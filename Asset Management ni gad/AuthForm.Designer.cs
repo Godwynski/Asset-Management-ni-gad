@@ -140,6 +140,7 @@
             DashboardBtn.Size = new Size(110, 37);
             DashboardBtn.TabIndex = 3;
             DashboardBtn.UseVisualStyleBackColor = false;
+            DashboardBtn.Click += DashboardBtn_Click;
             // 
             // AuthForm
             // 

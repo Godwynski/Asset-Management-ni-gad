@@ -21,7 +21,7 @@
             NavigationBar = new Panel();
             label1 = new Label();
             button6 = new Button();
-            button5 = new Button();
+            User = new Button();
             button2 = new Button();
             SideBar = new Panel();
             panel4 = new Panel();
@@ -46,7 +46,7 @@
             NavigationBar.BackColor = Color.FromArgb(255, 79, 129);
             NavigationBar.Controls.Add(label1);
             NavigationBar.Controls.Add(button6);
-            NavigationBar.Controls.Add(button5);
+            NavigationBar.Controls.Add(User);
             NavigationBar.Controls.Add(button2);
             NavigationBar.Dock = DockStyle.Top;
             NavigationBar.Location = new Point(0, 0);
@@ -78,20 +78,22 @@
             button6.TabIndex = 3;
             button6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // User
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button5.BackColor = Color.Transparent;
-            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
-            button5.BackgroundImageLayout = ImageLayout.Zoom;
-            button5.Cursor = Cursors.Hand;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(1055, 11);
-            button5.Name = "button5";
-            button5.Size = new Size(60, 49);
-            button5.TabIndex = 2;
-            button5.UseVisualStyleBackColor = false;
+            User.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            User.BackColor = Color.Transparent;
+            User.BackgroundImage = (Image)resources.GetObject("User.BackgroundImage");
+            User.BackgroundImageLayout = ImageLayout.Zoom;
+            User.Cursor = Cursors.Hand;
+            User.FlatAppearance.BorderSize = 0;
+            User.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            User.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            User.FlatStyle = FlatStyle.Flat;
+            User.Location = new Point(1055, 11);
+            User.Name = "User";
+            User.Size = new Size(60, 49);
+            User.TabIndex = 2;
+            User.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -321,7 +323,7 @@
         private Button button3;
         private Button button1;
         private Button Employee;
-        private Button button5;
+        private Button User;
         private Button button4;
         private Button button6;
         private Panel panel4;
