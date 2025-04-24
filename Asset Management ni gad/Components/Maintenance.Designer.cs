@@ -1,6 +1,6 @@
 ﻿namespace Asset_Management_ni_gad
 {
-    partial class Dashboard
+    partial class Maintenance
     {
         /// <summary>
         /// Required designer variable.
@@ -35,31 +35,33 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(255, 211, 220);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(799, 665);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(800, 450);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(327, 191);
+            label1.Font = new Font("Berlin Sans FB", 12F);
+            label1.ForeColor = Color.FromArgb(217, 58, 102);
+            label1.Location = new Point(81, 122);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Size = new Size(131, 18);
+            label1.TabIndex = 6;
+            label1.Text = "maintenance haha";
             // 
-            // Dashboard
+            // Maintenance
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 246, 249);
-            ClientSize = new Size(799, 665);
+            ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "Dashboard";
-            Text = "Dashboard";
+            Name = "Maintenance";
+            Text = "Maintenance";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

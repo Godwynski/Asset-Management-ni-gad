@@ -5,6 +5,7 @@
         public AuthForm()
         {
             InitializeComponent();
+
         }
 
         private void resize(object sender, EventArgs e)
@@ -12,21 +13,12 @@
             DesigningFunctions.CenterPanel(MainPanel, LoginForm);
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
 
-            Form1 main = new Form1();
+            MainForm main = new MainForm();
             main.Show();
-            this.Hide();
+            //this.Hide();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Asset_Management_ni_gad
 {
-    public partial class AssetManagement : Form
+    public partial class Maintenance : Form
     {
-        public AssetManagement()
+        public Maintenance()
         {
             InitializeComponent();
         }
