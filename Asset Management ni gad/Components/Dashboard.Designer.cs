@@ -28,31 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             panel1 = new Panel();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Berlin Sans FB", 12F);
-            label1.ForeColor = Color.FromArgb(217, 58, 102);
-            label1.Location = new Point(81, 122);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 18);
-            label1.TabIndex = 6;
-            label1.Text = "Dashboard to";
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 211, 220);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(799, 665);
             panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(799, 36);
+            panel2.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -65,13 +62,11 @@
             Name = "Dashboard";
             Text = "Dashboard";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Label label1;
         private Panel panel1;
+        private Panel panel2;
     }
 }
