@@ -23,39 +23,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             NavigationBar = new Panel();
-            label1 = new Label();
             button6 = new Button();
             User = new Button();
             button2 = new Button();
             SideBar = new Panel();
-            panel4 = new Panel();
             UserManagementBtn = new Button();
-            panel1 = new Panel();
             MaintenanceBtn = new Button();
-            panel6 = new Panel();
             AssetAssignmentBtn = new Button();
-            panel5 = new Panel();
             AssetManagementBtn = new Button();
-            panel2 = new Panel();
             DashboardBtn = new Button();
-            panel7 = new Panel();
             panel8 = new Panel();
             MainPanel = new Panel();
             SidePanelMain = new Panel();
             SidePanel = new Panel();
             panel3 = new Panel();
             button3 = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             NavigationBar.SuspendLayout();
             SideBar.SuspendLayout();
             panel8.SuspendLayout();
             SidePanelMain.SuspendLayout();
             panel3.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // NavigationBar
             // 
             NavigationBar.BackColor = Color.FromArgb(255, 79, 129);
-            NavigationBar.Controls.Add(label1);
             NavigationBar.Controls.Add(button6);
             NavigationBar.Controls.Add(User);
             NavigationBar.Controls.Add(button2);
@@ -64,17 +58,6 @@
             NavigationBar.Name = "NavigationBar";
             NavigationBar.Size = new Size(1127, 82);
             NavigationBar.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(255, 246, 249);
-            label1.Location = new Point(790, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(28, 18);
-            label1.TabIndex = 4;
-            label1.Text = "     ";
             // 
             // button6
             // 
@@ -123,30 +106,12 @@
             // SideBar
             // 
             SideBar.BackColor = Color.FromArgb(255, 246, 249);
-            SideBar.Controls.Add(panel4);
-            SideBar.Controls.Add(UserManagementBtn);
-            SideBar.Controls.Add(panel1);
-            SideBar.Controls.Add(MaintenanceBtn);
-            SideBar.Controls.Add(panel6);
-            SideBar.Controls.Add(AssetAssignmentBtn);
-            SideBar.Controls.Add(panel5);
-            SideBar.Controls.Add(AssetManagementBtn);
-            SideBar.Controls.Add(panel2);
-            SideBar.Controls.Add(DashboardBtn);
-            SideBar.Controls.Add(panel7);
+            SideBar.Controls.Add(flowLayoutPanel1);
             SideBar.Dock = DockStyle.Left;
             SideBar.Location = new Point(0, 82);
             SideBar.Name = "SideBar";
-            SideBar.Size = new Size(207, 758);
+            SideBar.Size = new Size(231, 758);
             SideBar.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 515);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(207, 41);
-            panel4.TabIndex = 8;
             // 
             // UserManagementBtn
             // 
@@ -154,14 +119,13 @@
             UserManagementBtn.BackgroundImage = (Image)resources.GetObject("UserManagementBtn.BackgroundImage");
             UserManagementBtn.BackgroundImageLayout = ImageLayout.Stretch;
             UserManagementBtn.Cursor = Cursors.Hand;
-            UserManagementBtn.Dock = DockStyle.Top;
             UserManagementBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
             UserManagementBtn.FlatAppearance.BorderSize = 0;
             UserManagementBtn.FlatStyle = FlatStyle.Flat;
             UserManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             UserManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            UserManagementBtn.Location = new Point(0, 453);
-            UserManagementBtn.Margin = new Padding(10, 11, 10, 11);
+            UserManagementBtn.Location = new Point(15, 383);
+            UserManagementBtn.Margin = new Padding(15);
             UserManagementBtn.Name = "UserManagementBtn";
             UserManagementBtn.Size = new Size(207, 62);
             UserManagementBtn.TabIndex = 4;
@@ -169,28 +133,19 @@
             UserManagementBtn.UseVisualStyleBackColor = false;
             UserManagementBtn.Click += UserManagementBtn_Click;
             // 
-            // panel1
-            // 
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 412);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(207, 41);
-            panel1.TabIndex = 5;
-            // 
             // MaintenanceBtn
             // 
             MaintenanceBtn.BackColor = Color.Transparent;
             MaintenanceBtn.BackgroundImage = (Image)resources.GetObject("MaintenanceBtn.BackgroundImage");
             MaintenanceBtn.BackgroundImageLayout = ImageLayout.Stretch;
             MaintenanceBtn.Cursor = Cursors.Hand;
-            MaintenanceBtn.Dock = DockStyle.Top;
             MaintenanceBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
             MaintenanceBtn.FlatAppearance.BorderSize = 0;
             MaintenanceBtn.FlatStyle = FlatStyle.Flat;
             MaintenanceBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             MaintenanceBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            MaintenanceBtn.Location = new Point(0, 350);
-            MaintenanceBtn.Margin = new Padding(10, 11, 10, 11);
+            MaintenanceBtn.Location = new Point(15, 291);
+            MaintenanceBtn.Margin = new Padding(15);
             MaintenanceBtn.Name = "MaintenanceBtn";
             MaintenanceBtn.Size = new Size(207, 62);
             MaintenanceBtn.TabIndex = 3;
@@ -198,28 +153,19 @@
             MaintenanceBtn.UseVisualStyleBackColor = false;
             MaintenanceBtn.Click += MaintenanceBtn_Click;
             // 
-            // panel6
-            // 
-            panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(0, 309);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(207, 41);
-            panel6.TabIndex = 11;
-            // 
             // AssetAssignmentBtn
             // 
             AssetAssignmentBtn.BackColor = Color.Transparent;
             AssetAssignmentBtn.BackgroundImage = (Image)resources.GetObject("AssetAssignmentBtn.BackgroundImage");
             AssetAssignmentBtn.BackgroundImageLayout = ImageLayout.Stretch;
             AssetAssignmentBtn.Cursor = Cursors.Hand;
-            AssetAssignmentBtn.Dock = DockStyle.Top;
             AssetAssignmentBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
             AssetAssignmentBtn.FlatAppearance.BorderSize = 0;
             AssetAssignmentBtn.FlatStyle = FlatStyle.Flat;
             AssetAssignmentBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             AssetAssignmentBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetAssignmentBtn.Location = new Point(0, 247);
-            AssetAssignmentBtn.Margin = new Padding(10, 11, 10, 11);
+            AssetAssignmentBtn.Location = new Point(15, 15);
+            AssetAssignmentBtn.Margin = new Padding(15);
             AssetAssignmentBtn.Name = "AssetAssignmentBtn";
             AssetAssignmentBtn.Size = new Size(207, 62);
             AssetAssignmentBtn.TabIndex = 0;
@@ -227,28 +173,19 @@
             AssetAssignmentBtn.UseVisualStyleBackColor = false;
             AssetAssignmentBtn.Click += AssetAssignmentBtn_Click;
             // 
-            // panel5
-            // 
-            panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(0, 206);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(207, 41);
-            panel5.TabIndex = 10;
-            // 
             // AssetManagementBtn
             // 
             AssetManagementBtn.BackColor = Color.Transparent;
             AssetManagementBtn.BackgroundImage = (Image)resources.GetObject("AssetManagementBtn.BackgroundImage");
             AssetManagementBtn.BackgroundImageLayout = ImageLayout.Stretch;
             AssetManagementBtn.Cursor = Cursors.Hand;
-            AssetManagementBtn.Dock = DockStyle.Top;
             AssetManagementBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
             AssetManagementBtn.FlatAppearance.BorderSize = 0;
             AssetManagementBtn.FlatStyle = FlatStyle.Flat;
             AssetManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             AssetManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetManagementBtn.Location = new Point(0, 144);
-            AssetManagementBtn.Margin = new Padding(10, 11, 10, 11);
+            AssetManagementBtn.Location = new Point(15, 199);
+            AssetManagementBtn.Margin = new Padding(15);
             AssetManagementBtn.Name = "AssetManagementBtn";
             AssetManagementBtn.Size = new Size(207, 62);
             AssetManagementBtn.TabIndex = 1;
@@ -256,28 +193,19 @@
             AssetManagementBtn.UseVisualStyleBackColor = false;
             AssetManagementBtn.Click += AssetManagementBtn_Click;
             // 
-            // panel2
-            // 
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 103);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(207, 41);
-            panel2.TabIndex = 9;
-            // 
             // DashboardBtn
             // 
             DashboardBtn.BackColor = Color.Transparent;
             DashboardBtn.BackgroundImage = (Image)resources.GetObject("DashboardBtn.BackgroundImage");
             DashboardBtn.BackgroundImageLayout = ImageLayout.Stretch;
             DashboardBtn.Cursor = Cursors.Hand;
-            DashboardBtn.Dock = DockStyle.Top;
             DashboardBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
             DashboardBtn.FlatAppearance.BorderSize = 0;
             DashboardBtn.FlatStyle = FlatStyle.Flat;
             DashboardBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             DashboardBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.Location = new Point(0, 41);
-            DashboardBtn.Margin = new Padding(10, 11, 10, 11);
+            DashboardBtn.Location = new Point(15, 107);
+            DashboardBtn.Margin = new Padding(15);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(207, 62);
             DashboardBtn.TabIndex = 2;
@@ -285,23 +213,15 @@
             DashboardBtn.UseVisualStyleBackColor = false;
             DashboardBtn.Click += DashboardBtn_Click;
             // 
-            // panel7
-            // 
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(207, 41);
-            panel7.TabIndex = 12;
-            // 
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(255, 211, 220);
             panel8.Controls.Add(MainPanel);
             panel8.Controls.Add(SidePanelMain);
             panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(207, 82);
+            panel8.Location = new Point(231, 82);
             panel8.Name = "panel8";
-            panel8.Size = new Size(920, 758);
+            panel8.Size = new Size(896, 758);
             panel8.TabIndex = 3;
             // 
             // MainPanel
@@ -309,7 +229,7 @@
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(0, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(635, 758);
+            MainPanel.Size = new Size(611, 758);
             MainPanel.TabIndex = 3;
             // 
             // SidePanelMain
@@ -317,7 +237,7 @@
             SidePanelMain.Controls.Add(SidePanel);
             SidePanelMain.Controls.Add(panel3);
             SidePanelMain.Dock = DockStyle.Right;
-            SidePanelMain.Location = new Point(635, 0);
+            SidePanelMain.Location = new Point(611, 0);
             SidePanelMain.Name = "SidePanelMain";
             SidePanelMain.Size = new Size(285, 758);
             SidePanelMain.TabIndex = 2;
@@ -361,6 +281,19 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(AssetAssignmentBtn);
+            flowLayoutPanel1.Controls.Add(DashboardBtn);
+            flowLayoutPanel1.Controls.Add(AssetManagementBtn);
+            flowLayoutPanel1.Controls.Add(MaintenanceBtn);
+            flowLayoutPanel1.Controls.Add(UserManagementBtn);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(231, 758);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -375,11 +308,11 @@
             Name = "MainForm";
             Text = "Office Asset Management";
             NavigationBar.ResumeLayout(false);
-            NavigationBar.PerformLayout();
             SideBar.ResumeLayout(false);
             panel8.ResumeLayout(false);
             SidePanelMain.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -395,18 +328,12 @@
         private Button User;
         private Button UserManagementBtn;
         private Button button6;
-        private Panel panel4;
-        private Panel panel1;
-        private Panel panel6;
-        private Panel panel5;
-        private Panel panel2;
-        private Panel panel7;
-        private Label label1;
         private Panel panel8;
         private Panel SidePanelMain;
         private Panel panel3;
         private Panel SidePanel;
         private Button button3;
         private Panel MainPanel;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -62,6 +62,7 @@
             // 
             // DashboardBtn
             // 
+            DashboardBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             DashboardBtn.BackColor = Color.Transparent;
             DashboardBtn.BackgroundImage = (Image)resources.GetObject("DashboardBtn.BackgroundImage");
             DashboardBtn.BackgroundImageLayout = ImageLayout.Stretch;
@@ -71,7 +72,7 @@
             DashboardBtn.FlatStyle = FlatStyle.Flat;
             DashboardBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             DashboardBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.Location = new Point(42, 534);
+            DashboardBtn.Location = new Point(35, 500);
             DashboardBtn.Margin = new Padding(10);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(207, 55);
