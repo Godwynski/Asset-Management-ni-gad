@@ -22,6 +22,12 @@ namespace Asset_Management_ni_gad.Components
             InitializeComponent();
             LoadAssets();
             AssetsGrid.CellContentClick += new DataGridViewCellEventHandler(AssetsGrid_CellContentClick);
+            HideAllPanels();
+            DesigningFunctions.CenterPanel(DeleteAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(EditAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(AddAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(ParentPanel, DeleteAssetPanel);
+            ParentPanel.Dock = DockStyle.Fill; 
 
         }
         public void LoadAssets()
@@ -65,17 +71,51 @@ namespace Asset_Management_ni_gad.Components
             {
                 int assetId = Convert.ToInt32(AssetsGrid.Rows[e.RowIndex].Cells["asset_id"].Value);
 
-                // Check which button is clicked
                 if (AssetsGrid.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    MessageBox.Show("Hi Guys haha test edit");
+                    HideAllPanels();
+                    EditAssetPanel.Visible = true;
                 }
                 else if (AssetsGrid.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    MessageBox.Show("Hi Guys haha");
+                    HideAllPanels();
+                    DeleteAssetPanel.Visible = true;
                 }
             }
         }
+        private void AddAssetBtn_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            AddAssetPanel.Visible = true;
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+        }
+
+
+        private void Resize(object sender, EventArgs e)
+        {
+            DesigningFunctions.CenterPanel(DeleteAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(EditAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(AddAssetPanel, ParentPanel);
+        }
+        private void HideAllPanels()
+        {
+            EditAssetPanel.Visible = false;
+            DeleteAssetPanel.Visible = false;
+            AddAssetPanel.Visible = false;
+        }
     }
 }
