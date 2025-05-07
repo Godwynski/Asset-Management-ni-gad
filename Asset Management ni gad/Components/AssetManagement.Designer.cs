@@ -34,38 +34,41 @@
             ParentPanel = new Panel();
             DeleteAssetPanel = new TableLayoutPanel();
             panel3 = new Panel();
-            label7 = new Label();
             button7 = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            label6 = new Label();
+            CancelDeleteBtn = new Button();
+            DeleteBtn = new Button();
+            DebugText = new Label();
             EditAssetPanel = new TableLayoutPanel();
             panel5 = new Panel();
-            comboBox1 = new ComboBox();
+            EditCategoryz = new TextBox();
+            EditPrice = new TextBox();
+            EditStatusComboBox = new ComboBox();
+            label13 = new Label();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
-            richTextBox1 = new RichTextBox();
+            UpdateAssetBtn = new Button();
+            EditNotes = new RichTextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            EditAssetName = new TextBox();
             label5 = new Label();
             AddAssetPanel = new TableLayoutPanel();
             panel4 = new Panel();
-            comboBox2 = new ComboBox();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            richTextBox2 = new RichTextBox();
+            AddCategory = new TextBox();
+            AddStatus = new ComboBox();
             label8 = new Label();
-            label9 = new Label();
+            button1 = new Button();
+            AddSubmitBtn = new Button();
+            AddNotes = new RichTextBox();
             label10 = new Label();
-            textBox5 = new TextBox();
+            label14 = new Label();
+            button8 = new Button();
+            label9 = new Label();
+            AddPrice = new TextBox();
             label11 = new Label();
-            textBox6 = new TextBox();
+            AddName = new TextBox();
             label12 = new Label();
             MainPanel = new TableLayoutPanel();
             panel2 = new Panel();
@@ -115,26 +118,14 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(255, 211, 220);
-            panel3.Controls.Add(label7);
             panel3.Controls.Add(button7);
-            panel3.Controls.Add(button6);
-            panel3.Controls.Add(button5);
-            panel3.Controls.Add(label6);
+            panel3.Controls.Add(CancelDeleteBtn);
+            panel3.Controls.Add(DeleteBtn);
+            panel3.Controls.Add(DebugText);
             panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(340, 188);
             panel3.TabIndex = 5;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(217, 58, 102);
-            label7.Location = new Point(10, 74);
-            label7.Name = "label7";
-            label7.Size = new Size(113, 23);
-            label7.TabIndex = 21;
-            label7.Text = "Asset Name";
             // 
             // button7
             // 
@@ -155,34 +146,36 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
-            // button6
+            // CancelDeleteBtn
             // 
-            button6.Location = new Point(179, 123);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 23);
-            button6.TabIndex = 19;
-            button6.Text = "No";
-            button6.UseVisualStyleBackColor = true;
+            CancelDeleteBtn.Location = new Point(179, 123);
+            CancelDeleteBtn.Name = "CancelDeleteBtn";
+            CancelDeleteBtn.Size = new Size(75, 23);
+            CancelDeleteBtn.TabIndex = 19;
+            CancelDeleteBtn.Text = "No";
+            CancelDeleteBtn.UseVisualStyleBackColor = true;
+            CancelDeleteBtn.Click += CancelDeleteBtn_Click;
             // 
-            // button5
+            // DeleteBtn
             // 
-            button5.Location = new Point(81, 123);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 18;
-            button5.Text = "Yes";
-            button5.UseVisualStyleBackColor = true;
+            DeleteBtn.Location = new Point(81, 123);
+            DeleteBtn.Name = "DeleteBtn";
+            DeleteBtn.Size = new Size(75, 23);
+            DeleteBtn.TabIndex = 18;
+            DeleteBtn.Text = "Delete";
+            DeleteBtn.UseVisualStyleBackColor = true;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
-            // label6
+            // DebugText
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(217, 58, 102);
-            label6.Location = new Point(10, 41);
-            label6.Name = "label6";
-            label6.Size = new Size(288, 23);
-            label6.TabIndex = 16;
-            label6.Text = "Are you sure you want to delete";
+            DebugText.AutoSize = true;
+            DebugText.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            DebugText.ForeColor = Color.FromArgb(217, 58, 102);
+            DebugText.Location = new Point(23, 56);
+            DebugText.Name = "DebugText";
+            DebugText.Size = new Size(296, 23);
+            DebugText.TabIndex = 16;
+            DebugText.Text = "Are you sure you want to delete?";
             // 
             // EditAssetPanel
             // 
@@ -190,40 +183,71 @@
             EditAssetPanel.ColumnCount = 1;
             EditAssetPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             EditAssetPanel.Controls.Add(panel5, 0, 0);
-            EditAssetPanel.Location = new Point(408, 574);
+            EditAssetPanel.Location = new Point(406, 560);
             EditAssetPanel.Name = "EditAssetPanel";
             EditAssetPanel.RowCount = 1;
             EditAssetPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            EditAssetPanel.Size = new Size(349, 451);
+            EditAssetPanel.Size = new Size(349, 489);
             EditAssetPanel.TabIndex = 8;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(255, 211, 220);
-            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(EditCategoryz);
+            panel5.Controls.Add(EditPrice);
+            panel5.Controls.Add(EditStatusComboBox);
+            panel5.Controls.Add(label13);
             panel5.Controls.Add(button2);
             panel5.Controls.Add(button3);
-            panel5.Controls.Add(button4);
-            panel5.Controls.Add(richTextBox1);
+            panel5.Controls.Add(UpdateAssetBtn);
+            panel5.Controls.Add(EditNotes);
             panel5.Controls.Add(label1);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(label3);
-            panel5.Controls.Add(textBox2);
             panel5.Controls.Add(label4);
-            panel5.Controls.Add(textBox3);
+            panel5.Controls.Add(EditAssetName);
             panel5.Controls.Add(label5);
             panel5.Location = new Point(3, 3);
             panel5.Name = "panel5";
-            panel5.Size = new Size(343, 445);
+            panel5.Size = new Size(343, 483);
             panel5.TabIndex = 7;
             // 
-            // comboBox1
+            // EditCategoryz
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(37, 220);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(278, 23);
-            comboBox1.TabIndex = 20;
+            EditCategoryz.Font = new Font("Segoe UI", 12F);
+            EditCategoryz.ForeColor = Color.FromArgb(217, 58, 102);
+            EditCategoryz.Location = new Point(37, 220);
+            EditCategoryz.Name = "EditCategoryz";
+            EditCategoryz.Size = new Size(278, 29);
+            EditCategoryz.TabIndex = 25;
+            // 
+            // EditPrice
+            // 
+            EditPrice.Font = new Font("Segoe UI", 12F);
+            EditPrice.ForeColor = Color.FromArgb(217, 58, 102);
+            EditPrice.Location = new Point(37, 157);
+            EditPrice.Name = "EditPrice";
+            EditPrice.Size = new Size(278, 29);
+            EditPrice.TabIndex = 24;
+            // 
+            // EditStatusComboBox
+            // 
+            EditStatusComboBox.FormattingEnabled = true;
+            EditStatusComboBox.Location = new Point(37, 284);
+            EditStatusComboBox.Name = "EditStatusComboBox";
+            EditStatusComboBox.Size = new Size(278, 23);
+            EditStatusComboBox.TabIndex = 22;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Berlin Sans FB", 12F);
+            label13.ForeColor = Color.FromArgb(217, 58, 102);
+            label13.Location = new Point(37, 257);
+            label13.Name = "label13";
+            label13.Size = new Size(47, 18);
+            label13.TabIndex = 21;
+            label13.Text = "Status";
             // 
             // button2
             // 
@@ -246,36 +270,39 @@
             // 
             // button3
             // 
-            button3.Location = new Point(215, 373);
+            button3.Location = new Point(215, 439);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 18;
             button3.Text = "Cancel";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
-            // button4
+            // UpdateAssetBtn
             // 
-            button4.Location = new Point(52, 373);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 17;
-            button4.Text = "Submit";
-            button4.UseVisualStyleBackColor = true;
+            UpdateAssetBtn.Location = new Point(53, 439);
+            UpdateAssetBtn.Name = "UpdateAssetBtn";
+            UpdateAssetBtn.Size = new Size(75, 23);
+            UpdateAssetBtn.TabIndex = 17;
+            UpdateAssetBtn.Text = "Submit";
+            UpdateAssetBtn.UseVisualStyleBackColor = true;
+            UpdateAssetBtn.Click += UpdateAssetBtn_Click;
             // 
-            // richTextBox1
+            // EditNotes
             // 
-            richTextBox1.Location = new Point(37, 279);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(278, 79);
-            richTextBox1.TabIndex = 16;
-            richTextBox1.Text = "";
+            EditNotes.Location = new Point(37, 342);
+            EditNotes.MaxLength = 30;
+            EditNotes.Name = "EditNotes";
+            EditNotes.Size = new Size(278, 79);
+            EditNotes.TabIndex = 16;
+            EditNotes.Text = "";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Berlin Sans FB", 12F);
             label1.ForeColor = Color.FromArgb(217, 58, 102);
-            label1.Location = new Point(37, 251);
+            label1.Location = new Point(37, 314);
             label1.Name = "label1";
             label1.Size = new Size(45, 18);
             label1.TabIndex = 15;
@@ -299,18 +326,9 @@
             label3.ForeColor = Color.FromArgb(217, 58, 102);
             label3.Location = new Point(37, 193);
             label3.Name = "label3";
-            label3.Size = new Size(47, 18);
+            label3.Size = new Size(68, 18);
             label3.TabIndex = 12;
-            label3.Text = "Status";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.ForeColor = Color.FromArgb(217, 58, 102);
-            textBox2.Location = new Point(37, 157);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(278, 29);
-            textBox2.TabIndex = 11;
+            label3.Text = "Category";
             // 
             // label4
             // 
@@ -319,18 +337,18 @@
             label4.ForeColor = Color.FromArgb(217, 58, 102);
             label4.Location = new Point(37, 136);
             label4.Name = "label4";
-            label4.Size = new Size(68, 18);
+            label4.Size = new Size(40, 18);
             label4.TabIndex = 10;
-            label4.Text = "Category";
+            label4.Text = "Price";
             // 
-            // textBox3
+            // EditAssetName
             // 
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.ForeColor = Color.FromArgb(217, 58, 102);
-            textBox3.Location = new Point(37, 91);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(278, 29);
-            textBox3.TabIndex = 9;
+            EditAssetName.Font = new Font("Segoe UI", 12F);
+            EditAssetName.ForeColor = Color.FromArgb(217, 58, 102);
+            EditAssetName.Location = new Point(37, 91);
+            EditAssetName.Name = "EditAssetName";
+            EditAssetName.Size = new Size(278, 29);
+            EditAssetName.TabIndex = 9;
             // 
             // label5
             // 
@@ -349,40 +367,112 @@
             AddAssetPanel.ColumnCount = 1;
             AddAssetPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             AddAssetPanel.Controls.Add(panel4, 0, 0);
-            AddAssetPanel.Location = new Point(775, 574);
+            AddAssetPanel.Location = new Point(775, 560);
             AddAssetPanel.Name = "AddAssetPanel";
             AddAssetPanel.RowCount = 1;
             AddAssetPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            AddAssetPanel.Size = new Size(349, 451);
+            AddAssetPanel.Size = new Size(349, 489);
             AddAssetPanel.TabIndex = 7;
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(255, 211, 220);
-            panel4.Controls.Add(comboBox2);
-            panel4.Controls.Add(button8);
-            panel4.Controls.Add(button9);
-            panel4.Controls.Add(button10);
-            panel4.Controls.Add(richTextBox2);
+            panel4.Controls.Add(AddCategory);
+            panel4.Controls.Add(AddStatus);
             panel4.Controls.Add(label8);
-            panel4.Controls.Add(label9);
+            panel4.Controls.Add(button1);
+            panel4.Controls.Add(AddSubmitBtn);
+            panel4.Controls.Add(AddNotes);
             panel4.Controls.Add(label10);
-            panel4.Controls.Add(textBox5);
+            panel4.Controls.Add(label14);
+            panel4.Controls.Add(button8);
+            panel4.Controls.Add(label9);
+            panel4.Controls.Add(AddPrice);
             panel4.Controls.Add(label11);
-            panel4.Controls.Add(textBox6);
+            panel4.Controls.Add(AddName);
             panel4.Controls.Add(label12);
             panel4.Location = new Point(3, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(343, 445);
+            panel4.Size = new Size(343, 483);
             panel4.TabIndex = 7;
             // 
-            // comboBox2
+            // AddCategory
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(37, 220);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(278, 23);
-            comboBox2.TabIndex = 21;
+            AddCategory.Font = new Font("Segoe UI", 12F);
+            AddCategory.ForeColor = Color.FromArgb(217, 58, 102);
+            AddCategory.Location = new Point(37, 220);
+            AddCategory.Name = "AddCategory";
+            AddCategory.Size = new Size(278, 29);
+            AddCategory.TabIndex = 31;
+            // 
+            // AddStatus
+            // 
+            AddStatus.FormattingEnabled = true;
+            AddStatus.Location = new Point(37, 284);
+            AddStatus.Name = "AddStatus";
+            AddStatus.Size = new Size(278, 23);
+            AddStatus.TabIndex = 30;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Berlin Sans FB", 12F);
+            label8.ForeColor = Color.FromArgb(217, 58, 102);
+            label8.Location = new Point(37, 257);
+            label8.Name = "label8";
+            label8.Size = new Size(47, 18);
+            label8.TabIndex = 29;
+            label8.Text = "Status";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(215, 439);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 27;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // AddSubmitBtn
+            // 
+            AddSubmitBtn.Location = new Point(53, 439);
+            AddSubmitBtn.Name = "AddSubmitBtn";
+            AddSubmitBtn.Size = new Size(75, 23);
+            AddSubmitBtn.TabIndex = 26;
+            AddSubmitBtn.Text = "Submit";
+            AddSubmitBtn.UseVisualStyleBackColor = true;
+            AddSubmitBtn.Click += AddSubmitBtn_Click;
+            // 
+            // AddNotes
+            // 
+            AddNotes.Location = new Point(37, 342);
+            AddNotes.MaxLength = 30;
+            AddNotes.Name = "AddNotes";
+            AddNotes.Size = new Size(278, 79);
+            AddNotes.TabIndex = 25;
+            AddNotes.Text = "";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Berlin Sans FB", 12F);
+            label10.ForeColor = Color.FromArgb(217, 58, 102);
+            label10.Location = new Point(37, 314);
+            label10.Name = "label10";
+            label10.Size = new Size(45, 18);
+            label10.TabIndex = 24;
+            label10.Text = "Notes";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Berlin Sans FB", 12F);
+            label14.ForeColor = Color.FromArgb(217, 58, 102);
+            label14.Location = new Point(37, 136);
+            label14.Name = "label14";
+            label14.Size = new Size(40, 18);
+            label14.TabIndex = 23;
+            label14.Text = "Price";
             // 
             // button8
             // 
@@ -403,43 +493,6 @@
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
-            // button9
-            // 
-            button9.Location = new Point(211, 373);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 18;
-            button9.Text = "Cancel";
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            button10.Location = new Point(52, 373);
-            button10.Name = "button10";
-            button10.Size = new Size(75, 23);
-            button10.TabIndex = 17;
-            button10.Text = "Submit";
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.Location = new Point(37, 279);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(278, 79);
-            richTextBox2.TabIndex = 16;
-            richTextBox2.Text = "";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Berlin Sans FB", 12F);
-            label8.ForeColor = Color.FromArgb(217, 58, 102);
-            label8.Location = new Point(37, 251);
-            label8.Name = "label8";
-            label8.Size = new Size(45, 18);
-            label8.TabIndex = 15;
-            label8.Text = "Notes";
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -451,45 +504,34 @@
             label9.TabIndex = 14;
             label9.Text = "Add Asset";
             // 
-            // label10
+            // AddPrice
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Berlin Sans FB", 12F);
-            label10.ForeColor = Color.FromArgb(217, 58, 102);
-            label10.Location = new Point(37, 193);
-            label10.Name = "label10";
-            label10.Size = new Size(47, 18);
-            label10.TabIndex = 12;
-            label10.Text = "Status";
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 12F);
-            textBox5.ForeColor = Color.FromArgb(217, 58, 102);
-            textBox5.Location = new Point(37, 157);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(278, 29);
-            textBox5.TabIndex = 11;
+            AddPrice.Font = new Font("Segoe UI", 12F);
+            AddPrice.ForeColor = Color.FromArgb(217, 58, 102);
+            AddPrice.Location = new Point(37, 157);
+            AddPrice.Name = "AddPrice";
+            AddPrice.Size = new Size(278, 29);
+            AddPrice.TabIndex = 11;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Berlin Sans FB", 12F);
             label11.ForeColor = Color.FromArgb(217, 58, 102);
-            label11.Location = new Point(37, 136);
+            label11.Location = new Point(37, 195);
             label11.Name = "label11";
             label11.Size = new Size(68, 18);
             label11.TabIndex = 10;
             label11.Text = "Category";
             // 
-            // textBox6
+            // AddName
             // 
-            textBox6.Font = new Font("Segoe UI", 12F);
-            textBox6.ForeColor = Color.FromArgb(217, 58, 102);
-            textBox6.Location = new Point(37, 91);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(278, 29);
-            textBox6.TabIndex = 9;
+            AddName.Font = new Font("Segoe UI", 12F);
+            AddName.ForeColor = Color.FromArgb(217, 58, 102);
+            AddName.Location = new Point(37, 91);
+            AddName.Name = "AddName";
+            AddName.Size = new Size(278, 29);
+            AddName.TabIndex = 9;
             // 
             // label12
             // 
@@ -542,12 +584,13 @@
             // 
             // SearchBtn
             // 
-            SearchBtn.Location = new Point(307, 0);
+            SearchBtn.Location = new Point(455, 0);
             SearchBtn.Name = "SearchBtn";
             SearchBtn.Size = new Size(75, 25);
             SearchBtn.TabIndex = 1;
             SearchBtn.Text = "Search";
             SearchBtn.UseVisualStyleBackColor = true;
+            SearchBtn.Click += SearchBtn_Click_1;
             // 
             // SearchTextBox
             // 
@@ -557,12 +600,13 @@
             SearchTextBox.ForeColor = Color.FromArgb(51, 51, 51);
             SearchTextBox.Location = new Point(0, 0);
             SearchTextBox.Name = "SearchTextBox";
-            SearchTextBox.Size = new Size(301, 25);
+            SearchTextBox.Size = new Size(449, 25);
             SearchTextBox.TabIndex = 0;
             SearchTextBox.Tag = "Search...";
             // 
             // AssetsGrid
             // 
+            AssetsGrid.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(51, 51, 51);
             AssetsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -591,6 +635,7 @@
             AssetsGrid.Location = new Point(20, 72);
             AssetsGrid.Margin = new Padding(0, 20, 0, 0);
             AssetsGrid.Name = "AssetsGrid";
+            AssetsGrid.ReadOnly = true;
             AssetsGrid.Size = new Size(1456, 472);
             AssetsGrid.TabIndex = 0;
             // 
@@ -628,39 +673,45 @@
         private Panel panel2;
         private Button AddAssetBtn;
         private Panel panel3;
-        private Label label6;
-        private Button button6;
-        private Button button5;
+        private Label DebugText;
+        private Button CancelDeleteBtn;
+        private Button DeleteBtn;
         private Button button7;
         private TableLayoutPanel AddAssetPanel;
         private Panel panel4;
         private Button button8;
-        private Button button9;
         private Button button10;
-        private RichTextBox richTextBox2;
-        private Label label8;
         private Label label9;
-        private Label label10;
-        private TextBox textBox5;
+        private TextBox AddPrice;
         private Label label11;
-        private TextBox textBox6;
+        private TextBox AddName;
         private Label label12;
         private TableLayoutPanel EditAssetPanel;
         private Panel panel5;
         private Button button2;
         private Button button3;
-        private Button button4;
-        private RichTextBox richTextBox1;
+        private Button UpdateAssetBtn;
+        private RichTextBox EditNotes;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox EditAssetName;
         private Label label5;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox EditCategory;
         private TableLayoutPanel DeleteAssetPanel;
-        private Label label7;
+        private ComboBox EditStatusComboBox;
+        private Label label13;
+        private ComboBox AddStatus;
+        private Label label8;
+        private ComboBox comboBox4;
+        private Button button1;
+        private Button AddSubmitBtn;
+        private RichTextBox AddNotes;
+        private Label label10;
+        private Label label14;
+        private TextBox AddCategory;
+        private TextBox EditPrice;
+        private TextBox EditCategoryz;
     }
 }

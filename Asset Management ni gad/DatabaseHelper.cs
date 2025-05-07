@@ -35,15 +35,14 @@ public class DatabaseHelper
             connection.Close();
         }
     }
-
-    // Execute a non-query command (INSERT, UPDATE, DELETE)
-    public void ExecuteNonQuery(string query)
+    public int ExecuteNonQuery(string query)
     {
+        int rowsAffected = 0;
         try
         {
             OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, connection);
-            cmd.ExecuteNonQuery();
+            rowsAffected = cmd.ExecuteNonQuery();
         }
         catch (Exception ex)
         {
@@ -53,7 +52,9 @@ public class DatabaseHelper
         {
             CloseConnection();
         }
+        return rowsAffected;
     }
+
 
     // Execute a query that returns data (SELECT)
     public DataTable ExecuteQuery(string query)
