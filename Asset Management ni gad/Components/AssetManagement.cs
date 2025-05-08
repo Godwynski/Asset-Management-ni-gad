@@ -202,5 +202,10 @@ namespace Asset_Management_ni_gad.Components
         {
             DeleteAssetPanel.Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddAssetPanel.Visible = false;
+        }
     }
 }
