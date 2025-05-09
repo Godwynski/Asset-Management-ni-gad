@@ -76,5 +76,10 @@ public class DatabaseHelper
         }
         return dt;
     }
+    public MySqlConnection GetConnection()
+    {
+        return connection;
+    }
+
 }
 

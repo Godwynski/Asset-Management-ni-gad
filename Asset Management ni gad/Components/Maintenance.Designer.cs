@@ -2,15 +2,8 @@
 {
     partial class Maintenance
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,155 +15,431 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
-            MainPanel = new TableLayoutPanel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            lblTitle = new Label();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            panel4 = new Panel();
+            lblCost = new Label();
+            txtCost = new TextBox();
+            cmbStatus = new ComboBox();
+            lblDate = new Label();
+            dtpMaintenanceDate = new DateTimePicker();
+            txtIssueDescription = new RichTextBox();
+            lblIssueDescription = new Label();
+            cmbAsset = new ComboBox();
+            btnClose = new Button();
+            btnCancel = new Button();
+            btnSave = new Button();
+            lblRecordTitle = new Label();
+            lblStatus = new Label();
+            lblAsset = new Label();
+            dgvMaintenance = new DataGridView();
             panel2 = new Panel();
-            AddAssetBtn = new Button();
-            SearchBtn = new Button();
-            SearchTextBox = new TextBox();
-            MaintenanceGrid = new DataGridView();
+            cmbStatusFilter = new ComboBox();
+            txtSearch = new TextBox();
+            btnReset = new Button();
+            btnSearch = new Button();
             panel1.SuspendLayout();
-            MainPanel.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMaintenance).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)MaintenanceGrid).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 211, 220);
-            panel1.Controls.Add(MainPanel);
+            panel1.Controls.Add(tableLayoutPanel1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1351, 658);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(1200, 700);
+            panel1.TabIndex = 0;
             // 
-            // MainPanel
+            // tableLayoutPanel1
             // 
-            MainPanel.ColumnCount = 1;
-            MainPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            MainPanel.Controls.Add(panel2, 0, 0);
-            MainPanel.Controls.Add(MaintenanceGrid, 0, 1);
-            MainPanel.Dock = DockStyle.Top;
-            MainPanel.Location = new Point(0, 0);
-            MainPanel.Name = "MainPanel";
-            MainPanel.Padding = new Padding(20);
-            MainPanel.RowCount = 2;
-            MainPanel.RowStyles.Add(new RowStyle());
-            MainPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 492F));
-            MainPanel.Size = new Size(1351, 554);
-            MainPanel.TabIndex = 2;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(lblTitle, 0, 0);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
+            tableLayoutPanel1.Controls.Add(panel2, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(1200, 700);
+            tableLayoutPanel1.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Dock = DockStyle.Fill;
+            lblTitle.Font = new Font("Berlin Sans FB", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.FromArgb(217, 58, 102);
+            lblTitle.Location = new Point(30, 20);
+            lblTitle.Margin = new Padding(30, 20, 0, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(1170, 38);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Maintenance Records";
+            lblTitle.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 350F));
+            tableLayoutPanel3.Controls.Add(panel4, 1, 0);
+            tableLayoutPanel3.Controls.Add(dgvMaintenance, 0, 0);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(10, 126);
+            tableLayoutPanel3.Margin = new Padding(10);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Size = new Size(1180, 564);
+            tableLayoutPanel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(255, 228, 235);
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(lblCost);
+            panel4.Controls.Add(txtCost);
+            panel4.Controls.Add(cmbStatus);
+            panel4.Controls.Add(lblDate);
+            panel4.Controls.Add(dtpMaintenanceDate);
+            panel4.Controls.Add(txtIssueDescription);
+            panel4.Controls.Add(lblIssueDescription);
+            panel4.Controls.Add(cmbAsset);
+            panel4.Controls.Add(btnClose);
+            panel4.Controls.Add(btnCancel);
+            panel4.Controls.Add(btnSave);
+            panel4.Controls.Add(lblRecordTitle);
+            panel4.Controls.Add(lblStatus);
+            panel4.Controls.Add(lblAsset);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(833, 3);
+            panel4.Name = "panel4";
+            panel4.Padding = new Padding(20);
+            panel4.Size = new Size(344, 558);
+            panel4.TabIndex = 0;
+            // 
+            // lblCost
+            // 
+            lblCost.AutoSize = true;
+            lblCost.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCost.ForeColor = Color.FromArgb(217, 58, 102);
+            lblCost.Location = new Point(23, 365);
+            lblCost.Name = "lblCost";
+            lblCost.Size = new Size(35, 18);
+            lblCost.TabIndex = 13;
+            lblCost.Text = "Cost";
+            // 
+            // txtCost
+            // 
+            txtCost.Location = new Point(23, 386);
+            txtCost.Name = "txtCost";
+            txtCost.Size = new Size(300, 23);
+            txtCost.TabIndex = 12;
+            // 
+            // cmbStatus
+            // 
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatus.FormattingEnabled = true;
+            cmbStatus.Items.AddRange(new object[] { "Pending", "In Progress", "Completed" });
+            cmbStatus.Location = new Point(23, 339);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(300, 23);
+            cmbStatus.TabIndex = 11;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = Color.FromArgb(217, 58, 102);
+            lblDate.Location = new Point(23, 262);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(128, 18);
+            lblDate.TabIndex = 10;
+            lblDate.Text = "Maintenance Date";
+            // 
+            // dtpMaintenanceDate
+            // 
+            dtpMaintenanceDate.Location = new Point(23, 283);
+            dtpMaintenanceDate.Name = "dtpMaintenanceDate";
+            dtpMaintenanceDate.Size = new Size(300, 23);
+            dtpMaintenanceDate.TabIndex = 9;
+            // 
+            // txtIssueDescription
+            // 
+            txtIssueDescription.BorderStyle = BorderStyle.FixedSingle;
+            txtIssueDescription.Location = new Point(23, 160);
+            txtIssueDescription.Name = "txtIssueDescription";
+            txtIssueDescription.Size = new Size(300, 99);
+            txtIssueDescription.TabIndex = 8;
+            txtIssueDescription.Text = "";
+            // 
+            // lblIssueDescription
+            // 
+            lblIssueDescription.AutoSize = true;
+            lblIssueDescription.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIssueDescription.ForeColor = Color.FromArgb(217, 58, 102);
+            lblIssueDescription.Location = new Point(23, 139);
+            lblIssueDescription.Name = "lblIssueDescription";
+            lblIssueDescription.Size = new Size(112, 18);
+            lblIssueDescription.TabIndex = 7;
+            lblIssueDescription.Text = "Issue Description";
+            // 
+            // cmbAsset
+            // 
+            cmbAsset.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAsset.FormattingEnabled = true;
+            cmbAsset.Location = new Point(23, 100);
+            cmbAsset.Name = "cmbAsset";
+            cmbAsset.Size = new Size(300, 23);
+            cmbAsset.TabIndex = 6;
+            // 
+            // btnClose
+            // 
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Location = new Point(310, 20);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(20, 20);
+            btnClose.TabIndex = 5;
+            btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCancel.BackColor = Color.FromArgb(217, 58, 102);
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(168, 504);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(150, 35);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSave.BackColor = Color.FromArgb(217, 58, 102);
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(23, 504);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(150, 35);
+            btnSave.TabIndex = 3;
+            btnSave.Text = "Save Record";
+            btnSave.UseVisualStyleBackColor = false;
+            // 
+            // lblRecordTitle
+            // 
+            lblRecordTitle.AutoSize = true;
+            lblRecordTitle.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblRecordTitle.ForeColor = Color.FromArgb(217, 58, 102);
+            lblRecordTitle.Location = new Point(23, 20);
+            lblRecordTitle.Name = "lblRecordTitle";
+            lblRecordTitle.Size = new Size(70, 23);
+            lblRecordTitle.TabIndex = 2;
+            lblRecordTitle.Text = "Record";
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStatus.ForeColor = Color.FromArgb(217, 58, 102);
+            lblStatus.Location = new Point(23, 318);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(47, 18);
+            lblStatus.TabIndex = 1;
+            lblStatus.Text = "Status";
+            // 
+            // lblAsset
+            // 
+            lblAsset.AutoSize = true;
+            lblAsset.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAsset.ForeColor = Color.FromArgb(217, 58, 102);
+            lblAsset.Location = new Point(23, 80);
+            lblAsset.Name = "lblAsset";
+            lblAsset.Size = new Size(83, 18);
+            lblAsset.TabIndex = 0;
+            lblAsset.Text = "Select Asset";
+            // 
+            // dgvMaintenance
+            // 
+            dgvMaintenance.AllowUserToAddRows = false;
+            dgvMaintenance.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
+            dgvMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvMaintenance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMaintenance.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvMaintenance.BorderStyle = BorderStyle.None;
+            dgvMaintenance.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvMaintenance.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.Padding = new Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvMaintenance.ColumnHeadersHeight = 40;
+            dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
+            dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.Padding = new Padding(5);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvMaintenance.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvMaintenance.Dock = DockStyle.Fill;
+            dgvMaintenance.EnableHeadersVisualStyles = false;
+            dgvMaintenance.GridColor = Color.FromArgb(255, 211, 220);
+            dgvMaintenance.Location = new Point(20, 20);
+            dgvMaintenance.Margin = new Padding(20);
+            dgvMaintenance.Name = "dgvMaintenance";
+            dgvMaintenance.ReadOnly = true;
+            dgvMaintenance.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvMaintenance.RowHeadersVisible = false;
+            dgvMaintenance.RowTemplate.Height = 35;
+            dgvMaintenance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMaintenance.Size = new Size(790, 524);
+            dgvMaintenance.TabIndex = 1;
             // 
             // panel2
             // 
-            panel2.Controls.Add(AddAssetBtn);
-            panel2.Controls.Add(SearchBtn);
-            panel2.Controls.Add(SearchTextBox);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(23, 23);
+            panel2.Controls.Add(cmbStatusFilter);
+            panel2.Controls.Add(txtSearch);
+            panel2.Controls.Add(btnReset);
+            panel2.Controls.Add(btnSearch);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(20, 68);
+            panel2.Margin = new Padding(20, 10, 20, 10);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1305, 26);
+            panel2.Size = new Size(1160, 38);
             panel2.TabIndex = 2;
             // 
-            // AddAssetBtn
+            // cmbStatusFilter
             // 
-            AddAssetBtn.Anchor = AnchorStyles.Right;
-            AddAssetBtn.Location = new Point(2480, -36);
-            AddAssetBtn.Name = "AddAssetBtn";
-            AddAssetBtn.Size = new Size(75, 25);
-            AddAssetBtn.TabIndex = 2;
-            AddAssetBtn.Text = "Add Asset";
-            AddAssetBtn.UseVisualStyleBackColor = true;
+            cmbStatusFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbStatusFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatusFilter.FormattingEnabled = true;
+            cmbStatusFilter.Items.AddRange(new object[] { "All Statuses", "Pending", "In Progress", "Completed" });
+            cmbStatusFilter.Location = new Point(900, 8);
+            cmbStatusFilter.Name = "cmbStatusFilter";
+            cmbStatusFilter.Size = new Size(150, 23);
+            cmbStatusFilter.TabIndex = 3;
             // 
-            // SearchBtn
+            // txtSearch
             // 
-            SearchBtn.Location = new Point(455, 0);
-            SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(75, 25);
-            SearchBtn.TabIndex = 1;
-            SearchBtn.Text = "Search";
-            SearchBtn.UseVisualStyleBackColor = true;
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearch.Location = new Point(10, 8);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Search maintenance records...";
+            txtSearch.Size = new Size(600, 23);
+            txtSearch.TabIndex = 0;
             // 
-            // SearchTextBox
+            // btnReset
             // 
-            SearchTextBox.BackColor = Color.FromArgb(255, 246, 249);
-            SearchTextBox.BorderStyle = BorderStyle.FixedSingle;
-            SearchTextBox.Font = new Font("Segoe UI", 10F);
-            SearchTextBox.ForeColor = Color.FromArgb(51, 51, 51);
-            SearchTextBox.Location = new Point(0, 0);
-            SearchTextBox.Name = "SearchTextBox";
-            SearchTextBox.Size = new Size(449, 25);
-            SearchTextBox.TabIndex = 0;
-            SearchTextBox.Tag = "Search...";
+            btnReset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnReset.BackColor = Color.FromArgb(217, 58, 102);
+            btnReset.FlatAppearance.BorderSize = 0;
+            btnReset.FlatStyle = FlatStyle.Flat;
+            btnReset.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReset.ForeColor = Color.White;
+            btnReset.Location = new Point(1060, 8);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(90, 25);
+            btnReset.TabIndex = 2;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = false;
             // 
-            // MaintenanceGrid
+            // btnSearch
             // 
-            MaintenanceGrid.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 211, 220);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(51, 51, 51);
-            MaintenanceGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            MaintenanceGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            MaintenanceGrid.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 79, 129);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            MaintenanceGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            MaintenanceGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(51, 51, 51);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            MaintenanceGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            MaintenanceGrid.Dock = DockStyle.Fill;
-            MaintenanceGrid.EnableHeadersVisualStyles = false;
-            MaintenanceGrid.GridColor = Color.FromArgb(255, 211, 220);
-            MaintenanceGrid.Location = new Point(20, 72);
-            MaintenanceGrid.Margin = new Padding(0, 20, 0, 0);
-            MaintenanceGrid.Name = "MaintenanceGrid";
-            MaintenanceGrid.ReadOnly = true;
-            MaintenanceGrid.Size = new Size(1311, 472);
-            MaintenanceGrid.TabIndex = 0;
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearch.BackColor = Color.FromArgb(217, 58, 102);
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(620, 8);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(90, 25);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
             // 
             // Maintenance
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1351, 658);
+            ClientSize = new Size(1200, 700);
             Controls.Add(panel1);
+            MinimumSize = new Size(1000, 600);
             Name = "Maintenance";
-            Text = "Maintenance";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Maintenance Records";
             panel1.ResumeLayout(false);
-            MainPanel.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMaintenance).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)MaintenanceGrid).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private TableLayoutPanel MainPanel;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label lblTitle;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Panel panel4;
+        private Label lblCost;
+        private TextBox txtCost;
+        private ComboBox cmbStatus;
+        private Label lblDate;
+        private DateTimePicker dtpMaintenanceDate;
+        private RichTextBox txtIssueDescription;
+        private Label lblIssueDescription;
+        private ComboBox cmbAsset;
+        private Button btnClose;
+        private Button btnCancel;
+        private Button btnSave;
+        private Label lblRecordTitle;
+        private Label lblStatus;
+        private Label lblAsset;
+        private DataGridView dgvMaintenance;
         private Panel panel2;
-        private Button AddAssetBtn;
-        private Button SearchBtn;
-        private TextBox SearchTextBox;
-        private DataGridView MaintenanceGrid;
+        private ComboBox cmbStatusFilter;
+        private TextBox txtSearch;
+        private Button btnReset;
+        private Button btnSearch;
     }
 }
