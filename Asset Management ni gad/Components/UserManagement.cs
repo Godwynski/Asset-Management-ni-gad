@@ -182,7 +182,7 @@ namespace Asset_Management_ni_gad
 
         private void BtnCloseForm_Click(object sender, EventArgs e)
         {
-            this.Close();
+            formPanel.Visible = false;
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

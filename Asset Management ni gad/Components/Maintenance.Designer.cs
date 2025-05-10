@@ -17,14 +17,14 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             lblTitle = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
-            panel4 = new Panel();
+            SidePanel = new Panel();
             lblCost = new Label();
             txtCost = new TextBox();
             cmbStatus = new ComboBox();
@@ -48,7 +48,7 @@
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
-            panel4.SuspendLayout();
+            SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMaintenance).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -99,7 +99,7 @@
             tableLayoutPanel3.ColumnCount = 2;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 350F));
-            tableLayoutPanel3.Controls.Add(panel4, 1, 0);
+            tableLayoutPanel3.Controls.Add(SidePanel, 1, 0);
             tableLayoutPanel3.Controls.Add(dgvMaintenance, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(10, 126);
@@ -110,30 +110,30 @@
             tableLayoutPanel3.Size = new Size(1180, 564);
             tableLayoutPanel3.TabIndex = 1;
             // 
-            // panel4
+            // SidePanel
             // 
-            panel4.BackColor = Color.FromArgb(255, 228, 235);
-            panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Controls.Add(lblCost);
-            panel4.Controls.Add(txtCost);
-            panel4.Controls.Add(cmbStatus);
-            panel4.Controls.Add(lblDate);
-            panel4.Controls.Add(dtpMaintenanceDate);
-            panel4.Controls.Add(txtIssueDescription);
-            panel4.Controls.Add(lblIssueDescription);
-            panel4.Controls.Add(cmbAsset);
-            panel4.Controls.Add(btnClose);
-            panel4.Controls.Add(btnCancel);
-            panel4.Controls.Add(btnSave);
-            panel4.Controls.Add(lblRecordTitle);
-            panel4.Controls.Add(lblStatus);
-            panel4.Controls.Add(lblAsset);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(833, 3);
-            panel4.Name = "panel4";
-            panel4.Padding = new Padding(20);
-            panel4.Size = new Size(344, 558);
-            panel4.TabIndex = 0;
+            SidePanel.BackColor = Color.FromArgb(255, 228, 235);
+            SidePanel.BorderStyle = BorderStyle.FixedSingle;
+            SidePanel.Controls.Add(lblCost);
+            SidePanel.Controls.Add(txtCost);
+            SidePanel.Controls.Add(cmbStatus);
+            SidePanel.Controls.Add(lblDate);
+            SidePanel.Controls.Add(dtpMaintenanceDate);
+            SidePanel.Controls.Add(txtIssueDescription);
+            SidePanel.Controls.Add(lblIssueDescription);
+            SidePanel.Controls.Add(cmbAsset);
+            SidePanel.Controls.Add(btnClose);
+            SidePanel.Controls.Add(btnCancel);
+            SidePanel.Controls.Add(btnSave);
+            SidePanel.Controls.Add(lblRecordTitle);
+            SidePanel.Controls.Add(lblStatus);
+            SidePanel.Controls.Add(lblAsset);
+            SidePanel.Dock = DockStyle.Fill;
+            SidePanel.Location = new Point(833, 3);
+            SidePanel.Name = "SidePanel";
+            SidePanel.Padding = new Padding(20);
+            SidePanel.Size = new Size(344, 558);
+            SidePanel.TabIndex = 0;
             // 
             // lblCost
             // 
@@ -288,33 +288,33 @@
             // 
             dgvMaintenance.AllowUserToAddRows = false;
             dgvMaintenance.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 228, 235);
+            dgvMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvMaintenance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvMaintenance.BackgroundColor = Color.FromArgb(255, 246, 249);
             dgvMaintenance.BorderStyle = BorderStyle.None;
             dgvMaintenance.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvMaintenance.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.Padding = new Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.Padding = new Padding(5);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvMaintenance.ColumnHeadersHeight = 40;
             dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
-            dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.Padding = new Padding(5);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvMaintenance.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(255, 246, 249);
+            dataGridViewCellStyle6.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.Padding = new Padding(5);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(255, 211, 220);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvMaintenance.DefaultCellStyle = dataGridViewCellStyle6;
             dgvMaintenance.Dock = DockStyle.Fill;
             dgvMaintenance.EnableHeadersVisualStyles = false;
             dgvMaintenance.GridColor = Color.FromArgb(255, 211, 220);
@@ -406,8 +406,8 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel3.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            SidePanel.ResumeLayout(false);
+            SidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMaintenance).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -420,7 +420,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label lblTitle;
         private TableLayoutPanel tableLayoutPanel3;
-        private Panel panel4;
+        private Panel SidePanel;
         private Label lblCost;
         private TextBox txtCost;
         private ComboBox cmbStatus;

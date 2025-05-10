@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Asset_Management_ni_gad.Components
+namespace Asset_Management_ni_gad.User_Controls
 {
-    public partial class AssetAssignment : Form
+    public partial class UserControl1 : UserControl
     {
-        public AssetAssignment()
+        public UserControl1()
         {
             InitializeComponent();
         }

@@ -43,6 +43,7 @@
             dataPanel = new Panel();
             dgvUsers = new DataGridView();
             formPanel = new Panel();
+            btnCloseForm = new Button();
             lblRole = new Label();
             cmbRole = new ComboBox();
             lblFullName = new Label();
@@ -51,7 +52,6 @@
             lblPassword = new Label();
             txtUsername = new TextBox();
             lblUsername = new Label();
-            btnCloseForm = new Button();
             btnCancel = new Button();
             btnSave = new Button();
             lblRecordTitle = new Label();
@@ -241,6 +241,7 @@
             // 
             formPanel.BackColor = Color.FromArgb(255, 228, 235);
             formPanel.BorderStyle = BorderStyle.FixedSingle;
+            formPanel.Controls.Add(btnCloseForm);
             formPanel.Controls.Add(lblRole);
             formPanel.Controls.Add(cmbRole);
             formPanel.Controls.Add(lblFullName);
@@ -249,7 +250,6 @@
             formPanel.Controls.Add(lblPassword);
             formPanel.Controls.Add(txtUsername);
             formPanel.Controls.Add(lblUsername);
-            formPanel.Controls.Add(btnCloseForm);
             formPanel.Controls.Add(btnCancel);
             formPanel.Controls.Add(btnSave);
             formPanel.Controls.Add(lblRecordTitle);
@@ -259,6 +259,24 @@
             formPanel.Padding = new Padding(20);
             formPanel.Size = new Size(347, 558);
             formPanel.TabIndex = 1;
+            // 
+            // btnCloseForm
+            // 
+            btnCloseForm.BackColor = Color.Transparent;
+            btnCloseForm.BackgroundImage = Properties.Resources.close;
+            btnCloseForm.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCloseForm.Cursor = Cursors.Hand;
+            btnCloseForm.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            btnCloseForm.FlatAppearance.BorderSize = 0;
+            btnCloseForm.FlatStyle = FlatStyle.Flat;
+            btnCloseForm.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            btnCloseForm.ForeColor = Color.FromArgb(255, 79, 129);
+            btnCloseForm.Location = new Point(303, 20);
+            btnCloseForm.Margin = new Padding(10, 11, 10, 11);
+            btnCloseForm.Name = "btnCloseForm";
+            btnCloseForm.Size = new Size(20, 20);
+            btnCloseForm.TabIndex = 12;
+            btnCloseForm.UseVisualStyleBackColor = false;
             // 
             // lblRole
             // 
@@ -339,17 +357,6 @@
             lblUsername.Size = new Size(75, 18);
             lblUsername.TabIndex = 4;
             lblUsername.Text = "Username";
-            // 
-            // btnCloseForm
-            // 
-            btnCloseForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCloseForm.FlatAppearance.BorderSize = 0;
-            btnCloseForm.FlatStyle = FlatStyle.Flat;
-            btnCloseForm.Location = new Point(305, 20);
-            btnCloseForm.Name = "btnCloseForm";
-            btnCloseForm.Size = new Size(20, 20);
-            btnCloseForm.TabIndex = 3;
-            btnCloseForm.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
@@ -439,9 +446,9 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Button btnCloseForm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblRecordTitle;
+        private Button btnCloseForm;
     }
 }

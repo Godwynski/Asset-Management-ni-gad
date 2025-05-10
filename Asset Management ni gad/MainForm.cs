@@ -14,13 +14,14 @@ namespace Asset_Management_ni_gad
             AssetAssignmentBtn.Click += NavBtn_Click;
             UserManagementBtn.Click += NavBtn_Click;
             MaintenanceBtn.Click += NavBtn_Click;
-            DesigningFunctions.btnSelected(DashboardBtn, DashboardBtn, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn);
+            AssetReturnBtn.Click += NavBtn_Click;
+            DesigningFunctions.btnSelected(DashboardBtn, DashboardBtn, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
         }
 
 
         private void NavBtn_Click(object sender, EventArgs e)
         {
-            DesigningFunctions.btnSelected((Button)sender, DashboardBtn, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn);
+            DesigningFunctions.btnSelected((Button)sender, DashboardBtn, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
         }
 
         private void User_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace Asset_Management_ni_gad
 
         private void AssetAssignmentBtn_Click(object sender, EventArgs e)
         {
-            LoadForm(MainPanel, new AssetAssignment());
+            LoadForm(MainPanel, new AssetAssign());
         }
 
         private void MaintenanceBtn_Click(object sender, EventArgs e)
@@ -67,6 +68,11 @@ namespace Asset_Management_ni_gad
         private void button3_Click(object sender, EventArgs e)
         {
             SidePanelMain.Hide();
+        }
+
+        private void AssetReturnBtn_Click(object sender, EventArgs e)
+        {
+            LoadForm(MainPanel, new AssetReturn());
         }
     }
 }

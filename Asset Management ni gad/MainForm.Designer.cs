@@ -29,10 +29,11 @@
             SideBar = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             DashboardBtn = new Button();
-            AssetManagementBtn = new Button();
             AssetAssignmentBtn = new Button();
-            MaintenanceBtn = new Button();
+            AssetReturnBtn = new Button();
             UserManagementBtn = new Button();
+            AssetManagementBtn = new Button();
+            MaintenanceBtn = new Button();
             panel8 = new Panel();
             MainPanel = new Panel();
             SidePanelMain = new Panel();
@@ -116,10 +117,11 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(DashboardBtn);
-            flowLayoutPanel1.Controls.Add(AssetManagementBtn);
             flowLayoutPanel1.Controls.Add(AssetAssignmentBtn);
-            flowLayoutPanel1.Controls.Add(MaintenanceBtn);
+            flowLayoutPanel1.Controls.Add(AssetReturnBtn);
             flowLayoutPanel1.Controls.Add(UserManagementBtn);
+            flowLayoutPanel1.Controls.Add(AssetManagementBtn);
+            flowLayoutPanel1.Controls.Add(MaintenanceBtn);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -146,26 +148,6 @@
             DashboardBtn.UseVisualStyleBackColor = false;
             DashboardBtn.Click += DashboardBtn_Click;
             // 
-            // AssetManagementBtn
-            // 
-            AssetManagementBtn.BackColor = Color.Transparent;
-            AssetManagementBtn.BackgroundImage = (Image)resources.GetObject("AssetManagementBtn.BackgroundImage");
-            AssetManagementBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            AssetManagementBtn.Cursor = Cursors.Hand;
-            AssetManagementBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            AssetManagementBtn.FlatAppearance.BorderSize = 0;
-            AssetManagementBtn.FlatStyle = FlatStyle.Flat;
-            AssetManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            AssetManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetManagementBtn.Location = new Point(15, 107);
-            AssetManagementBtn.Margin = new Padding(15);
-            AssetManagementBtn.Name = "AssetManagementBtn";
-            AssetManagementBtn.Size = new Size(207, 62);
-            AssetManagementBtn.TabIndex = 1;
-            AssetManagementBtn.Text = "Asset Management";
-            AssetManagementBtn.UseVisualStyleBackColor = false;
-            AssetManagementBtn.Click += AssetManagementBtn_Click;
-            // 
             // AssetAssignmentBtn
             // 
             AssetAssignmentBtn.BackColor = Color.Transparent;
@@ -177,34 +159,34 @@
             AssetAssignmentBtn.FlatStyle = FlatStyle.Flat;
             AssetAssignmentBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             AssetAssignmentBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetAssignmentBtn.Location = new Point(15, 199);
+            AssetAssignmentBtn.Location = new Point(15, 107);
             AssetAssignmentBtn.Margin = new Padding(15);
             AssetAssignmentBtn.Name = "AssetAssignmentBtn";
             AssetAssignmentBtn.Size = new Size(207, 62);
             AssetAssignmentBtn.TabIndex = 0;
-            AssetAssignmentBtn.Text = "Asset Assignment";
+            AssetAssignmentBtn.Text = "Assign";
             AssetAssignmentBtn.UseVisualStyleBackColor = false;
             AssetAssignmentBtn.Click += AssetAssignmentBtn_Click;
             // 
-            // MaintenanceBtn
+            // AssetReturnBtn
             // 
-            MaintenanceBtn.BackColor = Color.Transparent;
-            MaintenanceBtn.BackgroundImage = (Image)resources.GetObject("MaintenanceBtn.BackgroundImage");
-            MaintenanceBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            MaintenanceBtn.Cursor = Cursors.Hand;
-            MaintenanceBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            MaintenanceBtn.FlatAppearance.BorderSize = 0;
-            MaintenanceBtn.FlatStyle = FlatStyle.Flat;
-            MaintenanceBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            MaintenanceBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            MaintenanceBtn.Location = new Point(15, 291);
-            MaintenanceBtn.Margin = new Padding(15);
-            MaintenanceBtn.Name = "MaintenanceBtn";
-            MaintenanceBtn.Size = new Size(207, 62);
-            MaintenanceBtn.TabIndex = 3;
-            MaintenanceBtn.Text = "Maintenance";
-            MaintenanceBtn.UseVisualStyleBackColor = false;
-            MaintenanceBtn.Click += MaintenanceBtn_Click;
+            AssetReturnBtn.BackColor = Color.Transparent;
+            AssetReturnBtn.BackgroundImage = (Image)resources.GetObject("AssetReturnBtn.BackgroundImage");
+            AssetReturnBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            AssetReturnBtn.Cursor = Cursors.Hand;
+            AssetReturnBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            AssetReturnBtn.FlatAppearance.BorderSize = 0;
+            AssetReturnBtn.FlatStyle = FlatStyle.Flat;
+            AssetReturnBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            AssetReturnBtn.ForeColor = Color.FromArgb(255, 79, 129);
+            AssetReturnBtn.Location = new Point(15, 199);
+            AssetReturnBtn.Margin = new Padding(15);
+            AssetReturnBtn.Name = "AssetReturnBtn";
+            AssetReturnBtn.Size = new Size(207, 62);
+            AssetReturnBtn.TabIndex = 5;
+            AssetReturnBtn.Text = "Return";
+            AssetReturnBtn.UseVisualStyleBackColor = false;
+            AssetReturnBtn.Click += AssetReturnBtn_Click;
             // 
             // UserManagementBtn
             // 
@@ -217,7 +199,7 @@
             UserManagementBtn.FlatStyle = FlatStyle.Flat;
             UserManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             UserManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            UserManagementBtn.Location = new Point(15, 383);
+            UserManagementBtn.Location = new Point(15, 291);
             UserManagementBtn.Margin = new Padding(15);
             UserManagementBtn.Name = "UserManagementBtn";
             UserManagementBtn.Size = new Size(207, 62);
@@ -225,6 +207,46 @@
             UserManagementBtn.Text = "User Management";
             UserManagementBtn.UseVisualStyleBackColor = false;
             UserManagementBtn.Click += UserManagementBtn_Click;
+            // 
+            // AssetManagementBtn
+            // 
+            AssetManagementBtn.BackColor = Color.Transparent;
+            AssetManagementBtn.BackgroundImage = (Image)resources.GetObject("AssetManagementBtn.BackgroundImage");
+            AssetManagementBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            AssetManagementBtn.Cursor = Cursors.Hand;
+            AssetManagementBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            AssetManagementBtn.FlatAppearance.BorderSize = 0;
+            AssetManagementBtn.FlatStyle = FlatStyle.Flat;
+            AssetManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            AssetManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
+            AssetManagementBtn.Location = new Point(15, 383);
+            AssetManagementBtn.Margin = new Padding(15);
+            AssetManagementBtn.Name = "AssetManagementBtn";
+            AssetManagementBtn.Size = new Size(207, 62);
+            AssetManagementBtn.TabIndex = 1;
+            AssetManagementBtn.Text = "Asset Management";
+            AssetManagementBtn.UseVisualStyleBackColor = false;
+            AssetManagementBtn.Click += AssetManagementBtn_Click;
+            // 
+            // MaintenanceBtn
+            // 
+            MaintenanceBtn.BackColor = Color.Transparent;
+            MaintenanceBtn.BackgroundImage = (Image)resources.GetObject("MaintenanceBtn.BackgroundImage");
+            MaintenanceBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            MaintenanceBtn.Cursor = Cursors.Hand;
+            MaintenanceBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            MaintenanceBtn.FlatAppearance.BorderSize = 0;
+            MaintenanceBtn.FlatStyle = FlatStyle.Flat;
+            MaintenanceBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            MaintenanceBtn.ForeColor = Color.FromArgb(255, 79, 129);
+            MaintenanceBtn.Location = new Point(15, 475);
+            MaintenanceBtn.Margin = new Padding(15);
+            MaintenanceBtn.Name = "MaintenanceBtn";
+            MaintenanceBtn.Size = new Size(207, 62);
+            MaintenanceBtn.TabIndex = 3;
+            MaintenanceBtn.Text = "Maintenance";
+            MaintenanceBtn.UseVisualStyleBackColor = false;
+            MaintenanceBtn.Click += MaintenanceBtn_Click;
             // 
             // panel8
             // 
@@ -335,5 +357,6 @@
         private Button button3;
         private Panel MainPanel;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button AssetReturnBtn;
     }
 }
