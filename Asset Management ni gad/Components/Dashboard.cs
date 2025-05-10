@@ -16,35 +16,125 @@ namespace Asset_Management_ni_gad
 {
     public partial class Dashboard : Form
     {
-        private string connectionString = "Server=localhost;Database=office_asset_manager;Uid=root;Pwd=;"; // No password for root in XAMPP by default
-        private DatabaseHelper dbHelper;
-        private int selectedAssetId;
         public Dashboard()
         {
             InitializeComponent();
             dbHelper = new DatabaseHelper("localhost", "office_asset_manager", "root", "");
-            LoadAssignments();
+            LoadDashboardData();
         }
 
+        private DatabaseHelper dbHelper;
 
-        public void LoadAssignments()
+        private void LoadDashboardData()
         {
-            string query = @"
-        SELECT 
-            aa.assignment_id AS 'Assignment ID',
-            a.asset_name AS 'Asset Name',
-            u.full_name AS 'Assigned To',
-            aa.assigned_date AS 'Assigned Date',
-            aa.return_date AS 'Return Date',
-            aa.status AS 'Status'
-        FROM asset_assignments aa
-        INNER JOIN assets a ON aa.asset_id = a.asset_id
-        INNER JOIN users u ON aa.user_id = u.user_id
-        ORDER BY aa.assigned_date DESC";
+            try
+            {
+                // Load statistics
+                LoadStatistics();
 
-            DataTable dt = dbHelper.ExecuteQuery(query);
-            AssignmentsGrid.DataSource = dt;
+                // Load recent activity
+                LoadRecentActivity();
+
+                // Load total asset value
+                LoadTotalAssetValue();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading dashboard data: " + ex.Message);
+            }
         }
 
+        private void LoadStatistics()
+        {
+            // Total Assets
+            string totalAssetsQuery = "SELECT COUNT(*) FROM assets";
+            lblTotalAssetsValue.Text = dbHelper.ExecuteQuery(totalAssetsQuery).Rows[0][0].ToString();
+
+            // Assigned Assets
+            string assignedAssetsQuery = "SELECT COUNT(*) FROM assets WHERE status = 'Assigned'";
+            lblAssignedAssetsValue.Text = dbHelper.ExecuteQuery(assignedAssetsQuery).Rows[0][0].ToString();
+
+            // Under Maintenance
+            string underMaintenanceQuery = "SELECT COUNT(*) FROM assets WHERE status = 'Under Maintenance'";
+            lblUnderMaintenanceValue.Text = dbHelper.ExecuteQuery(underMaintenanceQuery).Rows[0][0].ToString();
+
+            // Retired Assets
+            string retiredAssetsQuery = "SELECT COUNT(*) FROM assets WHERE status = 'Retired'";
+            lblRetiredAssetsValue.Text = dbHelper.ExecuteQuery(retiredAssetsQuery).Rows[0][0].ToString();
+
+            // Total Users
+            string totalUsersQuery = "SELECT COUNT(*) FROM users";
+            lblTotalUsersValue.Text = dbHelper.ExecuteQuery(totalUsersQuery).Rows[0][0].ToString();
+
+            // Available Assets
+            string availableAssetsQuery = "SELECT COUNT(*) FROM assets WHERE status = 'Available'";
+            lblAvailableAssetsValue.Text = dbHelper.ExecuteQuery(availableAssetsQuery).Rows[0][0].ToString();
+
+            // Pending Maintenance
+            string pendingMaintenanceQuery = "SELECT COUNT(*) FROM maintenance WHERE maintenance_status = 'Pending'";
+            lblPendingMaintenanceValue.Text = dbHelper.ExecuteQuery(pendingMaintenanceQuery).Rows[0][0].ToString();
+
+            // Active Assignments
+            string activeAssignmentsQuery = "SELECT COUNT(*) FROM asset_assignments WHERE status = 'Assigned'";
+            lblActiveAssignmentsValue.Text = dbHelper.ExecuteQuery(activeAssignmentsQuery).Rows[0][0].ToString();
+        }
+
+        private void LoadRecentActivity()
+        {
+            string recentActivityQuery = @"
+                SELECT 
+                    a.asset_name AS 'Asset',
+                    CASE 
+                        WHEN aa.status = 'Assigned' THEN CONCAT('Assigned to ', u.full_name)
+                        WHEN aa.status = 'Returned' THEN CONCAT('Returned by ', u.full_name)
+                    END AS 'Activity',
+                    aa.assigned_date AS 'Date',
+                    aa.status AS 'Status'
+                FROM asset_assignments aa
+                JOIN assets a ON aa.asset_id = a.asset_id
+                JOIN users u ON aa.user_id = u.user_id
+                ORDER BY aa.assigned_date DESC
+                LIMIT 10";
+
+            DataTable dt = dbHelper.ExecuteQuery(recentActivityQuery);
+            dataGridViewRecentActivity.DataSource = dt;
+
+            // Format the DataGridView
+            if (dataGridViewRecentActivity.Columns.Contains("Date"))
+            {
+                dataGridViewRecentActivity.Columns["Date"].DefaultCellStyle.Format = "MM/dd/yyyy";
+            }
+            dataGridViewRecentActivity.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void LoadTotalAssetValue()
+        {
+            string totalValueQuery = "SELECT SUM(value) FROM assets WHERE status != 'Retired'";
+            DataTable dt = dbHelper.ExecuteQuery(totalValueQuery);
+
+            if (dt.Rows.Count > 0 && dt.Rows[0][0] != DBNull.Value)
+            {
+                decimal totalValue = Convert.ToDecimal(dt.Rows[0][0]);
+                lblTotalAssetValue.Text = totalValue.ToString("C");
+            }
+            else
+            {
+                lblTotalAssetValue.Text = "$0.00";
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadDashboardData();
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Clean up resources
+            if (dbHelper != null)
+            {
+                dbHelper.CloseConnection();
+            }
+        }
     }
 }
