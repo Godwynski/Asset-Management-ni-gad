@@ -531,6 +531,7 @@
             txtAssetSearch.PlaceholderText = "Search Asset";
             txtAssetSearch.Size = new Size(203, 24);
             txtAssetSearch.TabIndex = 15;
+            txtAssetSearch.Visible = false;
             // 
             // mainPanel
             // 

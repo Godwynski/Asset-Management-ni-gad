@@ -109,6 +109,7 @@
             btnRefresh.TabIndex = 4;
             btnRefresh.Text = "REFRESH DATA";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Visible = false;
             // 
             // lblTitle
             // 

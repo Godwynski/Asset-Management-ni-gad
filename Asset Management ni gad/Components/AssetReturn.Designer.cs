@@ -44,9 +44,9 @@
             grpMaintenance = new GroupBox();
             txtIssueDescription = new RichTextBox();
             lblIssue = new Label();
-            btnConfirmReturn = new Button();
             txtMaintenanceCost = new TextBox();
             lblCost = new Label();
+            btnConfirmReturn = new Button();
             btnCancel = new Button();
             mainPanel.SuspendLayout();
             mainLayout.SuspendLayout();
@@ -270,11 +270,13 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.2473335F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.7526665F));
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 159F));
             tableLayoutPanel1.Controls.Add(grpStatus, 0, 0);
             tableLayoutPanel1.Controls.Add(grpMaintenance, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnConfirmReturn, 2, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(10, 10);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -288,7 +290,6 @@
             grpStatus.Controls.Add(radRetired);
             grpStatus.Controls.Add(radUnderMaintenance);
             grpStatus.Controls.Add(radAvailable);
-            grpStatus.Dock = DockStyle.Fill;
             grpStatus.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpStatus.ForeColor = Color.FromArgb(217, 58, 102);
             grpStatus.Location = new Point(3, 3);
@@ -337,16 +338,14 @@
             // 
             grpMaintenance.Controls.Add(txtIssueDescription);
             grpMaintenance.Controls.Add(lblIssue);
-            grpMaintenance.Controls.Add(btnConfirmReturn);
             grpMaintenance.Controls.Add(txtMaintenanceCost);
             grpMaintenance.Controls.Add(lblCost);
-            grpMaintenance.Dock = DockStyle.Fill;
             grpMaintenance.Enabled = false;
             grpMaintenance.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpMaintenance.ForeColor = Color.FromArgb(217, 58, 102);
-            grpMaintenance.Location = new Point(343, 3);
+            grpMaintenance.Location = new Point(392, 3);
             grpMaintenance.Name = "grpMaintenance";
-            grpMaintenance.Size = new Size(592, 172);
+            grpMaintenance.Size = new Size(383, 172);
             grpMaintenance.TabIndex = 3;
             grpMaintenance.TabStop = false;
             grpMaintenance.Text = "Maintenance Details";
@@ -368,21 +367,6 @@
             lblIssue.TabIndex = 6;
             lblIssue.Text = "Issue Description";
             // 
-            // btnConfirmReturn
-            // 
-            btnConfirmReturn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnConfirmReturn.BackColor = Color.FromArgb(217, 58, 102);
-            btnConfirmReturn.FlatAppearance.BorderSize = 0;
-            btnConfirmReturn.FlatStyle = FlatStyle.Flat;
-            btnConfirmReturn.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConfirmReturn.ForeColor = Color.White;
-            btnConfirmReturn.Location = new Point(436, 131);
-            btnConfirmReturn.Name = "btnConfirmReturn";
-            btnConfirmReturn.Size = new Size(150, 35);
-            btnConfirmReturn.TabIndex = 0;
-            btnConfirmReturn.Text = "Confirm Return";
-            btnConfirmReturn.UseVisualStyleBackColor = false;
-            // 
             // txtMaintenanceCost
             // 
             txtMaintenanceCost.Location = new Point(6, 57);
@@ -398,6 +382,21 @@
             lblCost.Size = new Size(34, 17);
             lblCost.TabIndex = 2;
             lblCost.Text = "Cost";
+            // 
+            // btnConfirmReturn
+            // 
+            btnConfirmReturn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnConfirmReturn.BackColor = Color.FromArgb(217, 58, 102);
+            btnConfirmReturn.FlatAppearance.BorderSize = 0;
+            btnConfirmReturn.FlatStyle = FlatStyle.Flat;
+            btnConfirmReturn.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirmReturn.ForeColor = Color.White;
+            btnConfirmReturn.Location = new Point(785, 140);
+            btnConfirmReturn.Name = "btnConfirmReturn";
+            btnConfirmReturn.Size = new Size(150, 35);
+            btnConfirmReturn.TabIndex = 0;
+            btnConfirmReturn.Text = "Confirm Return";
+            btnConfirmReturn.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 

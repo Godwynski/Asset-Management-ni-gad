@@ -38,14 +38,16 @@
             MainPanel = new Panel();
             SidePanelMain = new Panel();
             SidePanel = new Panel();
-            panel3 = new Panel();
-            button3 = new Button();
+            btnCloseForm = new Button();
+            LogoutBtn = new Button();
+            FullNameTextbox = new Label();
+            button1 = new Button();
             NavigationBar.SuspendLayout();
             SideBar.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             panel8.SuspendLayout();
             SidePanelMain.SuspendLayout();
-            panel3.SuspendLayout();
+            SidePanel.SuspendLayout();
             SuspendLayout();
             // 
             // NavigationBar
@@ -204,7 +206,7 @@
             UserManagementBtn.Name = "UserManagementBtn";
             UserManagementBtn.Size = new Size(207, 62);
             UserManagementBtn.TabIndex = 4;
-            UserManagementBtn.Text = "User Management";
+            UserManagementBtn.Text = "Employee Management";
             UserManagementBtn.UseVisualStyleBackColor = false;
             UserManagementBtn.Click += UserManagementBtn_Click;
             // 
@@ -270,7 +272,6 @@
             // SidePanelMain
             // 
             SidePanelMain.Controls.Add(SidePanel);
-            SidePanelMain.Controls.Add(panel3);
             SidePanelMain.Dock = DockStyle.Right;
             SidePanelMain.Location = new Point(762, 0);
             SidePanelMain.Name = "SidePanelMain";
@@ -279,42 +280,90 @@
             // 
             // SidePanel
             // 
-            SidePanel.BackColor = Color.FromArgb(255, 211, 220);
+            SidePanel.BackgroundImage = (Image)resources.GetObject("SidePanel.BackgroundImage");
+            SidePanel.BackgroundImageLayout = ImageLayout.Stretch;
+            SidePanel.Controls.Add(btnCloseForm);
+            SidePanel.Controls.Add(LogoutBtn);
+            SidePanel.Controls.Add(FullNameTextbox);
+            SidePanel.Controls.Add(button1);
             SidePanel.Dock = DockStyle.Fill;
-            SidePanel.Location = new Point(0, 41);
+            SidePanel.Location = new Point(0, 0);
+            SidePanel.MinimumSize = new Size(285, 647);
             SidePanel.Name = "SidePanel";
-            SidePanel.Size = new Size(285, 606);
+            SidePanel.Size = new Size(285, 647);
             SidePanel.TabIndex = 1;
             // 
-            // panel3
+            // btnCloseForm
             // 
-            panel3.BackColor = Color.FromArgb(255, 246, 249);
-            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.Controls.Add(button3);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(285, 41);
-            panel3.TabIndex = 0;
+            btnCloseForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCloseForm.BackColor = Color.Transparent;
+            btnCloseForm.BackgroundImage = Properties.Resources.close;
+            btnCloseForm.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCloseForm.Cursor = Cursors.Hand;
+            btnCloseForm.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            btnCloseForm.FlatAppearance.BorderSize = 0;
+            btnCloseForm.FlatStyle = FlatStyle.Flat;
+            btnCloseForm.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            btnCloseForm.ForeColor = Color.FromArgb(255, 79, 129);
+            btnCloseForm.Location = new Point(253, 11);
+            btnCloseForm.Margin = new Padding(10, 11, 10, 11);
+            btnCloseForm.Name = "btnCloseForm";
+            btnCloseForm.Size = new Size(20, 20);
+            btnCloseForm.TabIndex = 13;
+            btnCloseForm.UseVisualStyleBackColor = false;
+            btnCloseForm.Click += btnCloseForm_Click;
             // 
-            // button3
+            // LogoutBtn
             // 
-            button3.BackColor = Color.Transparent;
-            button3.BackgroundImage = Properties.Resources.close;
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(255, 79, 129);
-            button3.Location = new Point(254, 9);
-            button3.Margin = new Padding(10, 11, 10, 11);
-            button3.Name = "button3";
-            button3.Size = new Size(20, 20);
-            button3.TabIndex = 9;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            LogoutBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            LogoutBtn.BackColor = Color.Transparent;
+            LogoutBtn.BackgroundImage = (Image)resources.GetObject("LogoutBtn.BackgroundImage");
+            LogoutBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            LogoutBtn.Cursor = Cursors.Hand;
+            LogoutBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            LogoutBtn.FlatAppearance.BorderSize = 0;
+            LogoutBtn.FlatStyle = FlatStyle.Flat;
+            LogoutBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            LogoutBtn.ForeColor = Color.FromArgb(255, 79, 129);
+            LogoutBtn.Location = new Point(44, 573);
+            LogoutBtn.Margin = new Padding(10);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.Size = new Size(207, 55);
+            LogoutBtn.TabIndex = 9;
+            LogoutBtn.Text = "Logout";
+            LogoutBtn.UseVisualStyleBackColor = false;
+            LogoutBtn.Click += LogoutBtn_Click;
+            // 
+            // FullNameTextbox
+            // 
+            FullNameTextbox.AutoSize = true;
+            FullNameTextbox.Font = new Font("Berlin Sans FB", 12F);
+            FullNameTextbox.ForeColor = Color.FromArgb(217, 58, 102);
+            FullNameTextbox.Location = new Point(24, 94);
+            FullNameTextbox.Name = "FullNameTextbox";
+            FullNameTextbox.Size = new Size(76, 18);
+            FullNameTextbox.TabIndex = 8;
+            FullNameTextbox.Text = "Full Name";
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(255, 79, 129);
+            button1.Location = new Point(125, 792);
+            button1.Margin = new Padding(10);
+            button1.Name = "button1";
+            button1.Size = new Size(207, 55);
+            button1.TabIndex = 6;
+            button1.Text = "Logout";
+            button1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -334,7 +383,8 @@
             flowLayoutPanel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
             SidePanelMain.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            SidePanel.ResumeLayout(false);
+            SidePanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -352,11 +402,13 @@
         private Button button6;
         private Panel panel8;
         private Panel SidePanelMain;
-        private Panel panel3;
-        private Panel SidePanel;
-        private Button button3;
         private Panel MainPanel;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button AssetReturnBtn;
+        private Panel SidePanel;
+        private Label FullNameTextbox;
+        private Button button1;
+        private Button LogoutBtn;
+        private Button btnCloseForm;
     }
 }

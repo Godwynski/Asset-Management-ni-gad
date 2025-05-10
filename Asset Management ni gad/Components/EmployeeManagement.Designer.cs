@@ -1,6 +1,6 @@
 ﻿namespace Asset_Management_ni_gad
 {
-    partial class UserManagement
+    partial class EmployeeManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -206,7 +206,7 @@
             dgvUsers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.Padding = new Padding(5);
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
@@ -217,7 +217,7 @@
             dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
-            dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle3.Padding = new Padding(5);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
@@ -284,7 +284,7 @@
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRole.ForeColor = Color.FromArgb(217, 58, 102);
-            lblRole.Location = new Point(23, 290);
+            lblRole.Location = new Point(21, 61);
             lblRole.Name = "lblRole";
             lblRole.Size = new Size(37, 18);
             lblRole.TabIndex = 11;
@@ -296,17 +296,18 @@
             cmbRole.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbRole.FormattingEnabled = true;
             cmbRole.Items.AddRange(new object[] { "Admin", "Employee" });
-            cmbRole.Location = new Point(23, 311);
+            cmbRole.Location = new Point(21, 82);
             cmbRole.Name = "cmbRole";
             cmbRole.Size = new Size(300, 25);
             cmbRole.TabIndex = 10;
+            cmbRole.SelectedIndexChanged += cmbRole_SelectedIndexChanged;
             // 
             // lblFullName
             // 
             lblFullName.AutoSize = true;
             lblFullName.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblFullName.ForeColor = Color.FromArgb(217, 58, 102);
-            lblFullName.Location = new Point(23, 230);
+            lblFullName.Location = new Point(21, 123);
             lblFullName.Name = "lblFullName";
             lblFullName.Size = new Size(76, 18);
             lblFullName.TabIndex = 9;
@@ -315,7 +316,7 @@
             // txtFullName
             // 
             txtFullName.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtFullName.Location = new Point(23, 251);
+            txtFullName.Location = new Point(21, 144);
             txtFullName.Name = "txtFullName";
             txtFullName.Size = new Size(300, 24);
             txtFullName.TabIndex = 8;
@@ -323,7 +324,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(23, 191);
+            txtPassword.Location = new Point(23, 276);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(300, 24);
@@ -334,7 +335,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.FromArgb(217, 58, 102);
-            lblPassword.Location = new Point(23, 170);
+            lblPassword.Location = new Point(23, 255);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(72, 18);
             lblPassword.TabIndex = 6;
@@ -343,7 +344,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(23, 131);
+            txtUsername.Location = new Point(22, 210);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(300, 24);
             txtUsername.TabIndex = 5;
@@ -353,7 +354,7 @@
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = Color.FromArgb(217, 58, 102);
-            lblUsername.Location = new Point(23, 110);
+            lblUsername.Location = new Point(22, 189);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(75, 18);
             lblUsername.TabIndex = 4;
@@ -400,7 +401,7 @@
             lblRecordTitle.TabIndex = 0;
             lblRecordTitle.Text = "Record";
             // 
-            // UserManagement
+            // EmployeeManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -408,7 +409,7 @@
             Controls.Add(mainPanel);
             Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinimumSize = new Size(1000, 600);
-            Name = "UserManagement";
+            Name = "EmployeeManagement";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "User Management";
             mainPanel.ResumeLayout(false);
@@ -439,8 +440,6 @@
         private System.Windows.Forms.Panel dataPanel;
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Panel formPanel;
-        private System.Windows.Forms.Label lblRole;
-        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtPassword;
@@ -451,5 +450,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblRecordTitle;
         private Button btnCloseForm;
+        private Label lblRole;
+        private ComboBox cmbRole;
     }
 }

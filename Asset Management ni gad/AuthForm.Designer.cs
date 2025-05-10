@@ -20,13 +20,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthForm));
             MainPanel = new Panel();
             LoginForm = new Panel();
-            checkBox1 = new CheckBox();
             pictureBox1 = new PictureBox();
-            textBox2 = new TextBox();
+            PasswordTextbox = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            UsernameTextbox = new TextBox();
             label1 = new Label();
-            DashboardBtn = new Button();
+            LoginBtn = new Button();
             MainPanel.SuspendLayout();
             LoginForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -48,30 +47,17 @@
             // 
             LoginForm.Anchor = AnchorStyles.None;
             LoginForm.BackColor = Color.FromArgb(255, 246, 249);
-            LoginForm.Controls.Add(checkBox1);
             LoginForm.Controls.Add(pictureBox1);
-            LoginForm.Controls.Add(textBox2);
+            LoginForm.Controls.Add(PasswordTextbox);
             LoginForm.Controls.Add(label2);
-            LoginForm.Controls.Add(textBox1);
+            LoginForm.Controls.Add(UsernameTextbox);
             LoginForm.Controls.Add(label1);
-            LoginForm.Controls.Add(DashboardBtn);
+            LoginForm.Controls.Add(LoginBtn);
             LoginForm.Location = new Point(189, 54);
             LoginForm.Name = "LoginForm";
             LoginForm.Padding = new Padding(2);
             LoginForm.Size = new Size(358, 470);
             LoginForm.TabIndex = 0;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Berlin Sans FB", 12F);
-            checkBox1.ForeColor = Color.FromArgb(217, 58, 102);
-            checkBox1.Location = new Point(64, 328);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(124, 22);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "Remember Me";
-            checkBox1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -83,14 +69,15 @@
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // PasswordTextbox
             // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.ForeColor = Color.FromArgb(217, 58, 102);
-            textBox2.Location = new Point(62, 280);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(240, 29);
-            textBox2.TabIndex = 7;
+            PasswordTextbox.Font = new Font("Segoe UI", 12F);
+            PasswordTextbox.ForeColor = Color.FromArgb(217, 58, 102);
+            PasswordTextbox.Location = new Point(62, 280);
+            PasswordTextbox.Name = "PasswordTextbox";
+            PasswordTextbox.PasswordChar = '*';
+            PasswordTextbox.Size = new Size(240, 29);
+            PasswordTextbox.TabIndex = 7;
             // 
             // label2
             // 
@@ -103,14 +90,14 @@
             label2.TabIndex = 6;
             label2.Text = "Password";
             // 
-            // textBox1
+            // UsernameTextbox
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.ForeColor = Color.FromArgb(217, 58, 102);
-            textBox1.Location = new Point(62, 209);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(240, 29);
-            textBox1.TabIndex = 5;
+            UsernameTextbox.Font = new Font("Segoe UI", 12F);
+            UsernameTextbox.ForeColor = Color.FromArgb(217, 58, 102);
+            UsernameTextbox.Location = new Point(62, 209);
+            UsernameTextbox.Name = "UsernameTextbox";
+            UsernameTextbox.Size = new Size(240, 29);
+            UsernameTextbox.TabIndex = 5;
             // 
             // label1
             // 
@@ -123,24 +110,24 @@
             label1.TabIndex = 4;
             label1.Text = "Username";
             // 
-            // DashboardBtn
+            // LoginBtn
             // 
-            DashboardBtn.BackColor = Color.Transparent;
-            DashboardBtn.BackgroundImage = (Image)resources.GetObject("DashboardBtn.BackgroundImage");
-            DashboardBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            DashboardBtn.Cursor = Cursors.Hand;
-            DashboardBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.FlatAppearance.BorderSize = 0;
-            DashboardBtn.FlatStyle = FlatStyle.Flat;
-            DashboardBtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            DashboardBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.Location = new Point(120, 378);
-            DashboardBtn.Margin = new Padding(10);
-            DashboardBtn.Name = "DashboardBtn";
-            DashboardBtn.Size = new Size(110, 37);
-            DashboardBtn.TabIndex = 3;
-            DashboardBtn.UseVisualStyleBackColor = false;
-            DashboardBtn.Click += DashboardBtn_Click;
+            LoginBtn.BackColor = Color.Transparent;
+            LoginBtn.BackgroundImage = (Image)resources.GetObject("LoginBtn.BackgroundImage");
+            LoginBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            LoginBtn.Cursor = Cursors.Hand;
+            LoginBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
+            LoginBtn.FlatAppearance.BorderSize = 0;
+            LoginBtn.FlatStyle = FlatStyle.Flat;
+            LoginBtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            LoginBtn.ForeColor = Color.FromArgb(255, 79, 129);
+            LoginBtn.Location = new Point(120, 378);
+            LoginBtn.Margin = new Padding(10);
+            LoginBtn.Name = "LoginBtn";
+            LoginBtn.Size = new Size(110, 37);
+            LoginBtn.TabIndex = 3;
+            LoginBtn.UseVisualStyleBackColor = false;
+            LoginBtn.Click += DashboardBtn_Click;
             // 
             // AuthForm
             // 
@@ -162,12 +149,11 @@
 
         private Panel MainPanel;
         private Panel LoginForm;
-        private TextBox textBox1;
+        private TextBox UsernameTextbox;
         private Label label1;
-        private Button DashboardBtn;
+        private Button LoginBtn;
         private PictureBox pictureBox1;
-        private TextBox textBox2;
+        private TextBox PasswordTextbox;
         private Label label2;
-        private CheckBox checkBox1;
     }
 }

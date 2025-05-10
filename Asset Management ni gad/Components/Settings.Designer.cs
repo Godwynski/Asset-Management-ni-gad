@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             panel1 = new Panel();
-            label2 = new Label();
+            FullNameTextbox = new Label();
             DashboardBtn = new Button();
-            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -40,25 +39,24 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(FullNameTextbox);
             panel1.Controls.Add(DashboardBtn);
-            panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(285, 599);
             panel1.TabIndex = 0;
             // 
-            // label2
+            // FullNameTextbox
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Berlin Sans FB", 12F);
-            label2.ForeColor = Color.FromArgb(217, 58, 102);
-            label2.Location = new Point(42, 114);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 18);
-            label2.TabIndex = 8;
-            label2.Text = "Full Name";
+            FullNameTextbox.AutoSize = true;
+            FullNameTextbox.Font = new Font("Berlin Sans FB", 12F);
+            FullNameTextbox.ForeColor = Color.FromArgb(217, 58, 102);
+            FullNameTextbox.Location = new Point(24, 94);
+            FullNameTextbox.Name = "FullNameTextbox";
+            FullNameTextbox.Size = new Size(76, 18);
+            FullNameTextbox.TabIndex = 8;
+            FullNameTextbox.Text = "Full Name";
             // 
             // DashboardBtn
             // 
@@ -72,24 +70,14 @@
             DashboardBtn.FlatStyle = FlatStyle.Flat;
             DashboardBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             DashboardBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.Location = new Point(35, 500);
+            DashboardBtn.Location = new Point(40, 245);
             DashboardBtn.Margin = new Padding(10);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(207, 55);
             DashboardBtn.TabIndex = 6;
             DashboardBtn.Text = "Logout";
             DashboardBtn.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Berlin Sans FB", 12F);
-            label1.ForeColor = Color.FromArgb(217, 58, 102);
-            label1.Location = new Point(43, 79);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 18);
-            label1.TabIndex = 5;
-            label1.Text = "Username";
+            DashboardBtn.Click += DashboardBtn_Click;
             // 
             // Settings
             // 
@@ -112,8 +100,7 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
         private Button DashboardBtn;
-        private Label label2;
+        private Label FullNameTextbox;
     }
 }

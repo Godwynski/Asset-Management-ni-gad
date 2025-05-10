@@ -96,6 +96,9 @@ namespace Asset_Management_ni_gad
         {
             // Enable maintenance details only if Under Maintenance is selected
             grpMaintenance.Enabled = radUnderMaintenance.Checked;
+            //grpMaintenance.Enabled = radAvailable.Checked;
+            //grpMaintenance.Enabled = radRetired.Checked;
+
         }
 
         private void BtnConfirmReturn_Click(object sender, EventArgs e)
@@ -272,5 +275,6 @@ namespace Asset_Management_ni_gad
             }
             return dt;
         }
+
     }
 }

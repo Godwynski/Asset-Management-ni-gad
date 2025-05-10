@@ -11,18 +11,19 @@ using MySql.Data.MySqlClient;
 
 namespace Asset_Management_ni_gad
 {
-    public partial class UserManagement : Form
+    public partial class EmployeeManagement : Form
     {
         private DatabaseHelper dbHelper;
         private DataTable usersData;
         private int currentUserId = -1;
 
-        public UserManagement()
+        public EmployeeManagement()
         {
             InitializeComponent();
             InitializeDatabase();
             LoadUserData();
             SetupEventHandlers();
+            clearAll();
         }
 
         private void InitializeDatabase()
@@ -345,6 +346,25 @@ namespace Asset_Management_ni_gad
         private MySqlConnection GetConnection()
         {
             return dbHelper.GetConnection();
+        }
+        public void clearAll()
+        {
+            txtSearch.Clear();
+            LoadUserData();
+        }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbRole.SelectedItem?.ToString() == "Admin")
+            {
+                txtPassword.Visible = true;
+                lblPassword.Visible = true;
+            }
+            else
+            {
+                txtPassword.Visible = false;
+                lblPassword.Visible = false;
+            }
         }
     }
 }

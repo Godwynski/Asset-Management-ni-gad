@@ -15,11 +15,23 @@ namespace Asset_Management_ni_gad.Components
         public Settings()
         {
             InitializeComponent();
+            FullNameTextbox.Text = Session.FullName;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
+
+        private void DashboardBtn_Click(object sender, EventArgs e)
+        {
+            Logout();
+        }
+        private void Logout()
+        {
+            AuthForm loginForm = new AuthForm(); // your login form
+            loginForm.Show();
+        }
+
     }
 }

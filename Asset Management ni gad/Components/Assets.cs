@@ -17,10 +17,9 @@ namespace Asset_Management_ni_gad.Components
             LoadAssets();
             AssetsGrid.CellContentClick += AssetsGrid_CellContentClick;
             HideAllPanels();
-            DesigningFunctions.CenterPanel(DeleteAssetPanel, ParentPanel);
-            DesigningFunctions.CenterPanel(EditAssetPanel, ParentPanel);
-            DesigningFunctions.CenterPanel(AddAssetPanel, ParentPanel);
-            DesigningFunctions.CenterPanel(ParentPanel, DeleteAssetPanel);
+            DesigningFunctions.CenterPanel(DeleteAssetPanel, MainPanel);
+            DesigningFunctions.CenterPanel(EditAssetPanel, MainPanel);
+            DesigningFunctions.CenterPanel(AddAssetPanel, MainPanel);
             ParentPanel.Dock = DockStyle.Fill;
             PopulateStatusComboBox();
         }
@@ -103,30 +102,6 @@ namespace Asset_Management_ni_gad.Components
             }
         }
 
-        private void UpdateAssetBtn_Click(object sender, EventArgs e)
-        {
-            if (!decimal.TryParse(EditPrice.Text.Trim(), out decimal value))
-            {
-                MessageBox.Show("Invalid price");
-                return;
-            }
-
-            string name = EditAssetName.Text.Trim();
-            string category = EditCategoryz.Text.Trim();
-            string status = EditStatusComboBox.SelectedItem?.ToString() ?? "";
-            string notes = EditNotes.Text.Trim();
-
-            string query = $"UPDATE assets SET asset_name = '{name}', category = '{category}', value = {value}, status = '{status}', notes = '{notes}' " +
-                           $"WHERE asset_id = {selectedAssetId}";
-
-            int result = dbHelper.ExecuteNonQuery(query);
-            if (result > 0)
-            {
-                MessageBox.Show("Asset updated!");
-                LoadAssets();
-                EditAssetPanel.Visible = false;
-            }
-        }
 
         private void AddAssetBtn_Click(object sender, EventArgs e)
         {
@@ -134,7 +109,141 @@ namespace Asset_Management_ni_gad.Components
             AddAssetPanel.Visible = true;
         }
 
-        private void AddSubmitBtn_Click(object sender, EventArgs e)
+
+
+        private void HideAllPanels()
+        {
+            EditAssetPanel.Visible = false;
+            DeleteAssetPanel.Visible = false;
+            AddAssetPanel.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e) => HideAllPanels();
+        private void button2_Click(object sender, EventArgs e) => HideAllPanels();
+        private void button8_Click(object sender, EventArgs e) => HideAllPanels();
+        private void button3_Click(object sender, EventArgs e) => HideAllPanels();
+
+        private void Resize(object sender, EventArgs e)
+        {
+            DesigningFunctions.CenterPanel(DeleteAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(EditAssetPanel, ParentPanel);
+            DesigningFunctions.CenterPanel(AddAssetPanel, ParentPanel);
+        }
+        //private void ResetBtn_Click(object sender, EventArgs e)
+        //{
+        //    SearchTextBox.Clear();
+        //    LoadAssets();
+        //}
+
+
+
+        private void CancelDeleteBtn_Click(object sender, EventArgs e)
+        {
+            DeleteAssetPanel.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddAssetPanel.Visible = false;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            EditAssetPanel.Visible = false;
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            DeleteAssetPanel.Visible = false;
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            AddAssetPanel.Visible = false;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            EditAssetPanel.Visible = false;
+        }
+
+        private void CancelDeleteBtn_Click_1(object sender, EventArgs e)
+        {
+            DeleteAssetPanel.Visible = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AddAssetPanel.Visible = false;
+        }
+
+        private void AddAssetBtn_Click_1(object sender, EventArgs e)
+        {
+            AddAssetPanel.Visible = true;
+        }
+
+        private void SearchAssets()
+        {
+            string searchTerm = SearchTextBox.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                LoadAssets(); // Reload all assets if search is empty
+                return;
+            }
+
+            try
+            {
+                string query = @"SELECT * FROM assets 
+                        WHERE asset_name LIKE @searchTerm 
+                        OR category LIKE @searchTerm 
+                        OR status LIKE @searchTerm
+                        OR notes LIKE @searchTerm
+                        OR value LIKE @searchTerm";
+
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+            new MySqlParameter("@searchTerm", $"%{searchTerm}%")
+                };
+
+                DataTable dt = dbHelper.ExecuteParameterizedQuery(query, parameters);
+                AssetsGrid.DataSource = dt;
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No assets found matching your search criteria.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching assets: " + ex.Message);
+            }
+        }
+
+        // Connect this to your Search button click event
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            SearchAssets();
+        }
+
+        // Optional: Add search on Enter key press
+        private void SearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchAssets();
+                e.Handled = true; // Prevent the 'ding' sound
+            }
+        }
+
+        // Connect this to your Reset button
+        private void ResetSearchBtn_Click(object sender, EventArgs e)
+        {
+            SearchTextBox.Clear();
+            LoadAssets();
+        }
+
+        private void AddSubmitBtn_Click_1(object sender, EventArgs e)
         {
             if (!decimal.TryParse(AddPrice.Text.Trim(), out decimal value))
             {
@@ -159,35 +268,37 @@ namespace Asset_Management_ni_gad.Components
             }
         }
 
-        private void HideAllPanels()
+        private void UpdateAssetBtn_Click_1(object sender, EventArgs e)
         {
-            EditAssetPanel.Visible = false;
-            DeleteAssetPanel.Visible = false;
-            AddAssetPanel.Visible = false;
+            if (!decimal.TryParse(EditPrice.Text.Trim(), out decimal value))
+            {
+                MessageBox.Show("Invalid price");
+                return;
+            }
+
+            string name = EditAssetName.Text.Trim();
+            string category = EditCategoryz.Text.Trim();
+            string status = EditStatusComboBox.SelectedItem?.ToString() ?? "";
+            string notes = EditNotes.Text.Trim();
+
+            string query = $"UPDATE assets SET asset_name = '{name}', category = '{category}', value = {value}, status = '{status}', notes = '{notes}' " +
+                           $"WHERE asset_id = {selectedAssetId}";
+
+            int result = dbHelper.ExecuteNonQuery(query);
+            if (result > 0)
+            {
+                MessageBox.Show("Asset updated!");
+                LoadAssets();
+                EditAssetPanel.Visible = false;
+            }
         }
 
-        private void button7_Click(object sender, EventArgs e) => HideAllPanels();
-        private void button2_Click(object sender, EventArgs e) => HideAllPanels();
-        private void button8_Click(object sender, EventArgs e) => HideAllPanels();
-        private void button3_Click(object sender, EventArgs e) => HideAllPanels();
-
-        private void Resize(object sender, EventArgs e)
-        {
-            DesigningFunctions.CenterPanel(DeleteAssetPanel, ParentPanel);
-            DesigningFunctions.CenterPanel(EditAssetPanel, ParentPanel);
-            DesigningFunctions.CenterPanel(AddAssetPanel, ParentPanel);
-        }
-        private void SearchBtn_Click_1(object sender, EventArgs e)
+        private void SearchBtn_Click_2(object sender, EventArgs e)
         {
             string searchTerm = SearchTextBox.Text.Trim();
             string query = $"SELECT * FROM assets WHERE asset_name LIKE '%{searchTerm}%' OR category LIKE '%{searchTerm}%'";
             DataTable dt = dbHelper.ExecuteQuery(query);
             AssetsGrid.DataSource = dt;
-        }
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-            SearchTextBox.Clear();
-            LoadAssets();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -196,16 +307,6 @@ namespace Asset_Management_ni_gad.Components
             int result = dbHelper.ExecuteNonQuery(query);
             LoadAssets();
             DeleteAssetPanel.Visible = false;
-        }
-
-        private void CancelDeleteBtn_Click(object sender, EventArgs e)
-        {
-            DeleteAssetPanel.Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AddAssetPanel.Visible = false;
         }
     }
 }
