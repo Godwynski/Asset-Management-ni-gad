@@ -221,11 +221,10 @@
             Employee.AutoSize = true;
             Employee.Font = new Font("Berlin Sans FB", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
             Employee.ForeColor = Color.FromArgb(217, 58, 102);
-            Employee.Location = new Point(334, 24);
+            Employee.Location = new Point(362, 26);
             Employee.Name = "Employee";
-            Employee.Size = new Size(90, 18);
+            Employee.Size = new Size(0, 18);
             Employee.TabIndex = 20;
-            Employee.Text = "Return Asset";
             Employee.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // button3
@@ -294,7 +293,7 @@
             txtEmployeeSearch.Location = new Point(3, 24);
             txtEmployeeSearch.Name = "txtEmployeeSearch";
             txtEmployeeSearch.PlaceholderText = "Search Employee...";
-            txtEmployeeSearch.Size = new Size(200, 24);
+            txtEmployeeSearch.Size = new Size(335, 24);
             txtEmployeeSearch.TabIndex = 16;
             // 
             // label3
@@ -358,11 +357,10 @@
             Asset.AutoSize = true;
             Asset.Font = new Font("Berlin Sans FB", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
             Asset.ForeColor = Color.FromArgb(217, 58, 102);
-            Asset.Location = new Point(296, 24);
+            Asset.Location = new Point(361, 24);
             Asset.Name = "Asset";
-            Asset.Size = new Size(90, 18);
+            Asset.Size = new Size(0, 18);
             Asset.TabIndex = 19;
-            Asset.Text = "Return Asset";
             Asset.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // AssetSearch
@@ -372,7 +370,7 @@
             AssetSearch.Location = new Point(4, 24);
             AssetSearch.Name = "AssetSearch";
             AssetSearch.PlaceholderText = "Asset Search...";
-            AssetSearch.Size = new Size(202, 24);
+            AssetSearch.Size = new Size(330, 24);
             AssetSearch.TabIndex = 3;
             // 
             // button2

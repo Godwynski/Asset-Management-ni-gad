@@ -36,17 +36,18 @@
             assignedDateColumn = new DataGridViewTextBoxColumn();
             actionColumn = new DataGridViewButtonColumn();
             statusPanel = new Panel();
-            grpMaintenance = new GroupBox();
-            txtIssueDescription = new RichTextBox();
-            lblIssue = new Label();
-            txtMaintenanceCost = new TextBox();
-            lblCost = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             grpStatus = new GroupBox();
             radRetired = new RadioButton();
             radUnderMaintenance = new RadioButton();
             radAvailable = new RadioButton();
-            btnCancel = new Button();
+            grpMaintenance = new GroupBox();
+            txtIssueDescription = new RichTextBox();
+            lblIssue = new Label();
             btnConfirmReturn = new Button();
+            txtMaintenanceCost = new TextBox();
+            lblCost = new Label();
+            btnCancel = new Button();
             mainPanel.SuspendLayout();
             mainLayout.SuspendLayout();
             headerPanel.SuspendLayout();
@@ -54,8 +55,9 @@
             dataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAssignedAssets).BeginInit();
             statusPanel.SuspendLayout();
-            grpMaintenance.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             grpStatus.SuspendLayout();
+            grpMaintenance.SuspendLayout();
             SuspendLayout();
             // 
             // mainPanel
@@ -66,7 +68,7 @@
             mainPanel.Location = new Point(0, 0);
             mainPanel.Name = "mainPanel";
             mainPanel.Padding = new Padding(10);
-            mainPanel.Size = new Size(1203, 666);
+            mainPanel.Size = new Size(984, 666);
             mainPanel.TabIndex = 0;
             // 
             // mainLayout
@@ -83,9 +85,9 @@
             mainLayout.RowCount = 4;
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 38.6194038F));
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 61.3805962F));
-            mainLayout.Size = new Size(1183, 646);
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 204F));
+            mainLayout.Size = new Size(964, 646);
             mainLayout.TabIndex = 0;
             // 
             // headerPanel
@@ -95,7 +97,7 @@
             headerPanel.Location = new Point(3, 3);
             headerPanel.Name = "headerPanel";
             headerPanel.Padding = new Padding(10, 5, 10, 5);
-            headerPanel.Size = new Size(1177, 54);
+            headerPanel.Size = new Size(958, 54);
             headerPanel.TabIndex = 0;
             // 
             // lblTitle
@@ -120,7 +122,7 @@
             filterPanel.Location = new Point(3, 63);
             filterPanel.Name = "filterPanel";
             filterPanel.Padding = new Padding(10, 5, 10, 5);
-            filterPanel.Size = new Size(1177, 44);
+            filterPanel.Size = new Size(958, 44);
             filterPanel.TabIndex = 1;
             // 
             // txtSearch
@@ -130,7 +132,7 @@
             txtSearch.Location = new Point(10, 8);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Search assigned assets...";
-            txtSearch.Size = new Size(900, 24);
+            txtSearch.Size = new Size(681, 24);
             txtSearch.TabIndex = 0;
             // 
             // btnRefresh
@@ -141,7 +143,7 @@
             btnRefresh.FlatStyle = FlatStyle.Flat;
             btnRefresh.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRefresh.ForeColor = Color.White;
-            btnRefresh.Location = new Point(1038, 7);
+            btnRefresh.Location = new Point(819, 7);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(100, 25);
             btnRefresh.TabIndex = 2;
@@ -156,7 +158,7 @@
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(920, 8);
+            btnSearch.Location = new Point(701, 8);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(100, 25);
             btnSearch.TabIndex = 1;
@@ -170,7 +172,7 @@
             dataPanel.Location = new Point(3, 113);
             dataPanel.Name = "dataPanel";
             dataPanel.Padding = new Padding(10);
-            dataPanel.Size = new Size(1177, 201);
+            dataPanel.Size = new Size(958, 326);
             dataPanel.TabIndex = 2;
             // 
             // dgvAssignedAssets
@@ -215,7 +217,7 @@
             dgvAssignedAssets.RowHeadersVisible = false;
             dgvAssignedAssets.RowTemplate.Height = 35;
             dgvAssignedAssets.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAssignedAssets.Size = new Size(1157, 181);
+            dgvAssignedAssets.Size = new Size(938, 306);
             dgvAssignedAssets.TabIndex = 1;
             // 
             // assetIdColumn
@@ -257,76 +259,41 @@
             // 
             // statusPanel
             // 
-            statusPanel.Controls.Add(grpMaintenance);
-            statusPanel.Controls.Add(grpStatus);
+            statusPanel.Controls.Add(tableLayoutPanel1);
             statusPanel.Controls.Add(btnCancel);
-            statusPanel.Controls.Add(btnConfirmReturn);
-            statusPanel.Dock = DockStyle.Fill;
-            statusPanel.Location = new Point(3, 320);
+            statusPanel.Dock = DockStyle.Bottom;
+            statusPanel.Location = new Point(3, 445);
             statusPanel.Name = "statusPanel";
             statusPanel.Padding = new Padding(10);
-            statusPanel.Size = new Size(1177, 323);
+            statusPanel.Size = new Size(958, 198);
             statusPanel.TabIndex = 3;
             // 
-            // grpMaintenance
+            // tableLayoutPanel1
             // 
-            grpMaintenance.Controls.Add(txtIssueDescription);
-            grpMaintenance.Controls.Add(lblIssue);
-            grpMaintenance.Controls.Add(txtMaintenanceCost);
-            grpMaintenance.Controls.Add(lblCost);
-            grpMaintenance.Enabled = false;
-            grpMaintenance.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            grpMaintenance.ForeColor = Color.FromArgb(217, 58, 102);
-            grpMaintenance.Location = new Point(500, 13);
-            grpMaintenance.Name = "grpMaintenance";
-            grpMaintenance.Size = new Size(400, 195);
-            grpMaintenance.TabIndex = 3;
-            grpMaintenance.TabStop = false;
-            grpMaintenance.Text = "Maintenance Details";
-            // 
-            // txtIssueDescription
-            // 
-            txtIssueDescription.Location = new Point(1, 104);
-            txtIssueDescription.Name = "txtIssueDescription";
-            txtIssueDescription.Size = new Size(360, 60);
-            txtIssueDescription.TabIndex = 5;
-            txtIssueDescription.Text = "";
-            // 
-            // lblIssue
-            // 
-            lblIssue.AutoSize = true;
-            lblIssue.Location = new Point(1, 84);
-            lblIssue.Name = "lblIssue";
-            lblIssue.Size = new Size(105, 17);
-            lblIssue.TabIndex = 4;
-            lblIssue.Text = "Issue Description";
-            // 
-            // txtMaintenanceCost
-            // 
-            txtMaintenanceCost.Location = new Point(6, 57);
-            txtMaintenanceCost.Name = "txtMaintenanceCost";
-            txtMaintenanceCost.Size = new Size(100, 24);
-            txtMaintenanceCost.TabIndex = 3;
-            // 
-            // lblCost
-            // 
-            lblCost.AutoSize = true;
-            lblCost.Location = new Point(6, 37);
-            lblCost.Name = "lblCost";
-            lblCost.Size = new Size(34, 17);
-            lblCost.TabIndex = 2;
-            lblCost.Text = "Cost";
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.2473335F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.7526665F));
+            tableLayoutPanel1.Controls.Add(grpStatus, 0, 0);
+            tableLayoutPanel1.Controls.Add(grpMaintenance, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(10, 10);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(938, 178);
+            tableLayoutPanel1.TabIndex = 4;
             // 
             // grpStatus
             // 
             grpStatus.Controls.Add(radRetired);
             grpStatus.Controls.Add(radUnderMaintenance);
             grpStatus.Controls.Add(radAvailable);
+            grpStatus.Dock = DockStyle.Fill;
             grpStatus.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpStatus.ForeColor = Color.FromArgb(217, 58, 102);
-            grpStatus.Location = new Point(20, 13);
+            grpStatus.Location = new Point(3, 3);
             grpStatus.Name = "grpStatus";
-            grpStatus.Size = new Size(445, 173);
+            grpStatus.Size = new Size(334, 172);
             grpStatus.TabIndex = 2;
             grpStatus.TabStop = false;
             grpStatus.Text = "Return Status";
@@ -366,20 +333,40 @@
             radAvailable.Text = "Available";
             radAvailable.UseVisualStyleBackColor = true;
             // 
-            // btnCancel
+            // grpMaintenance
             // 
-            btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnCancel.BackColor = Color.FromArgb(217, 58, 102);
-            btnCancel.FlatAppearance.BorderSize = 0;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(920, 275);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(100, 35);
-            btnCancel.TabIndex = 1;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = false;
+            grpMaintenance.Controls.Add(txtIssueDescription);
+            grpMaintenance.Controls.Add(lblIssue);
+            grpMaintenance.Controls.Add(btnConfirmReturn);
+            grpMaintenance.Controls.Add(txtMaintenanceCost);
+            grpMaintenance.Controls.Add(lblCost);
+            grpMaintenance.Dock = DockStyle.Fill;
+            grpMaintenance.Enabled = false;
+            grpMaintenance.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpMaintenance.ForeColor = Color.FromArgb(217, 58, 102);
+            grpMaintenance.Location = new Point(343, 3);
+            grpMaintenance.Name = "grpMaintenance";
+            grpMaintenance.Size = new Size(592, 172);
+            grpMaintenance.TabIndex = 3;
+            grpMaintenance.TabStop = false;
+            grpMaintenance.Text = "Maintenance Details";
+            // 
+            // txtIssueDescription
+            // 
+            txtIssueDescription.Location = new Point(5, 112);
+            txtIssueDescription.Name = "txtIssueDescription";
+            txtIssueDescription.Size = new Size(291, 60);
+            txtIssueDescription.TabIndex = 7;
+            txtIssueDescription.Text = "";
+            // 
+            // lblIssue
+            // 
+            lblIssue.AutoSize = true;
+            lblIssue.Location = new Point(5, 92);
+            lblIssue.Name = "lblIssue";
+            lblIssue.Size = new Size(105, 17);
+            lblIssue.TabIndex = 6;
+            lblIssue.Text = "Issue Description";
             // 
             // btnConfirmReturn
             // 
@@ -389,21 +376,51 @@
             btnConfirmReturn.FlatStyle = FlatStyle.Flat;
             btnConfirmReturn.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConfirmReturn.ForeColor = Color.White;
-            btnConfirmReturn.Location = new Point(1020, 275);
+            btnConfirmReturn.Location = new Point(436, 131);
             btnConfirmReturn.Name = "btnConfirmReturn";
             btnConfirmReturn.Size = new Size(150, 35);
             btnConfirmReturn.TabIndex = 0;
             btnConfirmReturn.Text = "Confirm Return";
             btnConfirmReturn.UseVisualStyleBackColor = false;
             // 
+            // txtMaintenanceCost
+            // 
+            txtMaintenanceCost.Location = new Point(6, 57);
+            txtMaintenanceCost.Name = "txtMaintenanceCost";
+            txtMaintenanceCost.Size = new Size(154, 24);
+            txtMaintenanceCost.TabIndex = 3;
+            // 
+            // lblCost
+            // 
+            lblCost.AutoSize = true;
+            lblCost.Location = new Point(6, 37);
+            lblCost.Name = "lblCost";
+            lblCost.Size = new Size(34, 17);
+            lblCost.TabIndex = 2;
+            lblCost.Text = "Cost";
+            // 
+            // btnCancel
+            // 
+            btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCancel.BackColor = Color.FromArgb(217, 58, 102);
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(678, 150);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(100, 35);
+            btnCancel.TabIndex = 1;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            // 
             // AssetReturn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1203, 666);
+            ClientSize = new Size(984, 666);
             Controls.Add(mainPanel);
             Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MinimumSize = new Size(1000, 600);
             Name = "AssetReturn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Asset Return Management";
@@ -416,10 +433,11 @@
             dataPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvAssignedAssets).EndInit();
             statusPanel.ResumeLayout(false);
-            grpMaintenance.ResumeLayout(false);
-            grpMaintenance.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
             grpStatus.ResumeLayout(false);
             grpStatus.PerformLayout();
+            grpMaintenance.ResumeLayout(false);
+            grpMaintenance.PerformLayout();
             ResumeLayout(false);
 
         }
@@ -437,9 +455,6 @@
         private System.Windows.Forms.Panel dataPanel;
         private System.Windows.Forms.DataGridView dgvAssignedAssets;
         private System.Windows.Forms.Panel statusPanel;
-        private System.Windows.Forms.GroupBox grpMaintenance;
-        private System.Windows.Forms.TextBox txtMaintenanceCost;
-        private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.GroupBox grpStatus;
         private System.Windows.Forms.RadioButton radRetired;
         private System.Windows.Forms.RadioButton radUnderMaintenance;
@@ -451,6 +466,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn assignedDateColumn;
         private System.Windows.Forms.DataGridViewButtonColumn actionColumn;
+        private TableLayoutPanel tableLayoutPanel1;
+        private GroupBox grpMaintenance;
+        private TextBox txtMaintenanceCost;
+        private Label lblCost;
         private RichTextBox txtIssueDescription;
         private Label lblIssue;
     }

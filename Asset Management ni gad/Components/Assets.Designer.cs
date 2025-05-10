@@ -98,7 +98,7 @@
             ParentPanel.Dock = DockStyle.Fill;
             ParentPanel.Location = new Point(0, 0);
             ParentPanel.Name = "ParentPanel";
-            ParentPanel.Size = new Size(1496, 1061);
+            ParentPanel.Size = new Size(1148, 1061);
             ParentPanel.TabIndex = 2;
             ParentPanel.Resize += Resize;
             // 
@@ -558,7 +558,7 @@
             MainPanel.RowCount = 2;
             MainPanel.RowStyles.Add(new RowStyle());
             MainPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 492F));
-            MainPanel.Size = new Size(1496, 554);
+            MainPanel.Size = new Size(1148, 554);
             MainPanel.TabIndex = 1;
             // 
             // panel2
@@ -569,13 +569,13 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(23, 23);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1450, 26);
+            panel2.Size = new Size(1102, 26);
             panel2.TabIndex = 2;
             // 
             // AddAssetBtn
             // 
             AddAssetBtn.Anchor = AnchorStyles.Right;
-            AddAssetBtn.Location = new Point(1375, 1);
+            AddAssetBtn.Location = new Point(1027, 1);
             AddAssetBtn.Name = "AddAssetBtn";
             AddAssetBtn.Size = new Size(75, 25);
             AddAssetBtn.TabIndex = 2;
@@ -637,14 +637,14 @@
             AssetsGrid.Margin = new Padding(0, 20, 0, 0);
             AssetsGrid.Name = "AssetsGrid";
             AssetsGrid.ReadOnly = true;
-            AssetsGrid.Size = new Size(1456, 472);
+            AssetsGrid.Size = new Size(1108, 472);
             AssetsGrid.TabIndex = 0;
             // 
             // AssetManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1496, 1061);
+            ClientSize = new Size(1148, 1061);
             Controls.Add(ParentPanel);
             Name = "AssetManagement";
             Text = "AssetManagement";

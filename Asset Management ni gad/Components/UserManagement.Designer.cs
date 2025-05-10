@@ -171,8 +171,8 @@
             // contentPanel
             // 
             contentPanel.ColumnCount = 2;
-            contentPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            contentPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            contentPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            contentPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 352F));
             contentPanel.Controls.Add(dataPanel, 0, 0);
             contentPanel.Controls.Add(formPanel, 1, 0);
             contentPanel.Dock = DockStyle.Fill;
@@ -190,7 +190,7 @@
             dataPanel.Location = new Point(3, 3);
             dataPanel.Name = "dataPanel";
             dataPanel.Padding = new Padding(10);
-            dataPanel.Size = new Size(815, 558);
+            dataPanel.Size = new Size(816, 558);
             dataPanel.TabIndex = 0;
             // 
             // dgvUsers
@@ -234,7 +234,7 @@
             dgvUsers.RowHeadersVisible = false;
             dgvUsers.RowTemplate.Height = 35;
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsers.Size = new Size(795, 538);
+            dgvUsers.Size = new Size(796, 538);
             dgvUsers.TabIndex = 1;
             // 
             // formPanel
@@ -254,10 +254,10 @@
             formPanel.Controls.Add(btnSave);
             formPanel.Controls.Add(lblRecordTitle);
             formPanel.Dock = DockStyle.Fill;
-            formPanel.Location = new Point(824, 3);
+            formPanel.Location = new Point(825, 3);
             formPanel.Name = "formPanel";
             formPanel.Padding = new Padding(20);
-            formPanel.Size = new Size(347, 558);
+            formPanel.Size = new Size(346, 558);
             formPanel.TabIndex = 1;
             // 
             // btnCloseForm
@@ -277,6 +277,7 @@
             btnCloseForm.Size = new Size(20, 20);
             btnCloseForm.TabIndex = 12;
             btnCloseForm.UseVisualStyleBackColor = false;
+            btnCloseForm.Visible = false;
             // 
             // lblRole
             // 
@@ -366,7 +367,7 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(173, 500);
+            btnCancel.Location = new Point(172, 500);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(150, 35);
             btnCancel.TabIndex = 2;
