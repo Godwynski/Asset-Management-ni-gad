@@ -61,7 +61,7 @@ namespace Asset_Management_ni_gad
 
         private void AssetAssignmentBtn_Click(object sender, EventArgs e)
         {
-            LoadForm(MainPanel, new AssetAssign());
+            LoadForm(MainPanel, new Booking());
         }
 
         private void MaintenanceBtn_Click(object sender, EventArgs e)

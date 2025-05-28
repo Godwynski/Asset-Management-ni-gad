@@ -477,7 +477,7 @@
             panelRecentActivity.Location = new Point(10, 430);
             panelRecentActivity.Margin = new Padding(10);
             panelRecentActivity.Name = "panelRecentActivity";
-            panelRecentActivity.Size = new Size(1196, 621);
+            panelRecentActivity.Size = new Size(1196, 140);
             panelRecentActivity.TabIndex = 3;
             // 
             // dataGridViewRecentActivity
@@ -521,7 +521,7 @@
             dataGridViewRecentActivity.RowHeadersVisible = false;
             dataGridViewRecentActivity.RowTemplate.Height = 35;
             dataGridViewRecentActivity.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewRecentActivity.Size = new Size(1194, 596);
+            dataGridViewRecentActivity.Size = new Size(1194, 115);
             dataGridViewRecentActivity.TabIndex = 2;
             // 
             // lblRecentActivity
@@ -552,7 +552,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 257F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 97F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1216, 1061);
+            tableLayoutPanel2.Size = new Size(1216, 580);
             tableLayoutPanel2.TabIndex = 5;
             // 
             // panel1
@@ -570,7 +570,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(255, 211, 220);
-            ClientSize = new Size(1216, 1061);
+            ClientSize = new Size(1216, 580);
             Controls.Add(tableLayoutPanel2);
             Name = "Dashboard";
             Text = "Dashboard";

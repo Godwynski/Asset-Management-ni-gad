@@ -1,6 +1,6 @@
 ﻿namespace Asset_Management_ni_gad.Components
 {
-    partial class AssetAssign
+    partial class Booking
     {
         /// <summary>
         /// Required designer variable.
@@ -544,13 +544,13 @@
             mainPanel.Size = new Size(982, 929);
             mainPanel.TabIndex = 1;
             // 
-            // AssetAssign
+            // Booking
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 929);
             Controls.Add(mainPanel);
-            Name = "AssetAssign";
+            Name = "Booking";
             Text = "AssetAssignment";
             headerPanel.ResumeLayout(false);
             headerPanel.PerformLayout();

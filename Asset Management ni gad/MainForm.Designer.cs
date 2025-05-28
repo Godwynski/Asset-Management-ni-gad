@@ -23,9 +23,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             NavigationBar = new Panel();
-            button6 = new Button();
+            lblRecentActivity = new Label();
             User = new Button();
-            button2 = new Button();
             SideBar = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             DashboardBtn = new Button();
@@ -36,44 +35,34 @@
             MaintenanceBtn = new Button();
             panel8 = new Panel();
             MainPanel = new Panel();
-            SidePanelMain = new Panel();
-            SidePanel = new Panel();
-            btnCloseForm = new Button();
-            LogoutBtn = new Button();
-            FullNameTextbox = new Label();
-            button1 = new Button();
             NavigationBar.SuspendLayout();
             SideBar.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             panel8.SuspendLayout();
-            SidePanelMain.SuspendLayout();
-            SidePanel.SuspendLayout();
             SuspendLayout();
             // 
             // NavigationBar
             // 
             NavigationBar.BackColor = Color.FromArgb(255, 79, 129);
-            NavigationBar.Controls.Add(button6);
+            NavigationBar.Controls.Add(lblRecentActivity);
             NavigationBar.Controls.Add(User);
-            NavigationBar.Controls.Add(button2);
             NavigationBar.Dock = DockStyle.Top;
             NavigationBar.Location = new Point(0, 0);
             NavigationBar.Name = "NavigationBar";
             NavigationBar.Size = new Size(1278, 82);
             NavigationBar.TabIndex = 0;
             // 
-            // button6
+            // lblRecentActivity
             // 
-            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
-            button6.BackgroundImageLayout = ImageLayout.Zoom;
-            button6.Cursor = Cursors.Hand;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(22, 8);
-            button6.Name = "button6";
-            button6.Size = new Size(65, 63);
-            button6.TabIndex = 3;
-            button6.UseVisualStyleBackColor = false;
+            lblRecentActivity.Anchor = AnchorStyles.None;
+            lblRecentActivity.AutoSize = true;
+            lblRecentActivity.Font = new Font("Berlin Sans FB", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRecentActivity.ForeColor = Color.White;
+            lblRecentActivity.Location = new Point(15, 21);
+            lblRecentActivity.Name = "lblRecentActivity";
+            lblRecentActivity.Size = new Size(173, 40);
+            lblRecentActivity.TabIndex = 4;
+            lblRecentActivity.Text = "RoomEase";
             // 
             // User
             // 
@@ -92,19 +81,6 @@
             User.TabIndex = 2;
             User.UseVisualStyleBackColor = false;
             User.Click += User_Click;
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(98, 8);
-            button2.Name = "button2";
-            button2.Size = new Size(386, 67);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
             // 
             // SideBar
             // 
@@ -166,7 +142,7 @@
             AssetAssignmentBtn.Name = "AssetAssignmentBtn";
             AssetAssignmentBtn.Size = new Size(207, 62);
             AssetAssignmentBtn.TabIndex = 0;
-            AssetAssignmentBtn.Text = "Assign";
+            AssetAssignmentBtn.Text = "Booking";
             AssetAssignmentBtn.UseVisualStyleBackColor = false;
             AssetAssignmentBtn.Click += AssetAssignmentBtn_Click;
             // 
@@ -254,7 +230,6 @@
             // 
             panel8.BackColor = Color.FromArgb(255, 211, 220);
             panel8.Controls.Add(MainPanel);
-            panel8.Controls.Add(SidePanelMain);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(231, 82);
             panel8.Name = "panel8";
@@ -264,106 +239,11 @@
             // MainPanel
             // 
             MainPanel.Dock = DockStyle.Fill;
+            MainPanel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainPanel.Location = new Point(0, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(762, 647);
+            MainPanel.Size = new Size(1047, 647);
             MainPanel.TabIndex = 3;
-            // 
-            // SidePanelMain
-            // 
-            SidePanelMain.Controls.Add(SidePanel);
-            SidePanelMain.Dock = DockStyle.Right;
-            SidePanelMain.Location = new Point(762, 0);
-            SidePanelMain.Name = "SidePanelMain";
-            SidePanelMain.Size = new Size(285, 647);
-            SidePanelMain.TabIndex = 2;
-            // 
-            // SidePanel
-            // 
-            SidePanel.BackgroundImage = (Image)resources.GetObject("SidePanel.BackgroundImage");
-            SidePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            SidePanel.Controls.Add(btnCloseForm);
-            SidePanel.Controls.Add(LogoutBtn);
-            SidePanel.Controls.Add(FullNameTextbox);
-            SidePanel.Controls.Add(button1);
-            SidePanel.Dock = DockStyle.Fill;
-            SidePanel.Location = new Point(0, 0);
-            SidePanel.MinimumSize = new Size(285, 647);
-            SidePanel.Name = "SidePanel";
-            SidePanel.Size = new Size(285, 647);
-            SidePanel.TabIndex = 1;
-            // 
-            // btnCloseForm
-            // 
-            btnCloseForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCloseForm.BackColor = Color.Transparent;
-            btnCloseForm.BackgroundImage = Properties.Resources.close;
-            btnCloseForm.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCloseForm.Cursor = Cursors.Hand;
-            btnCloseForm.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            btnCloseForm.FlatAppearance.BorderSize = 0;
-            btnCloseForm.FlatStyle = FlatStyle.Flat;
-            btnCloseForm.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            btnCloseForm.ForeColor = Color.FromArgb(255, 79, 129);
-            btnCloseForm.Location = new Point(253, 11);
-            btnCloseForm.Margin = new Padding(10, 11, 10, 11);
-            btnCloseForm.Name = "btnCloseForm";
-            btnCloseForm.Size = new Size(20, 20);
-            btnCloseForm.TabIndex = 13;
-            btnCloseForm.UseVisualStyleBackColor = false;
-            btnCloseForm.Click += btnCloseForm_Click;
-            // 
-            // LogoutBtn
-            // 
-            LogoutBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            LogoutBtn.BackColor = Color.Transparent;
-            LogoutBtn.BackgroundImage = (Image)resources.GetObject("LogoutBtn.BackgroundImage");
-            LogoutBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            LogoutBtn.Cursor = Cursors.Hand;
-            LogoutBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            LogoutBtn.FlatAppearance.BorderSize = 0;
-            LogoutBtn.FlatStyle = FlatStyle.Flat;
-            LogoutBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            LogoutBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            LogoutBtn.Location = new Point(44, 573);
-            LogoutBtn.Margin = new Padding(10);
-            LogoutBtn.Name = "LogoutBtn";
-            LogoutBtn.Size = new Size(207, 55);
-            LogoutBtn.TabIndex = 9;
-            LogoutBtn.Text = "Logout";
-            LogoutBtn.UseVisualStyleBackColor = false;
-            LogoutBtn.Click += LogoutBtn_Click;
-            // 
-            // FullNameTextbox
-            // 
-            FullNameTextbox.AutoSize = true;
-            FullNameTextbox.Font = new Font("Berlin Sans FB", 12F);
-            FullNameTextbox.ForeColor = Color.FromArgb(217, 58, 102);
-            FullNameTextbox.Location = new Point(24, 94);
-            FullNameTextbox.Name = "FullNameTextbox";
-            FullNameTextbox.Size = new Size(76, 18);
-            FullNameTextbox.TabIndex = 8;
-            FullNameTextbox.Text = "Full Name";
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(255, 79, 129);
-            button1.Location = new Point(125, 792);
-            button1.Margin = new Padding(10);
-            button1.Name = "button1";
-            button1.Size = new Size(207, 55);
-            button1.TabIndex = 6;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -379,12 +259,10 @@
             Name = "MainForm";
             Text = "Office Asset Management";
             NavigationBar.ResumeLayout(false);
+            NavigationBar.PerformLayout();
             SideBar.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
-            SidePanelMain.ResumeLayout(false);
-            SidePanel.ResumeLayout(false);
-            SidePanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -393,22 +271,15 @@
         private Panel NavigationBar;
         private Panel SideBar;
         private Button DashboardBtn;
-        private Button button2;
         private Button AssetAssignmentBtn;
         private Button AssetManagementBtn;
         private Button MaintenanceBtn;
         private Button User;
         private Button UserManagementBtn;
-        private Button button6;
         private Panel panel8;
-        private Panel SidePanelMain;
         private Panel MainPanel;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button AssetReturnBtn;
-        private Panel SidePanel;
-        private Label FullNameTextbox;
-        private Button button1;
-        private Button LogoutBtn;
-        private Button btnCloseForm;
+        private Label lblRecentActivity;
     }
 }

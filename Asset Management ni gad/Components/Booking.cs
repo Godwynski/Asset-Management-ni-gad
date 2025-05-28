@@ -1,17 +1,15 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace Asset_Management_ni_gad.Components
 {
-    public partial class AssetAssign : Form
+    public partial class Booking : Form
     {
         private DatabaseHelper dbHelper;
         private int selectedAssetId = -1;
         private int selectedUserId = -1;
 
-        public AssetAssign()
+        public Booking()
         {
             InitializeComponent();
 
