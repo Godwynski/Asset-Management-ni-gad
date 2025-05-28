@@ -151,7 +151,6 @@
             button2.Size = new Size(20, 20);
             button2.TabIndex = 0;
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
             // 
             // label2
             // 
@@ -284,7 +283,6 @@
             button3.TabIndex = 12;
             button3.Text = "CANCEL";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
             // 
             // UpdateAssetBtn
             // 
@@ -300,7 +298,6 @@
             UpdateAssetBtn.TabIndex = 13;
             UpdateAssetBtn.Text = "UPDATE";
             UpdateAssetBtn.UseVisualStyleBackColor = false;
-            UpdateAssetBtn.Click += UpdateAssetBtn_Click_1;
             // 
             // DeleteAssetPanel
             // 
@@ -339,7 +336,6 @@
             button7.Size = new Size(20, 20);
             button7.TabIndex = 0;
             button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click_1;
             // 
             // DebugText
             // 
@@ -367,7 +363,6 @@
             DeleteBtn.TabIndex = 2;
             DeleteBtn.Text = "DELETE";
             DeleteBtn.UseVisualStyleBackColor = false;
-            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // CancelDeleteBtn
             // 
@@ -383,7 +378,6 @@
             CancelDeleteBtn.TabIndex = 3;
             CancelDeleteBtn.Text = "CANCEL";
             CancelDeleteBtn.UseVisualStyleBackColor = false;
-            CancelDeleteBtn.Click += CancelDeleteBtn_Click_1;
             // 
             // AddAssetPanel
             // 
@@ -432,7 +426,6 @@
             button8.Size = new Size(20, 20);
             button8.TabIndex = 0;
             button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click_1;
             // 
             // label9
             // 
@@ -565,7 +558,6 @@
             button1.TabIndex = 12;
             button1.Text = "CANCEL";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
             // 
             // AddSubmitBtn
             // 
@@ -581,7 +573,6 @@
             AddSubmitBtn.TabIndex = 13;
             AddSubmitBtn.Text = "SUBMIT";
             AddSubmitBtn.UseVisualStyleBackColor = false;
-            AddSubmitBtn.Click += AddSubmitBtn_Click_1;
             // 
             // MainPanel
             // 
@@ -650,7 +641,6 @@
             SearchBtn.TabIndex = 1;
             SearchBtn.Text = "SEARCH";
             SearchBtn.UseVisualStyleBackColor = false;
-            SearchBtn.Click += SearchBtn_Click_2;
             // 
             // AddAssetBtn
             // 
@@ -666,7 +656,6 @@
             AddAssetBtn.TabIndex = 1;
             AddAssetBtn.Text = "+ ADD NEW ASSET";
             AddAssetBtn.UseVisualStyleBackColor = false;
-            AddAssetBtn.Click += AddAssetBtn_Click_1;
             // 
             // AssetsGrid
             // 

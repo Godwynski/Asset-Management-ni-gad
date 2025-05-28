@@ -80,7 +80,6 @@
             User.Size = new Size(60, 56);
             User.TabIndex = 2;
             User.UseVisualStyleBackColor = false;
-            User.Click += User_Click;
             // 
             // SideBar
             // 
@@ -162,7 +161,7 @@
             AssetReturnBtn.Name = "AssetReturnBtn";
             AssetReturnBtn.Size = new Size(207, 62);
             AssetReturnBtn.TabIndex = 5;
-            AssetReturnBtn.Text = "Return";
+            AssetReturnBtn.Text = "CheckOut";
             AssetReturnBtn.UseVisualStyleBackColor = false;
             AssetReturnBtn.Click += AssetReturnBtn_Click;
             // 

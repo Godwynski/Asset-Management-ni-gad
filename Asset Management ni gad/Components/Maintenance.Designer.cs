@@ -280,9 +280,9 @@
             lblAsset.ForeColor = Color.FromArgb(217, 58, 102);
             lblAsset.Location = new Point(23, 80);
             lblAsset.Name = "lblAsset";
-            lblAsset.Size = new Size(83, 18);
+            lblAsset.Size = new Size(88, 18);
             lblAsset.TabIndex = 0;
-            lblAsset.Text = "Select Asset";
+            lblAsset.Text = "Select Room";
             // 
             // dgvMaintenance
             // 

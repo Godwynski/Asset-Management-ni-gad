@@ -77,7 +77,6 @@
             DashboardBtn.TabIndex = 6;
             DashboardBtn.Text = "Logout";
             DashboardBtn.UseVisualStyleBackColor = false;
-            DashboardBtn.Click += DashboardBtn_Click;
             // 
             // Settings
             // 

@@ -127,7 +127,6 @@
             LoginBtn.Size = new Size(110, 37);
             LoginBtn.TabIndex = 3;
             LoginBtn.UseVisualStyleBackColor = false;
-            LoginBtn.Click += DashboardBtn_Click;
             // 
             // AuthForm
             // 

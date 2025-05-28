@@ -8,7 +8,6 @@ namespace Asset_Management_ni_gad
         {
             //FullNameTextbox.Text = Session.FullName;
             InitializeComponent();
-            SidePanelMain.Hide();
             LoadForm(MainPanel, new Dashboard());
             DashboardBtn.Click += NavBtn_Click;
             AssetManagementBtn.Click += NavBtn_Click;
@@ -17,7 +16,6 @@ namespace Asset_Management_ni_gad
             MaintenanceBtn.Click += NavBtn_Click;
             AssetReturnBtn.Click += NavBtn_Click;
             DesigningFunctions.btnSelected(DashboardBtn, DashboardBtn, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
-            FullNameTextbox.Text = Session.FullName;
         }
 
         private void NavBtn_Click(object sender, EventArgs e)
@@ -25,19 +23,6 @@ namespace Asset_Management_ni_gad
             DesigningFunctions.btnSelected((Button)sender, DashboardBtn, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
         }
 
-        private void User_Click(object sender, EventArgs e)
-        {
-            if (SidePanelMain.Visible) { 
-            SidePanelMain.Hide();
-            }
-            else
-            {
-                SidePanelMain.Show();
-            }
-            //LoadForm(SidePanel, new Settings());
-            //SidePanelMain.Show();
-
-        }
         public void LoadForm(Panel container, Form formToLoad)
         {
             container.Show();
@@ -74,14 +59,10 @@ namespace Asset_Management_ni_gad
             LoadForm(MainPanel, new EmployeeManagement());
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SidePanelMain.Hide();
-        }
 
         private void AssetReturnBtn_Click(object sender, EventArgs e)
         {
-            LoadForm(MainPanel, new AssetReturn());
+            LoadForm(MainPanel, new CheckOut());
         }
 
         private void LogoutBtn_Click(object sender, EventArgs e)
@@ -91,9 +72,5 @@ namespace Asset_Management_ni_gad
             this.Close(); // closes the main form
         }
 
-        private void btnCloseForm_Click(object sender, EventArgs e)
-        {
-            SidePanelMain.Hide();
-        }
     }
 }

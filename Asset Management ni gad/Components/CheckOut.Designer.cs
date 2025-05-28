@@ -1,6 +1,6 @@
 ﻿namespace Asset_Management_ni_gad
 {
-    partial class AssetReturn
+    partial class CheckOut
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -68,7 +68,7 @@
             mainPanel.Location = new Point(0, 0);
             mainPanel.Name = "mainPanel";
             mainPanel.Padding = new Padding(10);
-            mainPanel.Size = new Size(984, 666);
+            mainPanel.Size = new Size(1211, 666);
             mainPanel.TabIndex = 0;
             // 
             // mainLayout
@@ -87,7 +87,7 @@
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 204F));
-            mainLayout.Size = new Size(964, 646);
+            mainLayout.Size = new Size(1191, 646);
             mainLayout.TabIndex = 0;
             // 
             // headerPanel
@@ -97,7 +97,7 @@
             headerPanel.Location = new Point(3, 3);
             headerPanel.Name = "headerPanel";
             headerPanel.Padding = new Padding(10, 5, 10, 5);
-            headerPanel.Size = new Size(958, 54);
+            headerPanel.Size = new Size(1185, 54);
             headerPanel.TabIndex = 0;
             // 
             // lblTitle
@@ -108,10 +108,10 @@
             lblTitle.ForeColor = Color.FromArgb(217, 58, 102);
             lblTitle.Location = new Point(10, 5);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(146, 26);
+            lblTitle.Size = new Size(117, 26);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "Asset Returns";
-            lblTitle.TextAlign = ContentAlignment.MiddleLeft;
+            lblTitle.Text = "Check Out";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // filterPanel
             // 
@@ -122,7 +122,7 @@
             filterPanel.Location = new Point(3, 63);
             filterPanel.Name = "filterPanel";
             filterPanel.Padding = new Padding(10, 5, 10, 5);
-            filterPanel.Size = new Size(958, 44);
+            filterPanel.Size = new Size(1185, 44);
             filterPanel.TabIndex = 1;
             // 
             // txtSearch
@@ -132,7 +132,7 @@
             txtSearch.Location = new Point(10, 8);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Search assigned assets...";
-            txtSearch.Size = new Size(681, 24);
+            txtSearch.Size = new Size(908, 24);
             txtSearch.TabIndex = 0;
             // 
             // btnRefresh
@@ -143,7 +143,7 @@
             btnRefresh.FlatStyle = FlatStyle.Flat;
             btnRefresh.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRefresh.ForeColor = Color.White;
-            btnRefresh.Location = new Point(819, 7);
+            btnRefresh.Location = new Point(1046, 7);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(100, 25);
             btnRefresh.TabIndex = 2;
@@ -158,7 +158,7 @@
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(701, 8);
+            btnSearch.Location = new Point(928, 8);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(100, 25);
             btnSearch.TabIndex = 1;
@@ -172,7 +172,7 @@
             dataPanel.Location = new Point(3, 113);
             dataPanel.Name = "dataPanel";
             dataPanel.Padding = new Padding(10);
-            dataPanel.Size = new Size(958, 326);
+            dataPanel.Size = new Size(1185, 326);
             dataPanel.TabIndex = 2;
             // 
             // dgvAssignedAssets
@@ -217,7 +217,7 @@
             dgvAssignedAssets.RowHeadersVisible = false;
             dgvAssignedAssets.RowTemplate.Height = 35;
             dgvAssignedAssets.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAssignedAssets.Size = new Size(938, 306);
+            dgvAssignedAssets.Size = new Size(1165, 306);
             dgvAssignedAssets.TabIndex = 1;
             // 
             // assetIdColumn
@@ -265,7 +265,7 @@
             statusPanel.Location = new Point(3, 445);
             statusPanel.Name = "statusPanel";
             statusPanel.Padding = new Padding(10);
-            statusPanel.Size = new Size(958, 198);
+            statusPanel.Size = new Size(1185, 198);
             statusPanel.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -282,7 +282,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(938, 178);
+            tableLayoutPanel1.Size = new Size(1165, 178);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // grpStatus
@@ -320,7 +320,6 @@
             radUnderMaintenance.TabStop = true;
             radUnderMaintenance.Text = "Under Maintenance";
             radUnderMaintenance.UseVisualStyleBackColor = true;
-            radUnderMaintenance.CheckedChanged += radUnderMaintenance_CheckedChanged;
             // 
             // radAvailable
             // 
@@ -343,7 +342,7 @@
             grpMaintenance.Enabled = false;
             grpMaintenance.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpMaintenance.ForeColor = Color.FromArgb(217, 58, 102);
-            grpMaintenance.Location = new Point(392, 3);
+            grpMaintenance.Location = new Point(506, 3);
             grpMaintenance.Name = "grpMaintenance";
             grpMaintenance.Size = new Size(383, 172);
             grpMaintenance.TabIndex = 3;
@@ -391,7 +390,7 @@
             btnConfirmReturn.FlatStyle = FlatStyle.Flat;
             btnConfirmReturn.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConfirmReturn.ForeColor = Color.White;
-            btnConfirmReturn.Location = new Point(785, 140);
+            btnConfirmReturn.Location = new Point(1012, 140);
             btnConfirmReturn.Name = "btnConfirmReturn";
             btnConfirmReturn.Size = new Size(150, 35);
             btnConfirmReturn.TabIndex = 0;
@@ -406,21 +405,21 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(678, 150);
+            btnCancel.Location = new Point(905, 150);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(100, 35);
             btnCancel.TabIndex = 1;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
             // 
-            // AssetReturn
+            // CheckOut
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 666);
+            ClientSize = new Size(1211, 666);
             Controls.Add(mainPanel);
             Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Name = "AssetReturn";
+            Name = "CheckOut";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Asset Return Management";
             mainPanel.ResumeLayout(false);

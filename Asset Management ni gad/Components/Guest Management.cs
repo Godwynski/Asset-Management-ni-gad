@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace Asset_Management_ni_gad
 {
-    public partial class Maintenance : Form
+    public partial class EmployeeManagement : Form
     {
-        public Maintenance()
+        public EmployeeManagement()
         {
             InitializeComponent();
         }

@@ -43,9 +43,9 @@
             dataPanel = new Panel();
             dgvUsers = new DataGridView();
             formPanel = new Panel();
+            textBox1 = new TextBox();
             btnCloseForm = new Button();
             lblRole = new Label();
-            cmbRole = new ComboBox();
             lblFullName = new Label();
             txtFullName = new TextBox();
             txtPassword = new TextBox();
@@ -111,9 +111,9 @@
             lblTitle.ForeColor = Color.FromArgb(217, 58, 102);
             lblTitle.Location = new Point(10, 5);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(197, 26);
+            lblTitle.Size = new Size(210, 26);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "User Management";
+            lblTitle.Text = "Guest Management";
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // filterPanel
@@ -241,9 +241,9 @@
             // 
             formPanel.BackColor = Color.FromArgb(255, 228, 235);
             formPanel.BorderStyle = BorderStyle.FixedSingle;
+            formPanel.Controls.Add(textBox1);
             formPanel.Controls.Add(btnCloseForm);
             formPanel.Controls.Add(lblRole);
-            formPanel.Controls.Add(cmbRole);
             formPanel.Controls.Add(lblFullName);
             formPanel.Controls.Add(txtFullName);
             formPanel.Controls.Add(txtPassword);
@@ -259,6 +259,14 @@
             formPanel.Padding = new Padding(20);
             formPanel.Size = new Size(346, 558);
             formPanel.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(25, 287);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(300, 24);
+            textBox1.TabIndex = 13;
             // 
             // btnCloseForm
             // 
@@ -284,39 +292,27 @@
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRole.ForeColor = Color.FromArgb(217, 58, 102);
-            lblRole.Location = new Point(21, 61);
+            lblRole.Location = new Point(23, 261);
             lblRole.Name = "lblRole";
-            lblRole.Size = new Size(37, 18);
+            lblRole.Size = new Size(45, 18);
             lblRole.TabIndex = 11;
-            lblRole.Text = "Role";
-            // 
-            // cmbRole
-            // 
-            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRole.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbRole.FormattingEnabled = true;
-            cmbRole.Items.AddRange(new object[] { "Admin", "Employee" });
-            cmbRole.Location = new Point(21, 82);
-            cmbRole.Name = "cmbRole";
-            cmbRole.Size = new Size(300, 25);
-            cmbRole.TabIndex = 10;
-            cmbRole.SelectedIndexChanged += cmbRole_SelectedIndexChanged;
+            lblRole.Text = "Email";
             // 
             // lblFullName
             // 
             lblFullName.AutoSize = true;
             lblFullName.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblFullName.ForeColor = Color.FromArgb(217, 58, 102);
-            lblFullName.Location = new Point(21, 123);
+            lblFullName.Location = new Point(23, 72);
             lblFullName.Name = "lblFullName";
-            lblFullName.Size = new Size(76, 18);
+            lblFullName.Size = new Size(80, 18);
             lblFullName.TabIndex = 9;
-            lblFullName.Text = "Full Name";
+            lblFullName.Text = "First Name";
             // 
             // txtFullName
             // 
             txtFullName.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtFullName.Location = new Point(21, 144);
+            txtFullName.Location = new Point(23, 93);
             txtFullName.Name = "txtFullName";
             txtFullName.Size = new Size(300, 24);
             txtFullName.TabIndex = 8;
@@ -324,7 +320,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(23, 276);
+            txtPassword.Location = new Point(25, 225);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(300, 24);
@@ -335,16 +331,16 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.FromArgb(217, 58, 102);
-            lblPassword.Location = new Point(23, 255);
+            lblPassword.Location = new Point(25, 204);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(72, 18);
+            lblPassword.Size = new Size(116, 18);
             lblPassword.TabIndex = 6;
-            lblPassword.Text = "Password";
+            lblPassword.Text = "Contact Number";
             // 
             // txtUsername
             // 
             txtUsername.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(22, 210);
+            txtUsername.Location = new Point(24, 159);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(300, 24);
             txtUsername.TabIndex = 5;
@@ -354,11 +350,11 @@
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = Color.FromArgb(217, 58, 102);
-            lblUsername.Location = new Point(22, 189);
+            lblUsername.Location = new Point(24, 138);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(75, 18);
+            lblUsername.Size = new Size(80, 18);
             lblUsername.TabIndex = 4;
-            lblUsername.Text = "Username";
+            lblUsername.Text = "Last Name";
             // 
             // btnCancel
             // 
@@ -397,9 +393,9 @@
             lblRecordTitle.ForeColor = Color.FromArgb(217, 58, 102);
             lblRecordTitle.Location = new Point(23, 20);
             lblRecordTitle.Name = "lblRecordTitle";
-            lblRecordTitle.Size = new Size(70, 23);
+            lblRecordTitle.Size = new Size(102, 23);
             lblRecordTitle.TabIndex = 0;
-            lblRecordTitle.Text = "Record";
+            lblRecordTitle.Text = "Add Guest";
             // 
             // EmployeeManagement
             // 
@@ -451,6 +447,6 @@
         private System.Windows.Forms.Label lblRecordTitle;
         private Button btnCloseForm;
         private Label lblRole;
-        private ComboBox cmbRole;
+        private TextBox textBox1;
     }
 }
