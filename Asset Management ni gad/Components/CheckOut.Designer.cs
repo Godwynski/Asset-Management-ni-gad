@@ -17,9 +17,9 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             mainPanel = new Panel();
             mainLayout = new TableLayoutPanel();
             headerPanel = new Panel();
@@ -30,11 +30,6 @@
             btnSearch = new Button();
             dataPanel = new Panel();
             dgvAssignedAssets = new DataGridView();
-            assetIdColumn = new DataGridViewTextBoxColumn();
-            assetNameColumn = new DataGridViewTextBoxColumn();
-            userColumn = new DataGridViewTextBoxColumn();
-            assignedDateColumn = new DataGridViewTextBoxColumn();
-            actionColumn = new DataGridViewButtonColumn();
             statusPanel = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             grpStatus = new GroupBox();
@@ -131,7 +126,7 @@
             txtSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSearch.Location = new Point(10, 8);
             txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Search assigned assets...";
+            txtSearch.PlaceholderText = "Search Check-In...";
             txtSearch.Size = new Size(908, 24);
             txtSearch.TabIndex = 0;
             // 
@@ -179,34 +174,33 @@
             // 
             dgvAssignedAssets.AllowUserToAddRows = false;
             dgvAssignedAssets.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvAssignedAssets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 228, 235);
+            dgvAssignedAssets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvAssignedAssets.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAssignedAssets.BackgroundColor = Color.FromArgb(255, 246, 249);
             dgvAssignedAssets.BorderStyle = BorderStyle.None;
             dgvAssignedAssets.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvAssignedAssets.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.Padding = new Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvAssignedAssets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.Padding = new Padding(5);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvAssignedAssets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvAssignedAssets.ColumnHeadersHeight = 40;
             dgvAssignedAssets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvAssignedAssets.Columns.AddRange(new DataGridViewColumn[] { assetIdColumn, assetNameColumn, userColumn, assignedDateColumn, actionColumn });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
-            dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.Padding = new Padding(5);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvAssignedAssets.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(255, 246, 249);
+            dataGridViewCellStyle6.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.Padding = new Padding(5);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(255, 211, 220);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvAssignedAssets.DefaultCellStyle = dataGridViewCellStyle6;
             dgvAssignedAssets.Dock = DockStyle.Fill;
             dgvAssignedAssets.EnableHeadersVisualStyles = false;
             dgvAssignedAssets.GridColor = Color.FromArgb(255, 211, 220);
@@ -219,43 +213,6 @@
             dgvAssignedAssets.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAssignedAssets.Size = new Size(1165, 306);
             dgvAssignedAssets.TabIndex = 1;
-            // 
-            // assetIdColumn
-            // 
-            assetIdColumn.DataPropertyName = "asset_id";
-            assetIdColumn.HeaderText = "Asset ID";
-            assetIdColumn.Name = "assetIdColumn";
-            assetIdColumn.ReadOnly = true;
-            assetIdColumn.Visible = false;
-            // 
-            // assetNameColumn
-            // 
-            assetNameColumn.DataPropertyName = "asset_name";
-            assetNameColumn.HeaderText = "Asset Name";
-            assetNameColumn.Name = "assetNameColumn";
-            assetNameColumn.ReadOnly = true;
-            // 
-            // userColumn
-            // 
-            userColumn.DataPropertyName = "full_name";
-            userColumn.HeaderText = "Assigned To";
-            userColumn.Name = "userColumn";
-            userColumn.ReadOnly = true;
-            // 
-            // assignedDateColumn
-            // 
-            assignedDateColumn.DataPropertyName = "assigned_date";
-            assignedDateColumn.HeaderText = "Assigned Date";
-            assignedDateColumn.Name = "assignedDateColumn";
-            assignedDateColumn.ReadOnly = true;
-            // 
-            // actionColumn
-            // 
-            actionColumn.HeaderText = "Action";
-            actionColumn.Name = "actionColumn";
-            actionColumn.ReadOnly = true;
-            actionColumn.Text = "Return";
-            actionColumn.UseColumnTextForButtonValue = true;
             // 
             // statusPanel
             // 
@@ -297,17 +254,17 @@
             grpStatus.Size = new Size(334, 172);
             grpStatus.TabIndex = 2;
             grpStatus.TabStop = false;
-            grpStatus.Text = "Return Status";
+            grpStatus.Text = "Room Status";
             // 
             // radRetired
             // 
             radRetired.AutoSize = true;
             radRetired.Location = new Point(20, 100);
             radRetired.Name = "radRetired";
-            radRetired.Size = new Size(70, 21);
+            radRetired.Size = new Size(98, 21);
             radRetired.TabIndex = 2;
             radRetired.TabStop = true;
-            radRetired.Text = "Retired";
+            radRetired.Text = "Unavailable";
             radRetired.UseVisualStyleBackColor = true;
             // 
             // radUnderMaintenance
@@ -347,7 +304,7 @@
             grpMaintenance.Size = new Size(383, 172);
             grpMaintenance.TabIndex = 3;
             grpMaintenance.TabStop = false;
-            grpMaintenance.Text = "Maintenance Details";
+            grpMaintenance.Text = "Payment Details";
             // 
             // txtIssueDescription
             // 
@@ -459,11 +416,6 @@
         private System.Windows.Forms.RadioButton radAvailable;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirmReturn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assetIdColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assetNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignedDateColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn actionColumn;
         private TableLayoutPanel tableLayoutPanel1;
         private GroupBox grpMaintenance;
         private TextBox txtMaintenanceCost;

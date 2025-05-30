@@ -41,11 +41,7 @@
             headerPanel = new Panel();
             mainLayout = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            btnCreateAssignment = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
-            panel6 = new Panel();
-            dtpReturnDate = new DateTimePicker();
-            label5 = new Label();
             panel4 = new Panel();
             Employee = new Label();
             button3 = new Button();
@@ -67,11 +63,20 @@
             label7 = new Label();
             txtAssetSearch = new TextBox();
             mainPanel = new Panel();
+            panel7 = new Panel();
+            panel6 = new Panel();
+            dtpReturnDate = new DateTimePicker();
+            label5 = new Label();
+            btnCreateAssignment = new Button();
+            button4 = new Button();
+            panel2 = new Panel();
+            panel8 = new Panel();
+            label1 = new Label();
+            textBox1 = new TextBox();
             headerPanel.SuspendLayout();
             mainLayout.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            panel6.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEmployeeSearch).BeginInit();
             panel5.SuspendLayout();
@@ -81,6 +86,10 @@
             ((System.ComponentModel.ISupportInitialize)dgvRecentAssignment).BeginInit();
             panel1.SuspendLayout();
             mainPanel.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel2.SuspendLayout();
+            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitle
@@ -118,8 +127,8 @@
             mainLayout.Name = "mainLayout";
             mainLayout.RowCount = 3;
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 46F));
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 302F));
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 273F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 348F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 227F));
             mainLayout.Size = new Size(1209, 909);
             mainLayout.TabIndex = 0;
             // 
@@ -127,79 +136,37 @@
             // 
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Controls.Add(btnCreateAssignment, 0, 1);
             tableLayoutPanel2.Controls.Add(tableLayoutPanel1, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel2, 0, 1);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(3, 49);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 258F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 301F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(1203, 296);
+            tableLayoutPanel2.Size = new Size(1203, 342);
             tableLayoutPanel2.TabIndex = 6;
-            // 
-            // btnCreateAssignment
-            // 
-            btnCreateAssignment.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnCreateAssignment.BackColor = Color.FromArgb(217, 58, 102);
-            btnCreateAssignment.FlatAppearance.BorderSize = 0;
-            btnCreateAssignment.FlatStyle = FlatStyle.Flat;
-            btnCreateAssignment.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCreateAssignment.ForeColor = Color.White;
-            btnCreateAssignment.Location = new Point(1050, 261);
-            btnCreateAssignment.Name = "btnCreateAssignment";
-            btnCreateAssignment.Size = new Size(150, 32);
-            btnCreateAssignment.TabIndex = 5;
-            btnCreateAssignment.Text = "Assign";
-            btnCreateAssignment.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(panel6, 1, 1);
+            tableLayoutPanel1.Controls.Add(panel8, 1, 1);
+            tableLayoutPanel1.Controls.Add(panel7, 0, 2);
             tableLayoutPanel1.Controls.Add(panel4, 1, 0);
             tableLayoutPanel1.Controls.Add(panel5, 0, 1);
             tableLayoutPanel1.Controls.Add(panel3, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Top;
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 195F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1197, 252);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            tableLayoutPanel1.Size = new Size(1197, 295);
             tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(dtpReturnDate);
-            panel6.Controls.Add(label5);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(601, 198);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(593, 51);
-            panel6.TabIndex = 4;
-            // 
-            // dtpReturnDate
-            // 
-            dtpReturnDate.Dock = DockStyle.Fill;
-            dtpReturnDate.Location = new Point(0, 18);
-            dtpReturnDate.Name = "dtpReturnDate";
-            dtpReturnDate.Size = new Size(593, 23);
-            dtpReturnDate.TabIndex = 14;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Top;
-            label5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(217, 58, 102);
-            label5.Location = new Point(0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(79, 18);
-            label5.TabIndex = 13;
-            label5.Text = "Check-Out";
             // 
             // panel4
             // 
@@ -330,7 +297,7 @@
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(3, 198);
             panel5.Name = "panel5";
-            panel5.Size = new Size(592, 51);
+            panel5.Size = new Size(592, 46);
             panel5.TabIndex = 2;
             // 
             // dtpAssignDate
@@ -451,10 +418,10 @@
             dataPanel.Controls.Add(dgvRecentAssignment);
             dataPanel.Controls.Add(panel1);
             dataPanel.Dock = DockStyle.Fill;
-            dataPanel.Location = new Point(3, 351);
+            dataPanel.Location = new Point(3, 397);
             dataPanel.Name = "dataPanel";
             dataPanel.Padding = new Padding(10);
-            dataPanel.Size = new Size(1203, 555);
+            dataPanel.Size = new Size(1203, 509);
             dataPanel.TabIndex = 2;
             // 
             // dgvRecentAssignment
@@ -498,7 +465,7 @@
             dgvRecentAssignment.RowHeadersVisible = false;
             dgvRecentAssignment.RowTemplate.Height = 35;
             dgvRecentAssignment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecentAssignment.Size = new Size(1183, 502);
+            dgvRecentAssignment.Size = new Size(1183, 456);
             dgvRecentAssignment.TabIndex = 2;
             // 
             // panel1
@@ -546,6 +513,117 @@
             mainPanel.Size = new Size(1229, 929);
             mainPanel.TabIndex = 1;
             // 
+            // panel7
+            // 
+            panel7.Controls.Add(panel6);
+            panel7.Dock = DockStyle.Fill;
+            panel7.Location = new Point(3, 250);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(592, 42);
+            panel7.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(dtpReturnDate);
+            panel6.Controls.Add(label5);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(592, 42);
+            panel6.TabIndex = 5;
+            // 
+            // dtpReturnDate
+            // 
+            dtpReturnDate.Dock = DockStyle.Fill;
+            dtpReturnDate.Location = new Point(0, 18);
+            dtpReturnDate.Name = "dtpReturnDate";
+            dtpReturnDate.Size = new Size(592, 23);
+            dtpReturnDate.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Top;
+            label5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(217, 58, 102);
+            label5.Location = new Point(0, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(79, 18);
+            label5.TabIndex = 13;
+            label5.Text = "Check-Out";
+            // 
+            // btnCreateAssignment
+            // 
+            btnCreateAssignment.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCreateAssignment.BackColor = Color.FromArgb(217, 58, 102);
+            btnCreateAssignment.FlatAppearance.BorderSize = 0;
+            btnCreateAssignment.FlatStyle = FlatStyle.Flat;
+            btnCreateAssignment.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCreateAssignment.ForeColor = Color.White;
+            btnCreateAssignment.Location = new Point(196, 3);
+            btnCreateAssignment.Name = "btnCreateAssignment";
+            btnCreateAssignment.Size = new Size(150, 32);
+            btnCreateAssignment.TabIndex = 6;
+            btnCreateAssignment.Text = "Book Now";
+            btnCreateAssignment.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button4.BackColor = Color.FromArgb(217, 58, 102);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(26, 0);
+            button4.Name = "button4";
+            button4.Size = new Size(150, 32);
+            button4.TabIndex = 7;
+            button4.Text = "Check-In";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(btnCreateAssignment);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 304);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1197, 35);
+            panel2.TabIndex = 2;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(textBox1);
+            panel8.Controls.Add(label1);
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(601, 198);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(593, 46);
+            panel8.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(217, 58, 102);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(149, 18);
+            label1.TabIndex = 13;
+            label1.Text = "Full / Down Payment";
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(3, 17);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Amount";
+            textBox1.Size = new Size(574, 24);
+            textBox1.TabIndex = 17;
+            // 
             // Booking
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -559,8 +637,6 @@
             mainLayout.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEmployeeSearch).EndInit();
@@ -574,6 +650,12 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             mainPanel.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -584,9 +666,6 @@
         private Panel mainPanel;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel6;
-        private DateTimePicker dtpReturnDate;
-        private Label label5;
         private Panel panel4;
         private Button button3;
         private DataGridView dgvEmployeeSearch;
@@ -604,9 +683,18 @@
         private Panel panel1;
         private TextBox AssetSearch;
         private Label label7;
-        private Button btnCreateAssignment;
         private Label Employee;
         private Button button2;
         private Button button1;
+        private Panel panel8;
+        private TextBox textBox1;
+        private Label label1;
+        private Panel panel7;
+        private Panel panel6;
+        private DateTimePicker dtpReturnDate;
+        private Label label5;
+        private Panel panel2;
+        private Button button4;
+        private Button btnCreateAssignment;
     }
 }

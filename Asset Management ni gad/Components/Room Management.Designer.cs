@@ -17,9 +17,9 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             lblTitle = new Label();
@@ -28,11 +28,8 @@
             lblCost = new Label();
             txtCost = new TextBox();
             cmbStatus = new ComboBox();
-            lblDate = new Label();
-            dtpMaintenanceDate = new DateTimePicker();
             txtIssueDescription = new RichTextBox();
             lblIssueDescription = new Label();
-            cmbAsset = new ComboBox();
             btnClose = new Button();
             btnCancel = new Button();
             btnSave = new Button();
@@ -45,6 +42,11 @@
             txtSearch = new TextBox();
             btnReset = new Button();
             btnSearch = new Button();
+            Capacity = new Label();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            textBox2 = new TextBox();
+            cmbAsset = new ComboBox();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -91,7 +93,7 @@
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(1170, 38);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "Maintenance Records";
+            lblTitle.Text = "Room Management";
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
@@ -114,11 +116,13 @@
             // 
             SidePanel.BackColor = Color.FromArgb(255, 228, 235);
             SidePanel.BorderStyle = BorderStyle.FixedSingle;
+            SidePanel.Controls.Add(label1);
+            SidePanel.Controls.Add(textBox2);
+            SidePanel.Controls.Add(Capacity);
+            SidePanel.Controls.Add(textBox1);
             SidePanel.Controls.Add(lblCost);
             SidePanel.Controls.Add(txtCost);
             SidePanel.Controls.Add(cmbStatus);
-            SidePanel.Controls.Add(lblDate);
-            SidePanel.Controls.Add(dtpMaintenanceDate);
             SidePanel.Controls.Add(txtIssueDescription);
             SidePanel.Controls.Add(lblIssueDescription);
             SidePanel.Controls.Add(cmbAsset);
@@ -140,15 +144,15 @@
             lblCost.AutoSize = true;
             lblCost.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCost.ForeColor = Color.FromArgb(217, 58, 102);
-            lblCost.Location = new Point(23, 365);
+            lblCost.Location = new Point(23, 78);
             lblCost.Name = "lblCost";
-            lblCost.Size = new Size(35, 18);
+            lblCost.Size = new Size(47, 18);
             lblCost.TabIndex = 13;
-            lblCost.Text = "Cost";
+            lblCost.Text = "Room";
             // 
             // txtCost
             // 
-            txtCost.Location = new Point(23, 386);
+            txtCost.Location = new Point(23, 99);
             txtCost.Name = "txtCost";
             txtCost.Size = new Size(300, 23);
             txtCost.TabIndex = 12;
@@ -158,33 +162,15 @@
             cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbStatus.FormattingEnabled = true;
             cmbStatus.Items.AddRange(new object[] { "Pending", "In Progress", "Completed" });
-            cmbStatus.Location = new Point(23, 339);
+            cmbStatus.Location = new Point(23, 215);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(300, 23);
             cmbStatus.TabIndex = 11;
             // 
-            // lblDate
-            // 
-            lblDate.AutoSize = true;
-            lblDate.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDate.ForeColor = Color.FromArgb(217, 58, 102);
-            lblDate.Location = new Point(23, 262);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(128, 18);
-            lblDate.TabIndex = 10;
-            lblDate.Text = "Maintenance Date";
-            // 
-            // dtpMaintenanceDate
-            // 
-            dtpMaintenanceDate.Location = new Point(23, 283);
-            dtpMaintenanceDate.Name = "dtpMaintenanceDate";
-            dtpMaintenanceDate.Size = new Size(300, 23);
-            dtpMaintenanceDate.TabIndex = 9;
-            // 
             // txtIssueDescription
             // 
             txtIssueDescription.BorderStyle = BorderStyle.FixedSingle;
-            txtIssueDescription.Location = new Point(23, 160);
+            txtIssueDescription.Location = new Point(23, 390);
             txtIssueDescription.Name = "txtIssueDescription";
             txtIssueDescription.Size = new Size(300, 99);
             txtIssueDescription.TabIndex = 8;
@@ -195,20 +181,11 @@
             lblIssueDescription.AutoSize = true;
             lblIssueDescription.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblIssueDescription.ForeColor = Color.FromArgb(217, 58, 102);
-            lblIssueDescription.Location = new Point(23, 139);
+            lblIssueDescription.Location = new Point(23, 369);
             lblIssueDescription.Name = "lblIssueDescription";
-            lblIssueDescription.Size = new Size(112, 18);
+            lblIssueDescription.Size = new Size(122, 18);
             lblIssueDescription.TabIndex = 7;
-            lblIssueDescription.Text = "Issue Description";
-            // 
-            // cmbAsset
-            // 
-            cmbAsset.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAsset.FormattingEnabled = true;
-            cmbAsset.Location = new Point(23, 100);
-            cmbAsset.Name = "cmbAsset";
-            cmbAsset.Size = new Size(300, 23);
-            cmbAsset.TabIndex = 6;
+            lblIssueDescription.Text = "Room Description";
             // 
             // btnClose
             // 
@@ -248,7 +225,7 @@
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(150, 35);
             btnSave.TabIndex = 3;
-            btnSave.Text = "Save Record";
+            btnSave.Text = "Add Room";
             btnSave.UseVisualStyleBackColor = false;
             // 
             // lblRecordTitle
@@ -256,18 +233,18 @@
             lblRecordTitle.AutoSize = true;
             lblRecordTitle.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblRecordTitle.ForeColor = Color.FromArgb(217, 58, 102);
-            lblRecordTitle.Location = new Point(23, 20);
+            lblRecordTitle.Location = new Point(102, 33);
             lblRecordTitle.Name = "lblRecordTitle";
-            lblRecordTitle.Size = new Size(70, 23);
+            lblRecordTitle.Size = new Size(155, 23);
             lblRecordTitle.TabIndex = 2;
-            lblRecordTitle.Text = "Record";
+            lblRecordTitle.Text = "Add / Edit Room";
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = Color.FromArgb(217, 58, 102);
-            lblStatus.Location = new Point(23, 318);
+            lblStatus.Location = new Point(23, 194);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(47, 18);
             lblStatus.TabIndex = 1;
@@ -278,43 +255,43 @@
             lblAsset.AutoSize = true;
             lblAsset.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblAsset.ForeColor = Color.FromArgb(217, 58, 102);
-            lblAsset.Location = new Point(23, 80);
+            lblAsset.Location = new Point(23, 134);
             lblAsset.Name = "lblAsset";
-            lblAsset.Size = new Size(88, 18);
+            lblAsset.Size = new Size(84, 18);
             lblAsset.TabIndex = 0;
-            lblAsset.Text = "Select Room";
+            lblAsset.Text = "Room Type";
             // 
             // dgvMaintenance
             // 
             dgvMaintenance.AllowUserToAddRows = false;
             dgvMaintenance.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 228, 235);
+            dgvMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvMaintenance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvMaintenance.BackgroundColor = Color.FromArgb(255, 246, 249);
             dgvMaintenance.BorderStyle = BorderStyle.None;
             dgvMaintenance.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvMaintenance.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.Padding = new Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.Padding = new Padding(5);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(217, 58, 102);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvMaintenance.ColumnHeadersHeight = 40;
             dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
-            dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.Padding = new Padding(5);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvMaintenance.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(255, 246, 249);
+            dataGridViewCellStyle6.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.Padding = new Padding(5);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(255, 211, 220);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvMaintenance.DefaultCellStyle = dataGridViewCellStyle6;
             dgvMaintenance.Dock = DockStyle.Fill;
             dgvMaintenance.EnableHeadersVisualStyles = false;
             dgvMaintenance.GridColor = Color.FromArgb(255, 211, 220);
@@ -392,6 +369,51 @@
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             // 
+            // Capacity
+            // 
+            Capacity.AutoSize = true;
+            Capacity.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Capacity.ForeColor = Color.FromArgb(217, 58, 102);
+            Capacity.Location = new Point(21, 256);
+            Capacity.Name = "Capacity";
+            Capacity.Size = new Size(106, 18);
+            Capacity.TabIndex = 15;
+            Capacity.Text = "Price Per Night";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(22, 277);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(300, 23);
+            textBox1.TabIndex = 14;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(217, 58, 102);
+            label1.Location = new Point(23, 311);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 18);
+            label1.TabIndex = 17;
+            label1.Text = "Capacity";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(24, 332);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(300, 23);
+            textBox2.TabIndex = 16;
+            // 
+            // cmbAsset
+            // 
+            cmbAsset.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAsset.FormattingEnabled = true;
+            cmbAsset.Location = new Point(23, 154);
+            cmbAsset.Name = "cmbAsset";
+            cmbAsset.Size = new Size(300, 23);
+            cmbAsset.TabIndex = 6;
+            // 
             // Maintenance
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -423,11 +445,8 @@
         private Label lblCost;
         private TextBox txtCost;
         private ComboBox cmbStatus;
-        private Label lblDate;
-        private DateTimePicker dtpMaintenanceDate;
         private RichTextBox txtIssueDescription;
         private Label lblIssueDescription;
-        private ComboBox cmbAsset;
         private Button btnClose;
         private Button btnCancel;
         private Button btnSave;
@@ -440,5 +459,10 @@
         private TextBox txtSearch;
         private Button btnReset;
         private Button btnSearch;
+        private Label Capacity;
+        private TextBox textBox1;
+        private Label label1;
+        private TextBox textBox2;
+        private ComboBox cmbAsset;
     }
 }
