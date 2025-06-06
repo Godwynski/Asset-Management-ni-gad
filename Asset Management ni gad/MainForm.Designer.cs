@@ -27,7 +27,6 @@
             User = new Button();
             SideBar = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            DashboardBtn = new Button();
             AssetAssignmentBtn = new Button();
             AssetReturnBtn = new Button();
             UserManagementBtn = new Button();
@@ -93,37 +92,16 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(DashboardBtn);
             flowLayoutPanel1.Controls.Add(AssetAssignmentBtn);
-            flowLayoutPanel1.Controls.Add(AssetReturnBtn);
             flowLayoutPanel1.Controls.Add(UserManagementBtn);
-            flowLayoutPanel1.Controls.Add(AssetManagementBtn);
             flowLayoutPanel1.Controls.Add(MaintenanceBtn);
+            flowLayoutPanel1.Controls.Add(AssetManagementBtn);
+            flowLayoutPanel1.Controls.Add(AssetReturnBtn);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(231, 647);
             flowLayoutPanel1.TabIndex = 0;
-            // 
-            // DashboardBtn
-            // 
-            DashboardBtn.BackColor = Color.Transparent;
-            DashboardBtn.BackgroundImage = (Image)resources.GetObject("DashboardBtn.BackgroundImage");
-            DashboardBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            DashboardBtn.Cursor = Cursors.Hand;
-            DashboardBtn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.FlatAppearance.BorderSize = 0;
-            DashboardBtn.FlatStyle = FlatStyle.Flat;
-            DashboardBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
-            DashboardBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            DashboardBtn.Location = new Point(15, 15);
-            DashboardBtn.Margin = new Padding(15);
-            DashboardBtn.Name = "DashboardBtn";
-            DashboardBtn.Size = new Size(207, 62);
-            DashboardBtn.TabIndex = 2;
-            DashboardBtn.Text = "Dashboard";
-            DashboardBtn.UseVisualStyleBackColor = false;
-            DashboardBtn.Click += DashboardBtn_Click;
             // 
             // AssetAssignmentBtn
             // 
@@ -136,7 +114,7 @@
             AssetAssignmentBtn.FlatStyle = FlatStyle.Flat;
             AssetAssignmentBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             AssetAssignmentBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetAssignmentBtn.Location = new Point(15, 107);
+            AssetAssignmentBtn.Location = new Point(15, 15);
             AssetAssignmentBtn.Margin = new Padding(15);
             AssetAssignmentBtn.Name = "AssetAssignmentBtn";
             AssetAssignmentBtn.Size = new Size(207, 62);
@@ -156,12 +134,12 @@
             AssetReturnBtn.FlatStyle = FlatStyle.Flat;
             AssetReturnBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             AssetReturnBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetReturnBtn.Location = new Point(15, 199);
+            AssetReturnBtn.Location = new Point(15, 383);
             AssetReturnBtn.Margin = new Padding(15);
             AssetReturnBtn.Name = "AssetReturnBtn";
             AssetReturnBtn.Size = new Size(207, 62);
             AssetReturnBtn.TabIndex = 5;
-            AssetReturnBtn.Text = "CheckOut";
+            AssetReturnBtn.Text = "Cleaning";
             AssetReturnBtn.UseVisualStyleBackColor = false;
             AssetReturnBtn.Click += AssetReturnBtn_Click;
             // 
@@ -176,12 +154,12 @@
             UserManagementBtn.FlatStyle = FlatStyle.Flat;
             UserManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             UserManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            UserManagementBtn.Location = new Point(15, 291);
+            UserManagementBtn.Location = new Point(15, 107);
             UserManagementBtn.Margin = new Padding(15);
             UserManagementBtn.Name = "UserManagementBtn";
             UserManagementBtn.Size = new Size(207, 62);
             UserManagementBtn.TabIndex = 4;
-            UserManagementBtn.Text = "Employee Management";
+            UserManagementBtn.Text = "Guest Management";
             UserManagementBtn.UseVisualStyleBackColor = false;
             UserManagementBtn.Click += UserManagementBtn_Click;
             // 
@@ -196,12 +174,12 @@
             AssetManagementBtn.FlatStyle = FlatStyle.Flat;
             AssetManagementBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             AssetManagementBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            AssetManagementBtn.Location = new Point(15, 383);
+            AssetManagementBtn.Location = new Point(15, 291);
             AssetManagementBtn.Margin = new Padding(15);
             AssetManagementBtn.Name = "AssetManagementBtn";
             AssetManagementBtn.Size = new Size(207, 62);
             AssetManagementBtn.TabIndex = 1;
-            AssetManagementBtn.Text = "Asset Management";
+            AssetManagementBtn.Text = "Employee Management";
             AssetManagementBtn.UseVisualStyleBackColor = false;
             AssetManagementBtn.Click += AssetManagementBtn_Click;
             // 
@@ -216,12 +194,12 @@
             MaintenanceBtn.FlatStyle = FlatStyle.Flat;
             MaintenanceBtn.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold);
             MaintenanceBtn.ForeColor = Color.FromArgb(255, 79, 129);
-            MaintenanceBtn.Location = new Point(15, 475);
+            MaintenanceBtn.Location = new Point(15, 199);
             MaintenanceBtn.Margin = new Padding(15);
             MaintenanceBtn.Name = "MaintenanceBtn";
             MaintenanceBtn.Size = new Size(207, 62);
             MaintenanceBtn.TabIndex = 3;
-            MaintenanceBtn.Text = "Maintenance";
+            MaintenanceBtn.Text = "Room Management";
             MaintenanceBtn.UseVisualStyleBackColor = false;
             MaintenanceBtn.Click += MaintenanceBtn_Click;
             // 
@@ -269,7 +247,6 @@
 
         private Panel NavigationBar;
         private Panel SideBar;
-        private Button DashboardBtn;
         private Button AssetAssignmentBtn;
         private Button AssetManagementBtn;
         private Button MaintenanceBtn;
