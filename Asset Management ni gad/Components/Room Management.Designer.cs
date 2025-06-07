@@ -26,32 +26,26 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             SidePanel = new Panel();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtCapacity = new TextBox();
             Capacity = new Label();
-            textBox1 = new TextBox();
+            txtRoomPrice = new TextBox();
             lblCost = new Label();
-            txtCost = new TextBox();
-            cmbStatus = new ComboBox();
-            txtIssueDescription = new RichTextBox();
-            lblIssueDescription = new Label();
-            cmbAsset = new ComboBox();
+            txtRoomName = new TextBox();
+            cmbRoomStatus = new ComboBox();
             btnClose = new Button();
             btnCancel = new Button();
-            btnSave = new Button();
+            btnAddRoom = new Button();
             lblRecordTitle = new Label();
             lblStatus = new Label();
-            lblAsset = new Label();
-            dgvMaintenance = new DataGridView();
+            dgvRoom = new DataGridView();
             panel2 = new Panel();
-            cmbStatusFilter = new ComboBox();
-            txtSearch = new TextBox();
-            btnReset = new Button();
-            btnSearch = new Button();
+            txtSearchRoom = new TextBox();
+            btnSearchRoom = new Button();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             SidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvMaintenance).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRoom).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -102,7 +96,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 350F));
             tableLayoutPanel3.Controls.Add(SidePanel, 1, 0);
-            tableLayoutPanel3.Controls.Add(dgvMaintenance, 0, 0);
+            tableLayoutPanel3.Controls.Add(dgvRoom, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(10, 126);
             tableLayoutPanel3.Margin = new Padding(10);
@@ -117,21 +111,17 @@
             SidePanel.BackColor = Color.FromArgb(255, 228, 235);
             SidePanel.BorderStyle = BorderStyle.FixedSingle;
             SidePanel.Controls.Add(label1);
-            SidePanel.Controls.Add(textBox2);
+            SidePanel.Controls.Add(txtCapacity);
             SidePanel.Controls.Add(Capacity);
-            SidePanel.Controls.Add(textBox1);
+            SidePanel.Controls.Add(txtRoomPrice);
             SidePanel.Controls.Add(lblCost);
-            SidePanel.Controls.Add(txtCost);
-            SidePanel.Controls.Add(cmbStatus);
-            SidePanel.Controls.Add(txtIssueDescription);
-            SidePanel.Controls.Add(lblIssueDescription);
-            SidePanel.Controls.Add(cmbAsset);
+            SidePanel.Controls.Add(txtRoomName);
+            SidePanel.Controls.Add(cmbRoomStatus);
             SidePanel.Controls.Add(btnClose);
             SidePanel.Controls.Add(btnCancel);
-            SidePanel.Controls.Add(btnSave);
+            SidePanel.Controls.Add(btnAddRoom);
             SidePanel.Controls.Add(lblRecordTitle);
             SidePanel.Controls.Add(lblStatus);
-            SidePanel.Controls.Add(lblAsset);
             SidePanel.Dock = DockStyle.Fill;
             SidePanel.Location = new Point(833, 3);
             SidePanel.Name = "SidePanel";
@@ -144,36 +134,38 @@
             label1.AutoSize = true;
             label1.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(217, 58, 102);
-            label1.Location = new Point(23, 311);
+            label1.Location = new Point(23, 257);
             label1.Name = "label1";
             label1.Size = new Size(66, 18);
             label1.TabIndex = 17;
             label1.Text = "Capacity";
             // 
-            // textBox2
+            // txtCapacity
             // 
-            textBox2.Location = new Point(24, 332);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 23);
-            textBox2.TabIndex = 16;
+            txtCapacity.Font = new Font("Berlin Sans FB", 11.25F);
+            txtCapacity.Location = new Point(24, 278);
+            txtCapacity.Name = "txtCapacity";
+            txtCapacity.Size = new Size(300, 24);
+            txtCapacity.TabIndex = 16;
             // 
             // Capacity
             // 
             Capacity.AutoSize = true;
             Capacity.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Capacity.ForeColor = Color.FromArgb(217, 58, 102);
-            Capacity.Location = new Point(21, 256);
+            Capacity.Location = new Point(21, 202);
             Capacity.Name = "Capacity";
-            Capacity.Size = new Size(106, 18);
+            Capacity.Size = new Size(103, 18);
             Capacity.TabIndex = 15;
-            Capacity.Text = "Price Per Night";
+            Capacity.Text = "Price Per Hour";
             // 
-            // textBox1
+            // txtRoomPrice
             // 
-            textBox1.Location = new Point(22, 277);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 23);
-            textBox1.TabIndex = 14;
+            txtRoomPrice.Font = new Font("Berlin Sans FB", 11.25F);
+            txtRoomPrice.Location = new Point(22, 223);
+            txtRoomPrice.Name = "txtRoomPrice";
+            txtRoomPrice.Size = new Size(300, 24);
+            txtRoomPrice.TabIndex = 14;
             // 
             // lblCost
             // 
@@ -186,51 +178,23 @@
             lblCost.TabIndex = 13;
             lblCost.Text = "Room";
             // 
-            // txtCost
+            // txtRoomName
             // 
-            txtCost.Location = new Point(23, 99);
-            txtCost.Name = "txtCost";
-            txtCost.Size = new Size(300, 23);
-            txtCost.TabIndex = 12;
+            txtRoomName.Font = new Font("Berlin Sans FB", 11.25F);
+            txtRoomName.Location = new Point(23, 99);
+            txtRoomName.Name = "txtRoomName";
+            txtRoomName.Size = new Size(300, 24);
+            txtRoomName.TabIndex = 12;
             // 
-            // cmbStatus
+            // cmbRoomStatus
             // 
-            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbStatus.FormattingEnabled = true;
-            cmbStatus.Items.AddRange(new object[] { "Pending", "In Progress", "Completed" });
-            cmbStatus.Location = new Point(23, 215);
-            cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(300, 23);
-            cmbStatus.TabIndex = 11;
-            // 
-            // txtIssueDescription
-            // 
-            txtIssueDescription.BorderStyle = BorderStyle.FixedSingle;
-            txtIssueDescription.Location = new Point(23, 390);
-            txtIssueDescription.Name = "txtIssueDescription";
-            txtIssueDescription.Size = new Size(300, 99);
-            txtIssueDescription.TabIndex = 8;
-            txtIssueDescription.Text = "";
-            // 
-            // lblIssueDescription
-            // 
-            lblIssueDescription.AutoSize = true;
-            lblIssueDescription.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIssueDescription.ForeColor = Color.FromArgb(217, 58, 102);
-            lblIssueDescription.Location = new Point(23, 369);
-            lblIssueDescription.Name = "lblIssueDescription";
-            lblIssueDescription.Size = new Size(122, 18);
-            lblIssueDescription.TabIndex = 7;
-            lblIssueDescription.Text = "Room Description";
-            // 
-            // cmbAsset
-            // 
-            cmbAsset.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAsset.FormattingEnabled = true;
-            cmbAsset.Location = new Point(23, 154);
-            cmbAsset.Name = "cmbAsset";
-            cmbAsset.Size = new Size(300, 23);
-            cmbAsset.TabIndex = 6;
+            cmbRoomStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRoomStatus.Font = new Font("Berlin Sans FB", 11.25F);
+            cmbRoomStatus.FormattingEnabled = true;
+            cmbRoomStatus.Location = new Point(23, 161);
+            cmbRoomStatus.Name = "cmbRoomStatus";
+            cmbRoomStatus.Size = new Size(300, 25);
+            cmbRoomStatus.TabIndex = 11;
             // 
             // btnClose
             // 
@@ -258,20 +222,20 @@
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
             // 
-            // btnSave
+            // btnAddRoom
             // 
-            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnSave.BackColor = Color.FromArgb(217, 58, 102);
-            btnSave.FlatAppearance.BorderSize = 0;
-            btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(23, 504);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(150, 35);
-            btnSave.TabIndex = 3;
-            btnSave.Text = "Add Room";
-            btnSave.UseVisualStyleBackColor = false;
+            btnAddRoom.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnAddRoom.BackColor = Color.FromArgb(217, 58, 102);
+            btnAddRoom.FlatAppearance.BorderSize = 0;
+            btnAddRoom.FlatStyle = FlatStyle.Flat;
+            btnAddRoom.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddRoom.ForeColor = Color.White;
+            btnAddRoom.Location = new Point(23, 504);
+            btnAddRoom.Name = "btnAddRoom";
+            btnAddRoom.Size = new Size(150, 35);
+            btnAddRoom.TabIndex = 3;
+            btnAddRoom.Text = "Add Room";
+            btnAddRoom.UseVisualStyleBackColor = false;
             // 
             // lblRecordTitle
             // 
@@ -289,34 +253,23 @@
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = Color.FromArgb(217, 58, 102);
-            lblStatus.Location = new Point(23, 194);
+            lblStatus.Location = new Point(23, 140);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(47, 18);
             lblStatus.TabIndex = 1;
             lblStatus.Text = "Status";
             // 
-            // lblAsset
+            // dgvRoom
             // 
-            lblAsset.AutoSize = true;
-            lblAsset.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAsset.ForeColor = Color.FromArgb(217, 58, 102);
-            lblAsset.Location = new Point(23, 134);
-            lblAsset.Name = "lblAsset";
-            lblAsset.Size = new Size(84, 18);
-            lblAsset.TabIndex = 0;
-            lblAsset.Text = "Room Type";
-            // 
-            // dgvMaintenance
-            // 
-            dgvMaintenance.AllowUserToAddRows = false;
-            dgvMaintenance.AllowUserToDeleteRows = false;
+            dgvRoom.AllowUserToAddRows = false;
+            dgvRoom.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvMaintenance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvMaintenance.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dgvMaintenance.BorderStyle = BorderStyle.None;
-            dgvMaintenance.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvMaintenance.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvRoom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRoom.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvRoom.BorderStyle = BorderStyle.None;
+            dgvRoom.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvRoom.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -325,9 +278,9 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvMaintenance.ColumnHeadersHeight = 40;
-            dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvRoom.ColumnHeadersHeight = 40;
+            dgvRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
             dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -336,27 +289,25 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvMaintenance.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvMaintenance.Dock = DockStyle.Fill;
-            dgvMaintenance.EnableHeadersVisualStyles = false;
-            dgvMaintenance.GridColor = Color.FromArgb(255, 211, 220);
-            dgvMaintenance.Location = new Point(20, 20);
-            dgvMaintenance.Margin = new Padding(20);
-            dgvMaintenance.Name = "dgvMaintenance";
-            dgvMaintenance.ReadOnly = true;
-            dgvMaintenance.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvMaintenance.RowHeadersVisible = false;
-            dgvMaintenance.RowTemplate.Height = 35;
-            dgvMaintenance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMaintenance.Size = new Size(790, 524);
-            dgvMaintenance.TabIndex = 1;
+            dgvRoom.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvRoom.Dock = DockStyle.Fill;
+            dgvRoom.EnableHeadersVisualStyles = false;
+            dgvRoom.GridColor = Color.FromArgb(255, 211, 220);
+            dgvRoom.Location = new Point(20, 20);
+            dgvRoom.Margin = new Padding(20);
+            dgvRoom.Name = "dgvRoom";
+            dgvRoom.ReadOnly = true;
+            dgvRoom.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRoom.RowHeadersVisible = false;
+            dgvRoom.RowTemplate.Height = 35;
+            dgvRoom.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRoom.Size = new Size(790, 524);
+            dgvRoom.TabIndex = 1;
             // 
             // panel2
             // 
-            panel2.Controls.Add(cmbStatusFilter);
-            panel2.Controls.Add(txtSearch);
-            panel2.Controls.Add(btnReset);
-            panel2.Controls.Add(btnSearch);
+            panel2.Controls.Add(txtSearchRoom);
+            panel2.Controls.Add(btnSearchRoom);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(20, 68);
             panel2.Margin = new Padding(20, 10, 20, 10);
@@ -364,55 +315,28 @@
             panel2.Size = new Size(1160, 38);
             panel2.TabIndex = 2;
             // 
-            // cmbStatusFilter
+            // txtSearchRoom
             // 
-            cmbStatusFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            cmbStatusFilter.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbStatusFilter.FormattingEnabled = true;
-            cmbStatusFilter.Items.AddRange(new object[] { "All Statuses", "Pending", "In Progress", "Completed" });
-            cmbStatusFilter.Location = new Point(900, 8);
-            cmbStatusFilter.Name = "cmbStatusFilter";
-            cmbStatusFilter.Size = new Size(150, 23);
-            cmbStatusFilter.TabIndex = 3;
+            txtSearchRoom.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchRoom.Location = new Point(10, 8);
+            txtSearchRoom.Name = "txtSearchRoom";
+            txtSearchRoom.PlaceholderText = "Search room...";
+            txtSearchRoom.Size = new Size(604, 24);
+            txtSearchRoom.TabIndex = 4;
             // 
-            // txtSearch
+            // btnSearchRoom
             // 
-            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtSearch.Location = new Point(10, 8);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Search maintenance records...";
-            txtSearch.Size = new Size(600, 23);
-            txtSearch.TabIndex = 0;
-            // 
-            // btnReset
-            // 
-            btnReset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnReset.BackColor = Color.FromArgb(217, 58, 102);
-            btnReset.FlatAppearance.BorderSize = 0;
-            btnReset.FlatStyle = FlatStyle.Flat;
-            btnReset.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(1060, 8);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(90, 25);
-            btnReset.TabIndex = 2;
-            btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSearch.BackColor = Color.FromArgb(217, 58, 102);
-            btnSearch.FlatAppearance.BorderSize = 0;
-            btnSearch.FlatStyle = FlatStyle.Flat;
-            btnSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(620, 8);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(90, 25);
-            btnSearch.TabIndex = 1;
-            btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = false;
+            btnSearchRoom.BackColor = Color.FromArgb(217, 58, 102);
+            btnSearchRoom.FlatAppearance.BorderSize = 0;
+            btnSearchRoom.FlatStyle = FlatStyle.Flat;
+            btnSearchRoom.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchRoom.ForeColor = Color.White;
+            btnSearchRoom.Location = new Point(620, 8);
+            btnSearchRoom.Name = "btnSearchRoom";
+            btnSearchRoom.Size = new Size(90, 25);
+            btnSearchRoom.TabIndex = 1;
+            btnSearchRoom.Text = "Search";
+            btnSearchRoom.UseVisualStyleBackColor = false;
             // 
             // Maintenance
             // 
@@ -429,7 +353,7 @@
             tableLayoutPanel3.ResumeLayout(false);
             SidePanel.ResumeLayout(false);
             SidePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvMaintenance).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRoom).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -443,26 +367,20 @@
         private TableLayoutPanel tableLayoutPanel3;
         private Panel SidePanel;
         private Label lblCost;
-        private TextBox txtCost;
-        private ComboBox cmbStatus;
-        private RichTextBox txtIssueDescription;
-        private Label lblIssueDescription;
+        private TextBox txtRoomName;
+        private ComboBox cmbRoomStatus;
         private Button btnClose;
         private Button btnCancel;
-        private Button btnSave;
+        private Button btnAddRoom;
         private Label lblRecordTitle;
         private Label lblStatus;
-        private Label lblAsset;
-        private DataGridView dgvMaintenance;
+        private DataGridView dgvRoom;
         private Panel panel2;
-        private ComboBox cmbStatusFilter;
-        private TextBox txtSearch;
-        private Button btnReset;
-        private Button btnSearch;
+        private Button btnSearchRoom;
         private Label Capacity;
-        private TextBox textBox1;
+        private TextBox txtRoomPrice;
         private Label label1;
-        private TextBox textBox2;
-        private ComboBox cmbAsset;
+        private TextBox txtCapacity;
+        private TextBox txtSearchRoom;
     }
 }

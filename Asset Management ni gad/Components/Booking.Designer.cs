@@ -43,38 +43,38 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel6 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
+            dtpCheckOut = new DateTimePicker();
             label5 = new Label();
             panel2 = new Panel();
-            button4 = new Button();
+            btnCheckIn = new Button();
             btnCreateAssignment = new Button();
             panel7 = new Panel();
             panel8 = new Panel();
-            label1 = new Label();
+            lblAmount = new Label();
             label9 = new Label();
             button5 = new Button();
             button7 = new Button();
             panel4 = new Panel();
             Employee = new Label();
             button3 = new Button();
-            button2 = new Button();
-            dgvEmployeeSearch = new DataGridView();
-            txtEmployeeSearch = new TextBox();
+            btnSearchRoom = new Button();
+            dgvRooms = new DataGridView();
+            txtSearchRoom = new TextBox();
             label3 = new Label();
             panel5 = new Panel();
-            dateTimePicker3 = new DateTimePicker();
+            dtpCheckIn = new DateTimePicker();
             label4 = new Label();
             panel3 = new Panel();
-            button1 = new Button();
-            AssetSearch = new TextBox();
-            dgvAssetSearch = new DataGridView();
+            btnSearchGuest = new Button();
+            txtSearchGuest = new TextBox();
+            dgvGuests = new DataGridView();
             label2 = new Label();
             dataPanel = new Panel();
-            dgvRecentAssignment = new DataGridView();
+            dgvRecentLogs = new DataGridView();
             panel1 = new Panel();
-            button6 = new Button();
+            btnSearchRecent = new Button();
             label7 = new Label();
-            txtAssetSearch = new TextBox();
+            txtSearchRecent = new TextBox();
             mainPanel = new Panel();
             headerPanel.SuspendLayout();
             mainLayout.SuspendLayout();
@@ -85,12 +85,12 @@
             panel7.SuspendLayout();
             panel8.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEmployeeSearch).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRooms).BeginInit();
             panel5.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvAssetSearch).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvGuests).BeginInit();
             dataPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRecentAssignment).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRecentLogs).BeginInit();
             panel1.SuspendLayout();
             mainPanel.SuspendLayout();
             SuspendLayout();
@@ -172,7 +172,7 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(dateTimePicker1);
+            panel6.Controls.Add(dtpCheckOut);
             panel6.Controls.Add(label5);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(601, 198);
@@ -180,19 +180,19 @@
             panel6.Size = new Size(593, 52);
             panel6.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // dtpCheckOut
             // 
-            dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm tt";
-            dateTimePicker1.Dock = DockStyle.Fill;
-            dateTimePicker1.Font = new Font("Segoe UI", 10F);
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(0, 18);
-            dateTimePicker1.Margin = new Padding(0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.ShowUpDown = true;
-            dateTimePicker1.Size = new Size(593, 25);
-            dateTimePicker1.TabIndex = 14;
-            dateTimePicker1.Value = new DateTime(2025, 6, 6, 19, 36, 7, 816);
+            dtpCheckOut.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            dtpCheckOut.Dock = DockStyle.Fill;
+            dtpCheckOut.Font = new Font("Segoe UI", 10F);
+            dtpCheckOut.Format = DateTimePickerFormat.Custom;
+            dtpCheckOut.Location = new Point(0, 18);
+            dtpCheckOut.Margin = new Padding(0);
+            dtpCheckOut.Name = "dtpCheckOut";
+            dtpCheckOut.ShowUpDown = true;
+            dtpCheckOut.Size = new Size(593, 25);
+            dtpCheckOut.TabIndex = 14;
+            dtpCheckOut.Value = new DateTime(2025, 6, 6, 19, 36, 7, 816);
             // 
             // label5
             // 
@@ -208,7 +208,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button4);
+            panel2.Controls.Add(btnCheckIn);
             panel2.Controls.Add(btnCreateAssignment);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(601, 256);
@@ -216,20 +216,20 @@
             panel2.Size = new Size(593, 55);
             panel2.TabIndex = 2;
             // 
-            // button4
+            // btnCheckIn
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.BackColor = Color.FromArgb(217, 58, 102);
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(400, 11);
-            button4.Name = "button4";
-            button4.Size = new Size(80, 32);
-            button4.TabIndex = 7;
-            button4.Text = "Check-In";
-            button4.UseVisualStyleBackColor = false;
+            btnCheckIn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCheckIn.BackColor = Color.FromArgb(217, 58, 102);
+            btnCheckIn.FlatAppearance.BorderSize = 0;
+            btnCheckIn.FlatStyle = FlatStyle.Flat;
+            btnCheckIn.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCheckIn.ForeColor = Color.White;
+            btnCheckIn.Location = new Point(382, 11);
+            btnCheckIn.Name = "btnCheckIn";
+            btnCheckIn.Size = new Size(80, 32);
+            btnCheckIn.TabIndex = 7;
+            btnCheckIn.Text = "Check-In";
+            btnCheckIn.UseVisualStyleBackColor = false;
             // 
             // btnCreateAssignment
             // 
@@ -257,7 +257,7 @@
             // 
             // panel8
             // 
-            panel8.Controls.Add(label1);
+            panel8.Controls.Add(lblAmount);
             panel8.Controls.Add(label9);
             panel8.Controls.Add(button5);
             panel8.Controls.Add(button7);
@@ -267,17 +267,17 @@
             panel8.Size = new Size(592, 55);
             panel8.TabIndex = 3;
             // 
-            // label1
+            // lblAmount
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Berlin Sans FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(217, 58, 102);
-            label1.Location = new Point(234, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(48, 21);
-            label1.TabIndex = 15;
-            label1.Text = "4329";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            lblAmount.AutoSize = true;
+            lblAmount.Font = new Font("Berlin Sans FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAmount.ForeColor = Color.FromArgb(217, 58, 102);
+            lblAmount.Location = new Point(234, 18);
+            lblAmount.Name = "lblAmount";
+            lblAmount.Size = new Size(48, 21);
+            lblAmount.TabIndex = 15;
+            lblAmount.Text = "4329";
+            lblAmount.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
@@ -325,9 +325,9 @@
             // 
             panel4.Controls.Add(Employee);
             panel4.Controls.Add(button3);
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(dgvEmployeeSearch);
-            panel4.Controls.Add(txtEmployeeSearch);
+            panel4.Controls.Add(btnSearchRoom);
+            panel4.Controls.Add(dgvRooms);
+            panel4.Controls.Add(txtSearchRoom);
             panel4.Controls.Add(label3);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(601, 3);
@@ -362,32 +362,32 @@
             button3.Text = "Search";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnSearchRoom
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.BackColor = Color.FromArgb(217, 58, 102);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(468, 23);
-            button2.Name = "button2";
-            button2.Size = new Size(96, 24);
-            button2.TabIndex = 18;
-            button2.Text = "Search";
-            button2.UseVisualStyleBackColor = false;
+            btnSearchRoom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearchRoom.BackColor = Color.FromArgb(217, 58, 102);
+            btnSearchRoom.FlatAppearance.BorderSize = 0;
+            btnSearchRoom.FlatStyle = FlatStyle.Flat;
+            btnSearchRoom.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchRoom.ForeColor = Color.White;
+            btnSearchRoom.Location = new Point(468, 23);
+            btnSearchRoom.Name = "btnSearchRoom";
+            btnSearchRoom.Size = new Size(96, 24);
+            btnSearchRoom.TabIndex = 18;
+            btnSearchRoom.Text = "Search";
+            btnSearchRoom.UseVisualStyleBackColor = false;
             // 
-            // dgvEmployeeSearch
+            // dgvRooms
             // 
-            dgvEmployeeSearch.AllowUserToAddRows = false;
-            dgvEmployeeSearch.AllowUserToDeleteRows = false;
+            dgvRooms.AllowUserToAddRows = false;
+            dgvRooms.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvEmployeeSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvEmployeeSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvEmployeeSearch.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dgvEmployeeSearch.BorderStyle = BorderStyle.None;
-            dgvEmployeeSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvEmployeeSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRooms.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvRooms.BorderStyle = BorderStyle.None;
+            dgvRooms.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvRooms.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -396,9 +396,9 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvEmployeeSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvEmployeeSearch.ColumnHeadersHeight = 40;
-            dgvEmployeeSearch.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvRooms.ColumnHeadersHeight = 40;
+            dgvRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
             dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -407,29 +407,29 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvEmployeeSearch.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvEmployeeSearch.Dock = DockStyle.Bottom;
-            dgvEmployeeSearch.EnableHeadersVisualStyles = false;
-            dgvEmployeeSearch.GridColor = Color.FromArgb(255, 211, 220);
-            dgvEmployeeSearch.Location = new Point(0, 51);
-            dgvEmployeeSearch.Name = "dgvEmployeeSearch";
-            dgvEmployeeSearch.ReadOnly = true;
-            dgvEmployeeSearch.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvEmployeeSearch.RowHeadersVisible = false;
-            dgvEmployeeSearch.RowTemplate.Height = 35;
-            dgvEmployeeSearch.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvEmployeeSearch.Size = new Size(593, 138);
-            dgvEmployeeSearch.TabIndex = 17;
+            dgvRooms.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvRooms.Dock = DockStyle.Bottom;
+            dgvRooms.EnableHeadersVisualStyles = false;
+            dgvRooms.GridColor = Color.FromArgb(255, 211, 220);
+            dgvRooms.Location = new Point(0, 51);
+            dgvRooms.Name = "dgvRooms";
+            dgvRooms.ReadOnly = true;
+            dgvRooms.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRooms.RowHeadersVisible = false;
+            dgvRooms.RowTemplate.Height = 35;
+            dgvRooms.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRooms.Size = new Size(593, 138);
+            dgvRooms.TabIndex = 17;
             // 
-            // txtEmployeeSearch
+            // txtSearchRoom
             // 
-            txtEmployeeSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtEmployeeSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmployeeSearch.Location = new Point(3, 24);
-            txtEmployeeSearch.Name = "txtEmployeeSearch";
-            txtEmployeeSearch.PlaceholderText = "Search Room...";
-            txtEmployeeSearch.Size = new Size(459, 24);
-            txtEmployeeSearch.TabIndex = 16;
+            txtSearchRoom.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearchRoom.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchRoom.Location = new Point(3, 24);
+            txtSearchRoom.Name = "txtSearchRoom";
+            txtSearchRoom.PlaceholderText = "Search Room...";
+            txtSearchRoom.Size = new Size(459, 24);
+            txtSearchRoom.TabIndex = 16;
             // 
             // label3
             // 
@@ -445,7 +445,7 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(dateTimePicker3);
+            panel5.Controls.Add(dtpCheckIn);
             panel5.Controls.Add(label4);
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(3, 198);
@@ -453,19 +453,19 @@
             panel5.Size = new Size(592, 52);
             panel5.TabIndex = 2;
             // 
-            // dateTimePicker3
+            // dtpCheckIn
             // 
-            dateTimePicker3.CustomFormat = "MM/dd/yyyy hh:mm tt";
-            dateTimePicker3.Dock = DockStyle.Fill;
-            dateTimePicker3.Font = new Font("Segoe UI", 10F);
-            dateTimePicker3.Format = DateTimePickerFormat.Custom;
-            dateTimePicker3.Location = new Point(0, 18);
-            dateTimePicker3.Margin = new Padding(0);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.ShowUpDown = true;
-            dateTimePicker3.Size = new Size(592, 25);
-            dateTimePicker3.TabIndex = 3;
-            dateTimePicker3.Value = new DateTime(2025, 6, 6, 19, 36, 7, 816);
+            dtpCheckIn.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            dtpCheckIn.Dock = DockStyle.Fill;
+            dtpCheckIn.Font = new Font("Segoe UI", 10F);
+            dtpCheckIn.Format = DateTimePickerFormat.Custom;
+            dtpCheckIn.Location = new Point(0, 18);
+            dtpCheckIn.Margin = new Padding(0);
+            dtpCheckIn.Name = "dtpCheckIn";
+            dtpCheckIn.ShowUpDown = true;
+            dtpCheckIn.Size = new Size(592, 25);
+            dtpCheckIn.TabIndex = 3;
+            dtpCheckIn.Value = new DateTime(2025, 6, 6, 19, 36, 7, 816);
             // 
             // label4
             // 
@@ -481,9 +481,9 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(AssetSearch);
-            panel3.Controls.Add(dgvAssetSearch);
+            panel3.Controls.Add(btnSearchGuest);
+            panel3.Controls.Add(txtSearchGuest);
+            panel3.Controls.Add(dgvGuests);
             panel3.Controls.Add(label2);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(3, 3);
@@ -491,42 +491,42 @@
             panel3.Size = new Size(592, 189);
             panel3.TabIndex = 0;
             // 
-            // button1
+            // btnSearchGuest
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.FromArgb(217, 58, 102);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(463, 23);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 24);
-            button1.TabIndex = 19;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = false;
+            btnSearchGuest.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearchGuest.BackColor = Color.FromArgb(217, 58, 102);
+            btnSearchGuest.FlatAppearance.BorderSize = 0;
+            btnSearchGuest.FlatStyle = FlatStyle.Flat;
+            btnSearchGuest.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchGuest.ForeColor = Color.White;
+            btnSearchGuest.Location = new Point(463, 23);
+            btnSearchGuest.Name = "btnSearchGuest";
+            btnSearchGuest.Size = new Size(96, 24);
+            btnSearchGuest.TabIndex = 19;
+            btnSearchGuest.Text = "Search";
+            btnSearchGuest.UseVisualStyleBackColor = false;
             // 
-            // AssetSearch
+            // txtSearchGuest
             // 
-            AssetSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AssetSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AssetSearch.Location = new Point(4, 24);
-            AssetSearch.Name = "AssetSearch";
-            AssetSearch.PlaceholderText = "Search Guest...";
-            AssetSearch.Size = new Size(453, 24);
-            AssetSearch.TabIndex = 3;
+            txtSearchGuest.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearchGuest.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchGuest.Location = new Point(4, 24);
+            txtSearchGuest.Name = "txtSearchGuest";
+            txtSearchGuest.PlaceholderText = "Search Guest...";
+            txtSearchGuest.Size = new Size(453, 24);
+            txtSearchGuest.TabIndex = 3;
             // 
-            // dgvAssetSearch
+            // dgvGuests
             // 
-            dgvAssetSearch.AllowUserToAddRows = false;
-            dgvAssetSearch.AllowUserToDeleteRows = false;
+            dgvGuests.AllowUserToAddRows = false;
+            dgvGuests.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 228, 235);
-            dgvAssetSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgvAssetSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvAssetSearch.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dgvAssetSearch.BorderStyle = BorderStyle.None;
-            dgvAssetSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvAssetSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvGuests.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvGuests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvGuests.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvGuests.BorderStyle = BorderStyle.None;
+            dgvGuests.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvGuests.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -535,9 +535,9 @@
             dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle5.SelectionForeColor = Color.White;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvAssetSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgvAssetSearch.ColumnHeadersHeight = 40;
-            dgvAssetSearch.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvGuests.ColumnHeadersHeight = 40;
+            dgvGuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.FromArgb(255, 246, 249);
             dataGridViewCellStyle6.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -546,19 +546,19 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgvAssetSearch.DefaultCellStyle = dataGridViewCellStyle6;
-            dgvAssetSearch.Dock = DockStyle.Bottom;
-            dgvAssetSearch.EnableHeadersVisualStyles = false;
-            dgvAssetSearch.GridColor = Color.FromArgb(255, 211, 220);
-            dgvAssetSearch.Location = new Point(0, 51);
-            dgvAssetSearch.Name = "dgvAssetSearch";
-            dgvAssetSearch.ReadOnly = true;
-            dgvAssetSearch.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvAssetSearch.RowHeadersVisible = false;
-            dgvAssetSearch.RowTemplate.Height = 35;
-            dgvAssetSearch.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAssetSearch.Size = new Size(592, 138);
-            dgvAssetSearch.TabIndex = 14;
+            dgvGuests.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvGuests.Dock = DockStyle.Bottom;
+            dgvGuests.EnableHeadersVisualStyles = false;
+            dgvGuests.GridColor = Color.FromArgb(255, 211, 220);
+            dgvGuests.Location = new Point(0, 51);
+            dgvGuests.Name = "dgvGuests";
+            dgvGuests.ReadOnly = true;
+            dgvGuests.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvGuests.RowHeadersVisible = false;
+            dgvGuests.RowTemplate.Height = 35;
+            dgvGuests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvGuests.Size = new Size(592, 138);
+            dgvGuests.TabIndex = 14;
             // 
             // label2
             // 
@@ -574,7 +574,7 @@
             // 
             // dataPanel
             // 
-            dataPanel.Controls.Add(dgvRecentAssignment);
+            dataPanel.Controls.Add(dgvRecentLogs);
             dataPanel.Controls.Add(panel1);
             dataPanel.Dock = DockStyle.Fill;
             dataPanel.Location = new Point(3, 375);
@@ -583,17 +583,17 @@
             dataPanel.Size = new Size(1203, 347);
             dataPanel.TabIndex = 2;
             // 
-            // dgvRecentAssignment
+            // dgvRecentLogs
             // 
-            dgvRecentAssignment.AllowUserToAddRows = false;
-            dgvRecentAssignment.AllowUserToDeleteRows = false;
+            dgvRecentLogs.AllowUserToAddRows = false;
+            dgvRecentLogs.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.BackColor = Color.FromArgb(255, 228, 235);
-            dgvRecentAssignment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dgvRecentAssignment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRecentAssignment.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dgvRecentAssignment.BorderStyle = BorderStyle.None;
-            dgvRecentAssignment.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvRecentAssignment.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRecentLogs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dgvRecentLogs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecentLogs.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvRecentLogs.BorderStyle = BorderStyle.None;
+            dgvRecentLogs.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvRecentLogs.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle8.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -602,9 +602,9 @@
             dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle8.SelectionForeColor = Color.White;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvRecentAssignment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dgvRecentAssignment.ColumnHeadersHeight = 40;
-            dgvRecentAssignment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvRecentLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dgvRecentLogs.ColumnHeadersHeight = 40;
+            dgvRecentLogs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = Color.FromArgb(255, 246, 249);
             dataGridViewCellStyle9.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -613,45 +613,44 @@
             dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            dgvRecentAssignment.DefaultCellStyle = dataGridViewCellStyle9;
-            dgvRecentAssignment.Dock = DockStyle.Fill;
-            dgvRecentAssignment.EnableHeadersVisualStyles = false;
-            dgvRecentAssignment.GridColor = Color.FromArgb(255, 211, 220);
-            dgvRecentAssignment.Location = new Point(10, 43);
-            dgvRecentAssignment.Name = "dgvRecentAssignment";
-            dgvRecentAssignment.ReadOnly = true;
-            dgvRecentAssignment.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvRecentAssignment.RowHeadersVisible = false;
-            dgvRecentAssignment.RowTemplate.Height = 35;
-            dgvRecentAssignment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecentAssignment.Size = new Size(1183, 294);
-            dgvRecentAssignment.TabIndex = 2;
+            dgvRecentLogs.DefaultCellStyle = dataGridViewCellStyle9;
+            dgvRecentLogs.Dock = DockStyle.Fill;
+            dgvRecentLogs.EnableHeadersVisualStyles = false;
+            dgvRecentLogs.GridColor = Color.FromArgb(255, 211, 220);
+            dgvRecentLogs.Location = new Point(10, 43);
+            dgvRecentLogs.Name = "dgvRecentLogs";
+            dgvRecentLogs.ReadOnly = true;
+            dgvRecentLogs.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRecentLogs.RowHeadersVisible = false;
+            dgvRecentLogs.RowTemplate.Height = 35;
+            dgvRecentLogs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRecentLogs.Size = new Size(1183, 294);
+            dgvRecentLogs.TabIndex = 2;
             // 
             // panel1
             // 
-            panel1.Controls.Add(button6);
+            panel1.Controls.Add(btnSearchRecent);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(txtAssetSearch);
+            panel1.Controls.Add(txtSearchRecent);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(10, 10);
             panel1.Name = "panel1";
             panel1.Size = new Size(1183, 33);
             panel1.TabIndex = 3;
             // 
-            // button6
+            // btnSearchRecent
             // 
-            button6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button6.BackColor = Color.FromArgb(217, 58, 102);
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(531, 3);
-            button6.Name = "button6";
-            button6.Size = new Size(114, 26);
-            button6.TabIndex = 16;
-            button6.Text = "Search";
-            button6.UseVisualStyleBackColor = false;
+            btnSearchRecent.BackColor = Color.FromArgb(217, 58, 102);
+            btnSearchRecent.FlatAppearance.BorderSize = 0;
+            btnSearchRecent.FlatStyle = FlatStyle.Flat;
+            btnSearchRecent.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchRecent.ForeColor = Color.White;
+            btnSearchRecent.Location = new Point(498, 5);
+            btnSearchRecent.Name = "btnSearchRecent";
+            btnSearchRecent.Size = new Size(114, 26);
+            btnSearchRecent.TabIndex = 16;
+            btnSearchRecent.Text = "Search";
+            btnSearchRecent.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -666,15 +665,14 @@
             label7.Text = "Recent Booking";
             label7.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // txtAssetSearch
+            // txtSearchRecent
             // 
-            txtAssetSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtAssetSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtAssetSearch.Location = new Point(208, 4);
-            txtAssetSearch.Name = "txtAssetSearch";
-            txtAssetSearch.PlaceholderText = "Search Booking";
-            txtAssetSearch.Size = new Size(317, 24);
-            txtAssetSearch.TabIndex = 15;
+            txtSearchRecent.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchRecent.Location = new Point(175, 5);
+            txtSearchRecent.Name = "txtSearchRecent";
+            txtSearchRecent.PlaceholderText = "Search Booking";
+            txtSearchRecent.Size = new Size(317, 24);
+            txtSearchRecent.TabIndex = 15;
             // 
             // mainPanel
             // 
@@ -708,14 +706,14 @@
             panel8.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEmployeeSearch).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRooms).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvAssetSearch).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvGuests).EndInit();
             dataPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvRecentAssignment).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRecentLogs).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             mainPanel.ResumeLayout(false);
@@ -731,34 +729,34 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel4;
         private Button button3;
-        private DataGridView dgvEmployeeSearch;
-        private TextBox txtEmployeeSearch;
+        private DataGridView dgvRooms;
+        private TextBox txtSearchRoom;
         private Label label3;
         private Panel panel5;
         private Label label4;
         private Panel panel3;
-        private DataGridView dgvAssetSearch;
+        private DataGridView dgvGuests;
         private Label label2;
-        private TextBox AssetSearch;
+        private TextBox txtSearchGuest;
         private Label Employee;
-        private Button button2;
-        private Button button1;
+        private Button btnSearchRoom;
+        private Button btnSearchGuest;
         private Panel panel7;
         private Panel panel2;
-        private Button button4;
+        private Button btnCheckIn;
         private Button btnCreateAssignment;
         private Panel dataPanel;
-        private DataGridView dgvRecentAssignment;
+        private DataGridView dgvRecentLogs;
         private Panel panel1;
-        private Button button6;
+        private Button btnSearchRecent;
         private Label label7;
-        private TextBox txtAssetSearch;
-        private DateTimePicker dateTimePicker3;
+        private TextBox txtSearchRecent;
+        private DateTimePicker dtpCheckIn;
         private Panel panel6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpCheckOut;
         private Label label5;
         private Panel panel8;
-        private Label label1;
+        private Label lblAmount;
         private Label label9;
         private Button button5;
         private Button button7;

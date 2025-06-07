@@ -34,29 +34,34 @@
             lblRole = new Label();
             lblFullName = new Label();
             txtFullName = new TextBox();
-            txtPassword = new TextBox();
+            txtConfirmPassword = new TextBox();
             lblPassword = new Label();
-            txtUsername = new TextBox();
-            lblUsername = new Label();
+            txtEmail = new TextBox();
+            emailtext = new Label();
             btnCancel = new Button();
             lblRecordTitle = new Label();
             dataPanel = new Panel();
-            dgvUsers = new DataGridView();
+            dgvEmployee = new DataGridView();
             btnCloseForm = new Button();
             formPanel = new Panel();
-            comboBox1 = new ComboBox();
+            txtPassword = new TextBox();
+            label1 = new Label();
+            button1 = new Button();
+            btnAddEmployee = new Button();
+            cmbRole = new ComboBox();
             btnSave = new Button();
             contentPanel = new TableLayoutPanel();
-            txtSearch = new TextBox();
+            txtSearchEmployee = new TextBox();
             btnReset = new Button();
             btnSearch = new Button();
             filterPanel = new Panel();
+            btnSearchEmployee = new Button();
             lblTitle = new Label();
             headerPanel = new Panel();
             mainLayout = new TableLayoutPanel();
             mainPanel = new Panel();
             dataPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployee).BeginInit();
             formPanel.SuspendLayout();
             contentPanel.SuspendLayout();
             filterPanel.SuspendLayout();
@@ -70,7 +75,7 @@
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRole.ForeColor = Color.FromArgb(217, 58, 102);
-            lblRole.Location = new Point(22, 266);
+            lblRole.Location = new Point(20, 329);
             lblRole.Name = "lblRole";
             lblRole.Size = new Size(37, 18);
             lblRole.TabIndex = 11;
@@ -95,44 +100,44 @@
             txtFullName.Size = new Size(300, 24);
             txtFullName.TabIndex = 8;
             // 
-            // txtPassword
+            // txtConfirmPassword
             // 
-            txtPassword.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(23, 230);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(300, 24);
-            txtPassword.TabIndex = 7;
+            txtConfirmPassword.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtConfirmPassword.Location = new Point(21, 293);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
+            txtConfirmPassword.Size = new Size(300, 24);
+            txtConfirmPassword.TabIndex = 7;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.FromArgb(217, 58, 102);
-            lblPassword.Location = new Point(24, 209);
+            lblPassword.Location = new Point(22, 272);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(72, 18);
+            lblPassword.Size = new Size(127, 18);
             lblPassword.TabIndex = 6;
-            lblPassword.Text = "Password";
+            lblPassword.Text = "Confirm Password";
             // 
-            // txtUsername
+            // txtEmail
             // 
-            txtUsername.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(22, 164);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(300, 24);
-            txtUsername.TabIndex = 5;
+            txtEmail.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(22, 164);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(300, 24);
+            txtEmail.TabIndex = 5;
             // 
-            // lblUsername
+            // emailtext
             // 
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsername.ForeColor = Color.FromArgb(217, 58, 102);
-            lblUsername.Location = new Point(23, 143);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(75, 18);
-            lblUsername.TabIndex = 4;
-            lblUsername.Text = "Username";
+            emailtext.AutoSize = true;
+            emailtext.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailtext.ForeColor = Color.FromArgb(217, 58, 102);
+            emailtext.Location = new Point(23, 143);
+            emailtext.Name = "emailtext";
+            emailtext.Size = new Size(45, 18);
+            emailtext.TabIndex = 4;
+            emailtext.Text = "Email";
             // 
             // btnCancel
             // 
@@ -142,7 +147,7 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(296, 1033);
+            btnCancel.Location = new Point(296, 913);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(150, 35);
             btnCancel.TabIndex = 2;
@@ -156,31 +161,31 @@
             lblRecordTitle.ForeColor = Color.FromArgb(217, 58, 102);
             lblRecordTitle.Location = new Point(22, 25);
             lblRecordTitle.Name = "lblRecordTitle";
-            lblRecordTitle.Size = new Size(90, 23);
+            lblRecordTitle.Size = new Size(130, 23);
             lblRecordTitle.TabIndex = 0;
-            lblRecordTitle.Text = "Add User";
+            lblRecordTitle.Text = "Add/Edit User";
             // 
             // dataPanel
             // 
-            dataPanel.Controls.Add(dgvUsers);
+            dataPanel.Controls.Add(dgvEmployee);
             dataPanel.Dock = DockStyle.Fill;
             dataPanel.Location = new Point(3, 3);
             dataPanel.Name = "dataPanel";
             dataPanel.Padding = new Padding(10);
-            dataPanel.Size = new Size(950, 655);
+            dataPanel.Size = new Size(344, 535);
             dataPanel.TabIndex = 0;
             // 
-            // dgvUsers
+            // dgvEmployee
             // 
-            dgvUsers.AllowUserToAddRows = false;
-            dgvUsers.AllowUserToDeleteRows = false;
+            dgvEmployee.AllowUserToAddRows = false;
+            dgvEmployee.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUsers.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dgvUsers.BorderStyle = BorderStyle.None;
-            dgvUsers.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvUsers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvEmployee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEmployee.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvEmployee.BorderStyle = BorderStyle.None;
+            dgvEmployee.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvEmployee.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -189,9 +194,9 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvUsers.ColumnHeadersHeight = 40;
-            dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvEmployee.ColumnHeadersHeight = 40;
+            dgvEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
             dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -200,19 +205,19 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvUsers.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvUsers.Dock = DockStyle.Fill;
-            dgvUsers.EnableHeadersVisualStyles = false;
-            dgvUsers.GridColor = Color.FromArgb(255, 211, 220);
-            dgvUsers.Location = new Point(10, 10);
-            dgvUsers.Name = "dgvUsers";
-            dgvUsers.ReadOnly = true;
-            dgvUsers.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvUsers.RowHeadersVisible = false;
-            dgvUsers.RowTemplate.Height = 35;
-            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsers.Size = new Size(930, 635);
-            dgvUsers.TabIndex = 1;
+            dgvEmployee.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvEmployee.Dock = DockStyle.Fill;
+            dgvEmployee.EnableHeadersVisualStyles = false;
+            dgvEmployee.GridColor = Color.FromArgb(255, 211, 220);
+            dgvEmployee.Location = new Point(10, 10);
+            dgvEmployee.Name = "dgvEmployee";
+            dgvEmployee.ReadOnly = true;
+            dgvEmployee.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvEmployee.RowHeadersVisible = false;
+            dgvEmployee.RowTemplate.Height = 35;
+            dgvEmployee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvEmployee.Size = new Size(324, 515);
+            dgvEmployee.TabIndex = 1;
             // 
             // btnCloseForm
             // 
@@ -237,32 +242,87 @@
             // 
             formPanel.BackColor = Color.FromArgb(255, 228, 235);
             formPanel.BorderStyle = BorderStyle.FixedSingle;
-            formPanel.Controls.Add(comboBox1);
+            formPanel.Controls.Add(txtPassword);
+            formPanel.Controls.Add(label1);
+            formPanel.Controls.Add(button1);
+            formPanel.Controls.Add(btnAddEmployee);
+            formPanel.Controls.Add(cmbRole);
             formPanel.Controls.Add(btnCloseForm);
             formPanel.Controls.Add(lblRole);
             formPanel.Controls.Add(lblFullName);
             formPanel.Controls.Add(txtFullName);
-            formPanel.Controls.Add(txtPassword);
+            formPanel.Controls.Add(txtConfirmPassword);
             formPanel.Controls.Add(lblPassword);
-            formPanel.Controls.Add(txtUsername);
-            formPanel.Controls.Add(lblUsername);
+            formPanel.Controls.Add(txtEmail);
+            formPanel.Controls.Add(emailtext);
             formPanel.Controls.Add(btnCancel);
             formPanel.Controls.Add(btnSave);
             formPanel.Controls.Add(lblRecordTitle);
             formPanel.Dock = DockStyle.Fill;
-            formPanel.Location = new Point(959, 3);
+            formPanel.Location = new Point(353, 3);
             formPanel.Name = "formPanel";
             formPanel.Padding = new Padding(20);
-            formPanel.Size = new Size(346, 655);
+            formPanel.Size = new Size(346, 535);
             formPanel.TabIndex = 1;
             // 
-            // comboBox1
+            // txtPassword
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(26, 288);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(297, 23);
-            comboBox1.TabIndex = 13;
+            txtPassword.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(21, 230);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(300, 24);
+            txtPassword.TabIndex = 17;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(217, 58, 102);
+            label1.Location = new Point(22, 209);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 18);
+            label1.TabIndex = 16;
+            label1.Text = "Password";
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(217, 58, 102);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(175, 475);
+            button1.Name = "button1";
+            button1.Size = new Size(146, 35);
+            button1.TabIndex = 15;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // btnAddEmployee
+            // 
+            btnAddEmployee.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnAddEmployee.BackColor = Color.FromArgb(217, 58, 102);
+            btnAddEmployee.FlatAppearance.BorderSize = 0;
+            btnAddEmployee.FlatStyle = FlatStyle.Flat;
+            btnAddEmployee.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddEmployee.ForeColor = Color.White;
+            btnAddEmployee.Location = new Point(19, 475);
+            btnAddEmployee.Name = "btnAddEmployee";
+            btnAddEmployee.Size = new Size(131, 35);
+            btnAddEmployee.TabIndex = 14;
+            btnAddEmployee.Text = "Add user";
+            btnAddEmployee.UseVisualStyleBackColor = false;
+            // 
+            // cmbRole
+            // 
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(24, 351);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(297, 23);
+            cmbRole.TabIndex = 13;
             // 
             // btnSave
             // 
@@ -272,7 +332,7 @@
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(43, 1033);
+            btnSave.Location = new Point(43, 913);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(150, 35);
             btnSave.TabIndex = 1;
@@ -291,18 +351,18 @@
             contentPanel.Name = "contentPanel";
             contentPanel.RowCount = 1;
             contentPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            contentPanel.Size = new Size(1308, 661);
+            contentPanel.Size = new Size(702, 541);
             contentPanel.TabIndex = 2;
             // 
-            // txtSearch
+            // txtSearchEmployee
             // 
-            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSearch.Location = new Point(7, 12);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Search users...";
-            txtSearch.Size = new Size(1012, 24);
-            txtSearch.TabIndex = 0;
+            txtSearchEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearchEmployee.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchEmployee.Location = new Point(7, 12);
+            txtSearchEmployee.Name = "txtSearchEmployee";
+            txtSearchEmployee.PlaceholderText = "Search users...";
+            txtSearchEmployee.Size = new Size(406, 24);
+            txtSearchEmployee.TabIndex = 0;
             // 
             // btnReset
             // 
@@ -312,7 +372,7 @@
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(2068, 13);
+            btnReset.Location = new Point(1462, 13);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(100, 25);
             btnReset.TabIndex = 2;
@@ -327,7 +387,7 @@
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(1918, 13);
+            btnSearch.Location = new Point(1312, 13);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(100, 25);
             btnSearch.TabIndex = 1;
@@ -336,15 +396,31 @@
             // 
             // filterPanel
             // 
-            filterPanel.Controls.Add(txtSearch);
+            filterPanel.Controls.Add(btnSearchEmployee);
+            filterPanel.Controls.Add(txtSearchEmployee);
             filterPanel.Controls.Add(btnReset);
             filterPanel.Controls.Add(btnSearch);
             filterPanel.Dock = DockStyle.Fill;
             filterPanel.Location = new Point(3, 63);
             filterPanel.Name = "filterPanel";
             filterPanel.Padding = new Padding(10, 5, 10, 5);
-            filterPanel.Size = new Size(1308, 44);
+            filterPanel.Size = new Size(702, 44);
             filterPanel.TabIndex = 1;
+            // 
+            // btnSearchEmployee
+            // 
+            btnSearchEmployee.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSearchEmployee.BackColor = Color.FromArgb(217, 58, 102);
+            btnSearchEmployee.FlatAppearance.BorderSize = 0;
+            btnSearchEmployee.FlatStyle = FlatStyle.Flat;
+            btnSearchEmployee.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchEmployee.ForeColor = Color.White;
+            btnSearchEmployee.Location = new Point(429, 6);
+            btnSearchEmployee.Name = "btnSearchEmployee";
+            btnSearchEmployee.Size = new Size(146, 35);
+            btnSearchEmployee.TabIndex = 18;
+            btnSearchEmployee.Text = "Search";
+            btnSearchEmployee.UseVisualStyleBackColor = false;
             // 
             // lblTitle
             // 
@@ -366,7 +442,7 @@
             headerPanel.Location = new Point(3, 3);
             headerPanel.Name = "headerPanel";
             headerPanel.Padding = new Padding(10, 5, 10, 5);
-            headerPanel.Size = new Size(1308, 54);
+            headerPanel.Size = new Size(702, 54);
             headerPanel.TabIndex = 0;
             // 
             // mainLayout
@@ -383,7 +459,7 @@
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            mainLayout.Size = new Size(1314, 777);
+            mainLayout.Size = new Size(708, 657);
             mainLayout.TabIndex = 0;
             // 
             // mainPanel
@@ -394,19 +470,19 @@
             mainPanel.Location = new Point(0, 0);
             mainPanel.Name = "mainPanel";
             mainPanel.Padding = new Padding(10);
-            mainPanel.Size = new Size(1334, 797);
+            mainPanel.Size = new Size(728, 677);
             mainPanel.TabIndex = 1;
             // 
             // User_Management
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1334, 797);
+            ClientSize = new Size(728, 677);
             Controls.Add(mainPanel);
             Name = "User_Management";
             Text = "User_Management";
             dataPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployee).EndInit();
             formPanel.ResumeLayout(false);
             formPanel.PerformLayout();
             contentPanel.ResumeLayout(false);
@@ -424,19 +500,19 @@
         private Label lblRole;
         private Label lblFullName;
         private TextBox txtFullName;
-        private TextBox txtPassword;
+        private TextBox txtConfirmPassword;
         private Label lblPassword;
-        private TextBox txtUsername;
-        private Label lblUsername;
+        private TextBox txtEmail;
+        private Label emailtext;
         private Button btnCancel;
         private Label lblRecordTitle;
         private Panel dataPanel;
-        private DataGridView dgvUsers;
+        private DataGridView dgvEmployee;
         private Button btnCloseForm;
         private Panel formPanel;
         private Button btnSave;
         private TableLayoutPanel contentPanel;
-        private TextBox txtSearch;
+        private TextBox txtSearchEmployee;
         private Button btnReset;
         private Button btnSearch;
         private Panel filterPanel;
@@ -444,6 +520,11 @@
         private Panel headerPanel;
         private TableLayoutPanel mainLayout;
         private Panel mainPanel;
-        private ComboBox comboBox1;
+        private ComboBox cmbRole;
+        private Button button1;
+        private Button btnAddEmployee;
+        private TextBox txtPassword;
+        private Label label1;
+        private Button btnSearchEmployee;
     }
 }

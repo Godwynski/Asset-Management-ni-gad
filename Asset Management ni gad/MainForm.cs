@@ -8,18 +8,18 @@ namespace Asset_Management_ni_gad
         {
             //FullNameTextbox.Text = Session.FullName;
             InitializeComponent();
-            LoadForm(MainPanel, new Dashboard());
+            LoadForm(MainPanel, new Booking());
             AssetManagementBtn.Click += NavBtn_Click;
             AssetAssignmentBtn.Click += NavBtn_Click;
             UserManagementBtn.Click += NavBtn_Click;
             MaintenanceBtn.Click += NavBtn_Click;
             AssetReturnBtn.Click += NavBtn_Click;
-            DesigningFunctions.btnSelected( AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
+            DesigningFunctions.btnSelected(AssetAssignmentBtn, AssetManagementBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
         }
 
         private void NavBtn_Click(object sender, EventArgs e)
         {
-            DesigningFunctions.btnSelected((Button)sender, AssetManagementBtn, AssetAssignmentBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
+            DesigningFunctions.btnSelected((Button)sender, AssetAssignmentBtn, AssetManagementBtn, UserManagementBtn, MaintenanceBtn, AssetReturnBtn);
         }
 
         public void LoadForm(Panel container, Form formToLoad)
@@ -35,7 +35,7 @@ namespace Asset_Management_ni_gad
 
         private void AssetManagementBtn_Click(object sender, EventArgs e)
         {
-            LoadForm(MainPanel, new AssetManagement());
+            LoadForm(MainPanel, new User_Management());
         }
 
         private void DashboardBtn_Click(object sender, EventArgs e)

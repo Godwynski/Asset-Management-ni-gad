@@ -1,0 +1,45 @@
+﻿CREATE DATABASE IF NOT EXISTS HotelDB;
+USE HotelDB;
+
+-- Guests Table
+CREATE TABLE Guests (
+    GuestID INT AUTO_INCREMENT PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    Contact VARCHAR(20),
+    Email VARCHAR(100),
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Rooms Table
+CREATE TABLE Rooms (
+    RoomID INT AUTO_INCREMENT PRIMARY KEY,
+    RoomName VARCHAR(50) NOT NULL,
+    Status ENUM('Available', 'Occupied', 'Cleaning') NOT NULL,
+    PricePerHour DECIMAL(10,2) NOT NULL,
+    Capacity INT NOT NULL,
+    UpdatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Employees Table
+CREATE TABLE Employees (
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    Role ENUM('Admin', 'Employee') NOT NULL,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Bookings Table
+CREATE TABLE Bookings (
+    BookingID INT AUTO_INCREMENT PRIMARY KEY,
+    GuestID INT NOT NULL,
+    RoomID INT NOT NULL,
+    CheckIn DATETIME NOT NULL,
+    CheckOut DATETIME NOT NULL,
+    TotalAmount DECIMAL(10,2) NOT NULL,
+    Status ENUM('Booked', 'Checked-in', 'Completed') NOT NULL,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (GuestID) REFERENCES Guests(GuestID),
+    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
+);

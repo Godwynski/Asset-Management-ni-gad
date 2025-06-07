@@ -25,17 +25,18 @@
             headerPanel = new Panel();
             lblTitle = new Label();
             filterPanel = new Panel();
+            btnCheckOut = new Button();
             txtSearch = new TextBox();
-            btnRefresh = new Button();
+            btnClean = new Button();
             btnSearch = new Button();
             dataPanel = new Panel();
-            dgvAssignedAssets = new DataGridView();
+            dgvBookings = new DataGridView();
             mainPanel.SuspendLayout();
             mainLayout.SuspendLayout();
             headerPanel.SuspendLayout();
             filterPanel.SuspendLayout();
             dataPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvAssignedAssets).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBookings).BeginInit();
             SuspendLayout();
             // 
             // mainPanel
@@ -46,7 +47,7 @@
             mainPanel.Location = new Point(0, 0);
             mainPanel.Name = "mainPanel";
             mainPanel.Padding = new Padding(10);
-            mainPanel.Size = new Size(1211, 666);
+            mainPanel.Size = new Size(938, 666);
             mainPanel.TabIndex = 0;
             // 
             // mainLayout
@@ -64,7 +65,7 @@
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            mainLayout.Size = new Size(1191, 646);
+            mainLayout.Size = new Size(918, 646);
             mainLayout.TabIndex = 0;
             // 
             // headerPanel
@@ -74,7 +75,7 @@
             headerPanel.Location = new Point(3, 3);
             headerPanel.Name = "headerPanel";
             headerPanel.Padding = new Padding(10, 5, 10, 5);
-            headerPanel.Size = new Size(1185, 54);
+            headerPanel.Size = new Size(912, 54);
             headerPanel.TabIndex = 0;
             // 
             // lblTitle
@@ -92,15 +93,31 @@
             // 
             // filterPanel
             // 
+            filterPanel.Controls.Add(btnCheckOut);
             filterPanel.Controls.Add(txtSearch);
-            filterPanel.Controls.Add(btnRefresh);
+            filterPanel.Controls.Add(btnClean);
             filterPanel.Controls.Add(btnSearch);
             filterPanel.Dock = DockStyle.Fill;
             filterPanel.Location = new Point(3, 63);
             filterPanel.Name = "filterPanel";
             filterPanel.Padding = new Padding(10, 5, 10, 5);
-            filterPanel.Size = new Size(1185, 44);
+            filterPanel.Size = new Size(912, 44);
             filterPanel.TabIndex = 1;
+            // 
+            // btnCheckOut
+            // 
+            btnCheckOut.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCheckOut.BackColor = Color.FromArgb(217, 58, 102);
+            btnCheckOut.FlatAppearance.BorderSize = 0;
+            btnCheckOut.FlatStyle = FlatStyle.Flat;
+            btnCheckOut.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCheckOut.ForeColor = Color.White;
+            btnCheckOut.Location = new Point(800, 8);
+            btnCheckOut.Name = "btnCheckOut";
+            btnCheckOut.Size = new Size(88, 25);
+            btnCheckOut.TabIndex = 3;
+            btnCheckOut.Text = "Check-Out";
+            btnCheckOut.UseVisualStyleBackColor = false;
             // 
             // txtSearch
             // 
@@ -109,23 +126,23 @@
             txtSearch.Location = new Point(10, 8);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Search Check-In...";
-            txtSearch.Size = new Size(908, 24);
+            txtSearch.Size = new Size(635, 24);
             txtSearch.TabIndex = 0;
             // 
-            // btnRefresh
+            // btnClean
             // 
-            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRefresh.BackColor = Color.FromArgb(217, 58, 102);
-            btnRefresh.FlatAppearance.BorderSize = 0;
-            btnRefresh.FlatStyle = FlatStyle.Flat;
-            btnRefresh.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRefresh.ForeColor = Color.White;
-            btnRefresh.Location = new Point(1046, 7);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(100, 25);
-            btnRefresh.TabIndex = 2;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = false;
+            btnClean.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClean.BackColor = Color.FromArgb(217, 58, 102);
+            btnClean.FlatAppearance.BorderSize = 0;
+            btnClean.FlatStyle = FlatStyle.Flat;
+            btnClean.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClean.ForeColor = Color.White;
+            btnClean.Location = new Point(725, 8);
+            btnClean.Name = "btnClean";
+            btnClean.Size = new Size(69, 25);
+            btnClean.TabIndex = 2;
+            btnClean.Text = "Clean";
+            btnClean.UseVisualStyleBackColor = false;
             // 
             // btnSearch
             // 
@@ -135,34 +152,34 @@
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Berlin Sans FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(928, 8);
+            btnSearch.Location = new Point(655, 8);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(100, 25);
+            btnSearch.Size = new Size(64, 25);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             // 
             // dataPanel
             // 
-            dataPanel.Controls.Add(dgvAssignedAssets);
+            dataPanel.Controls.Add(dgvBookings);
             dataPanel.Dock = DockStyle.Fill;
             dataPanel.Location = new Point(3, 113);
             dataPanel.Name = "dataPanel";
             dataPanel.Padding = new Padding(10);
-            dataPanel.Size = new Size(1185, 530);
+            dataPanel.Size = new Size(912, 530);
             dataPanel.TabIndex = 2;
             // 
-            // dgvAssignedAssets
+            // dgvBookings
             // 
-            dgvAssignedAssets.AllowUserToAddRows = false;
-            dgvAssignedAssets.AllowUserToDeleteRows = false;
+            dgvBookings.AllowUserToAddRows = false;
+            dgvBookings.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 228, 235);
-            dgvAssignedAssets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvAssignedAssets.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvAssignedAssets.BackgroundColor = Color.FromArgb(255, 246, 249);
-            dgvAssignedAssets.BorderStyle = BorderStyle.None;
-            dgvAssignedAssets.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvAssignedAssets.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvBookings.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvBookings.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBookings.BackgroundColor = Color.FromArgb(255, 246, 249);
+            dgvBookings.BorderStyle = BorderStyle.None;
+            dgvBookings.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvBookings.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -171,9 +188,9 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(217, 58, 102);
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvAssignedAssets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvAssignedAssets.ColumnHeadersHeight = 40;
-            dgvAssignedAssets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvBookings.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvBookings.ColumnHeadersHeight = 40;
+            dgvBookings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 246, 249);
             dataGridViewCellStyle3.Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -182,25 +199,25 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 211, 220);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvAssignedAssets.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvAssignedAssets.Dock = DockStyle.Fill;
-            dgvAssignedAssets.EnableHeadersVisualStyles = false;
-            dgvAssignedAssets.GridColor = Color.FromArgb(255, 211, 220);
-            dgvAssignedAssets.Location = new Point(10, 10);
-            dgvAssignedAssets.Name = "dgvAssignedAssets";
-            dgvAssignedAssets.ReadOnly = true;
-            dgvAssignedAssets.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvAssignedAssets.RowHeadersVisible = false;
-            dgvAssignedAssets.RowTemplate.Height = 35;
-            dgvAssignedAssets.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAssignedAssets.Size = new Size(1165, 510);
-            dgvAssignedAssets.TabIndex = 1;
+            dgvBookings.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvBookings.Dock = DockStyle.Fill;
+            dgvBookings.EnableHeadersVisualStyles = false;
+            dgvBookings.GridColor = Color.FromArgb(255, 211, 220);
+            dgvBookings.Location = new Point(10, 10);
+            dgvBookings.Name = "dgvBookings";
+            dgvBookings.ReadOnly = true;
+            dgvBookings.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvBookings.RowHeadersVisible = false;
+            dgvBookings.RowTemplate.Height = 35;
+            dgvBookings.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvBookings.Size = new Size(892, 510);
+            dgvBookings.TabIndex = 1;
             // 
             // CheckOut
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1211, 666);
+            ClientSize = new Size(938, 666);
             Controls.Add(mainPanel);
             Font = new Font("Berlin Sans FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "CheckOut";
@@ -213,7 +230,7 @@
             filterPanel.ResumeLayout(false);
             filterPanel.PerformLayout();
             dataPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvAssignedAssets).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBookings).EndInit();
             ResumeLayout(false);
 
         }
@@ -226,9 +243,10 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel filterPanel;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel dataPanel;
-        private System.Windows.Forms.DataGridView dgvAssignedAssets;
+        private System.Windows.Forms.DataGridView dgvBookings;
+        private Button btnCheckOut;
     }
 }
